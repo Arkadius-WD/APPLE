@@ -1,6 +1,10 @@
 @use 'utilities' as *;
 
-body {
-	background-color: $second;
-	color: $first;
+.nav {
+	height: 4.4rem;
+	width: 100%;
+	background-color: rgba($color: $second, $alpha: 0.9);
+}
+.nav-box {
+	display: flex;
 }

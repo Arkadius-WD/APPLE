@@ -1,3 +1,5 @@
+@use 'colors' as *;
+
 *,
 *::before,
 *::after {
@@ -12,10 +14,16 @@ html {
 }
 
 body {
-	font-family: 'Lato', sans-serif;
-	font-size: 1.6rem;
+	font-size: 1.7rem;
+	line-height: 1.47059;
+	font-weight: 400;
+	letter-spacing: -0.022em;
+	font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+	background-color: $first;
+	color: $second;
+	font-style: normal;
 }
 
 a {
-	text-decoration: none;
+	color: $first;
 }
