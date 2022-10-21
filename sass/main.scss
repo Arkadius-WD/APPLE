@@ -1,10 +1,12 @@
 @use 'utilities' as *;
 
 .nav {
-	height: 4.4rem;
+	position: fixed;
 	width: 100%;
 	background-color: rgba($color: $second, $alpha: 0.9);
+	height: 4.8rem;
 }
-.nav-box {
-	display: flex;
+
+.nav-container {
+	background-color: rgba($color: $second, $alpha: 0.9);
 }

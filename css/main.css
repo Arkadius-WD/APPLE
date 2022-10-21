@@ -14,17 +14,18 @@ html {
 
 body {
   font-size: 1.7rem;
-  line-height: 1.47059;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: -0.022em;
-  font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Lato", sans-serif;
   background-color: #f5f5f7;
   color: #1d1d1f;
   font-style: normal;
 }
 
 a {
+  text-decoration: none;
   color: #f5f5f7;
+  cursor: pointer;
 }
 
 .wrapper {
@@ -33,14 +34,40 @@ a {
   max-width: 1024px;
 }
 
+@media (min-width: 834px) {
+  .nav-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .nav-container :nth-child(3) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .nav-container :nth-child(4) {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+}
 .nav {
-  height: 4.4rem;
+  position: fixed;
   width: 100%;
   background-color: rgba(29, 29, 31, 0.9);
+  height: 4.8rem;
 }
 
-.nav-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.nav-container {
+  background-color: rgba(29, 29, 31, 0.9);
 }/*# sourceMappingURL=main.css.map */

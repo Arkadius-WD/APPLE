@@ -1,4 +1,17 @@
 @use 'colors' as *;
 
 @media (min-width: 834px) {
+	.nav-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+
+		:nth-child(3) {
+			order: 4;
+		}
+		:nth-child(4) {
+			order: 5;
+		}
+	}
 }
