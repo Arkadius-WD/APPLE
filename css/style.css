@@ -40,8 +40,23 @@ a {
   background-color: rgba(29, 29, 31, 0.9);
   height: 4.8rem;
 }
-
-.nav-container {
+.nav__burger, .nav__logo, .nav__search, .nav__bag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 4.8rem;
+  width: 4.8rem;
+}
+.nav__search {
+  display: none;
+}
+.nav__burger {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,9 +71,63 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.nav__burger-bel {
+  margin: 0.3rem;
+  height: 0.1rem;
+  width: 2rem;
+  background-color: #f5f5f7;
+}
+.nav img {
+  height: 100%;
+  width: 100%;
+}
+
+.nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  height: 4.8rem;
+}
+
+.nav__list {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 4.8rem;
+  left: 0;
+  right: 0;
+  background-color: rgba(29, 29, 31, 0.9);
+}
+
+.hidden {
+  background-color: red;
+}
 
 @media only screen and (min-width: 834px) {
   .nav-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     background-color: green;
   }
   .nav-container :nth-child(3) {
@@ -71,11 +140,23 @@ a {
         -ms-flex-order: 5;
             order: 5;
   }
-  .nav-container {
+  .nav__list {
+    position: relative;
+    top: 0;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    background-color: rgba(29, 29, 31, 0.9);
+  }
+  .nav__burger {
+    display: none;
+  }
+  .nav__search {
+    display: block;
+  }
+  .nav__input-search {
+    display: none;
   }
 }
 @media screen and (min-width: 1024px) {
