@@ -99,6 +99,7 @@ a {
 
 .nav__list {
   position: absolute;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,14 +113,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  top: 4.8rem;
-  left: 0;
-  right: 0;
-  background-color: rgba(29, 29, 31, 0.9);
-}
-
-.hidden {
-  background-color: red;
+  background-color: #1d1d1f;
 }
 
 @media only screen and (min-width: 834px) {

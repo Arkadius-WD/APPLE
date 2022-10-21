@@ -59,17 +59,14 @@
 
 .nav__list {
 	position: absolute;
+	top: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-direction: column;
-	top: 4.8rem;
-	left: 0;
-	right: 0;
-	background-color: rgba($color: $second, $alpha: 0.9);
+	background-color: $second;
 }
 
-.hidden {
-	background-color: red;
-	// display: none;           ////<<<<<<<<<<<<<<<<<<<<<<<<
-}
+// .hidden {
+// 	display: none;
+// }
