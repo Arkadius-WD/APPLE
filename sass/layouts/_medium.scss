@@ -10,15 +10,15 @@
 		:nth-child(4) {
 			order: 5;
 		}
-
-		background-color: green;
 	}
 
 	.nav__list {
 		position: relative;
 		top: 0;
+		margin-left: auto;
+		margin-right: auto;
 		flex-direction: row;
-		background-color: rgba($color: $second, $alpha: 0.9);
+		background-color: inherit;
 	}
 
 	.nav__burger {
@@ -27,6 +27,7 @@
 
 	.nav__search {
 		display: block;
+		margin-right: 1rem;
 	}
 
 	.nav__input-search {

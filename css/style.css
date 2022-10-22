@@ -122,7 +122,6 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    background-color: green;
   }
   .nav-container :nth-child(3) {
     -webkit-box-ordinal-group: 5;
@@ -137,24 +136,22 @@ a {
   .nav__list {
     position: relative;
     top: 0;
+    margin-left: auto;
+    margin-right: auto;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    background-color: rgba(29, 29, 31, 0.9);
+    background-color: inherit;
   }
   .nav__burger {
     display: none;
   }
   .nav__search {
     display: block;
+    margin-right: 1rem;
   }
   .nav__input-search {
     display: none;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .nav-container {
-    background-color: blue;
   }
 }/*# sourceMappingURL=style.css.map */
