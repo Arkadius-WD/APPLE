@@ -60,11 +60,18 @@
 .nav__list {
 	position: absolute;
 	top: 0;
+	left: 0;
+	right: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-direction: column;
 	background-color: $second;
+	z-index: -5;
+}
+
+.nav__input-search {
+	padding-top: 5rem;
 }
 
 // .hidden {

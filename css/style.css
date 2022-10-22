@@ -100,6 +100,8 @@ a {
 .nav__list {
   position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,6 +116,11 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #1d1d1f;
+  z-index: -5;
+}
+
+.nav__input-search {
+  padding-top: 5rem;
 }
 
 @media only screen and (min-width: 834px) {
@@ -143,6 +150,7 @@ a {
         -ms-flex-direction: row;
             flex-direction: row;
     background-color: inherit;
+    z-index: 0;
   }
   .nav__burger {
     display: none;
