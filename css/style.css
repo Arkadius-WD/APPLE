@@ -123,6 +123,10 @@ a {
   padding-top: 5rem;
 }
 
+label {
+  color: white;
+}
+
 @media only screen and (min-width: 834px) {
   .nav-container {
     -webkit-box-orient: horizontal;
