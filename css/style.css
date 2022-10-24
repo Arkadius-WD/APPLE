@@ -40,6 +40,20 @@ a {
   background-color: rgba(29, 29, 31, 0.9);
   height: 4.8rem;
 }
+.nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  height: 4.8rem;
+}
 .nav__burger, .nav__logo, .nav__search, .nav__bag {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,26 +91,6 @@ a {
   width: 2rem;
   background-color: #f5f5f7;
 }
-.nav img {
-  height: 100%;
-  width: 100%;
-}
-
-.nav-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  height: 4.8rem;
-}
-
 .nav__list {
   position: absolute;
   top: 0;
@@ -118,13 +112,27 @@ a {
   background-color: #1d1d1f;
   z-index: -5;
 }
-
 .nav__input-search {
   padding-top: 5rem;
 }
-
-label {
-  color: white;
+.nav__input-form::-webkit-input-placeholder {
+  color: red;
+}
+.nav__input-form::-moz-placeholder {
+  color: red;
+}
+.nav__input-form:-ms-input-placeholder {
+  color: red;
+}
+.nav__input-form::-ms-input-placeholder {
+  color: red;
+}
+.nav__input-form::placeholder {
+  color: red;
+}
+.nav img {
+  height: 100%;
+  width: 100%;
 }
 
 @media only screen and (min-width: 834px) {
