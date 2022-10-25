@@ -116,24 +116,30 @@ a {
   padding-top: 5rem;
 }
 .nav__input-form::-webkit-input-placeholder {
+  text-align: center;
   color: red;
-  border-radius: 0.5rem;
 }
 .nav__input-form::-moz-placeholder {
+  text-align: center;
   color: red;
-  border-radius: 0.5rem;
 }
 .nav__input-form:-ms-input-placeholder {
+  text-align: center;
   color: red;
-  border-radius: 0.5rem;
 }
 .nav__input-form::-ms-input-placeholder {
+  text-align: center;
   color: red;
-  border-radius: 0.5rem;
 }
 .nav__input-form::placeholder {
+  text-align: center;
   color: red;
-  border-radius: 0.5rem;
+}
+.nav__input-form {
+  height: 2.5rem;
+  border-radius: 1rem;
+  border: 1px solid #f5f5f7;
+  background-color: inherit;
 }
 .nav img {
   height: 100%;

@@ -63,8 +63,15 @@
 	}
 
 	&__input-form::placeholder {
+		text-align: center;
 		color: red;
-		border-radius: 0.5rem;
+	}
+
+	&__input-form {
+		height: 2.5rem;
+		border-radius: 1rem;
+		border: 1px solid $first;
+		background-color: inherit;
 	}
 
 	img {
