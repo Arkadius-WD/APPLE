@@ -117,18 +117,23 @@ a {
 }
 .nav__input-form::-webkit-input-placeholder {
   color: red;
+  border-radius: 0.5rem;
 }
 .nav__input-form::-moz-placeholder {
   color: red;
+  border-radius: 0.5rem;
 }
 .nav__input-form:-ms-input-placeholder {
   color: red;
+  border-radius: 0.5rem;
 }
 .nav__input-form::-ms-input-placeholder {
   color: red;
+  border-radius: 0.5rem;
 }
 .nav__input-form::placeholder {
   color: red;
+  border-radius: 0.5rem;
 }
 .nav img {
   height: 100%;
