@@ -90,6 +90,10 @@ a {
   height: 0.1rem;
   width: 2rem;
   background-color: #f5f5f7;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 .nav__list {
   position: absolute;
@@ -133,6 +137,19 @@ a {
 .nav img {
   height: 100%;
   width: 100%;
+}
+
+.click-btn .nav__burger-bel--up {
+  -webkit-transform: rotate(-45deg) translateX(-5px);
+          transform: rotate(-45deg) translateX(-5px);
+}
+.click-btn .nav__burger-bel--down {
+  -webkit-transform: rotate(45deg) translateX(-5px);
+          transform: rotate(45deg) translateX(-5px);
+}
+
+.hidden {
+  display: none;
 }
 
 @media only screen and (min-width: 834px) {

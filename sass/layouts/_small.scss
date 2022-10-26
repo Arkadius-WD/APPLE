@@ -42,6 +42,7 @@
 			height: 0.1rem;
 			width: 2rem;
 			background-color: $first;
+			transition: transform 0.5s;
 		}
 	}
 
@@ -70,4 +71,17 @@
 		height: 100%;
 		width: 100%;
 	}
+}
+
+.click-btn {
+	.nav__burger-bel--up {
+		transform: rotate(-45deg) translateX(-5px);
+	}
+	.nav__burger-bel--down {
+		transform: rotate(45deg) translateX(-5px);
+	}
+}
+
+.hidden {
+	display: none;
 }
