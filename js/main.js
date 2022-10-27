@@ -1,14 +1,17 @@
-const topNav = document.querySelector('.nav__list')
+const topNav = document.querySelector('.top__list')
 const navBtn = document.querySelector('.nav__burger')
-const allNavItems = document.querySelectorAll('.nav__list-item')
+const navBag = document.querySelector('.nav__bag')
+const allNavItems = document.querySelectorAll('.top__list-item')
 
 const showMenu = () => {
-	topNav.classList.toggle('hidden')
+	topNav.classList.toggle('nav-hidden')
+	navBag.classList.toggle('bag-hidden')
 	navBtn.classList.toggle('click-btn')
 
 	allNavItems.forEach(item => {
 		item.addEventListener('click', () => {
-			topNav.classList.remove('hidden')
+			topNav.classList.remove('nav-hidden')
+			navBag.classList.remove('bag-hidden')
 			navBtn.classList.remove('click-btn')
 		})
 	})
