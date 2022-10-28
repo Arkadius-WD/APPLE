@@ -3,18 +3,36 @@
 ////////////////////// navigation ///////////////////////
 /////////////////////////////////////////////////////////
 
-.top__list {
-	position: absolute;
-	display: flex;
-	top: -100vh;
-	left: 0;
-	right: 0;
-	height: 100vh;
-	padding-left: 5rem;
-	align-items: flex-start;
-	flex-direction: column;
-	background-color: $third;
-	transition: top 0.3s;
+.top {
+	&__list {
+		position: absolute;
+		display: flex;
+		top: -100vh;
+		left: 0;
+		right: 0;
+		height: 100vh;
+		padding-left: 5rem;
+		align-items: flex-start;
+		flex-direction: column;
+		background-color: $third;
+		transition: top 0.5s;
+	}
+
+	&__input-search {
+		padding-top: 5rem;
+	}
+
+	&__input-form::placeholder {
+		text-align: center;
+		color: $first;
+	}
+
+	&__input-form {
+		height: 2.5rem;
+		border-radius: 1rem;
+		border: 1px solid $first;
+		background-color: rgba($color: $second, $alpha: 0.9);
+	}
 }
 
 .nav {
@@ -66,22 +84,6 @@
 		}
 	}
 
-	&__input-search {
-		padding-top: 5rem;
-	}
-
-	&__input-form::placeholder {
-		text-align: center;
-		color: red;
-	}
-
-	&__input-form {
-		height: 2.5rem;
-		border-radius: 1rem;
-		border: 1px solid $first;
-		background-color: inherit;
-	}
-
 	img {
 		height: 100%;
 		width: 100%;
@@ -103,4 +105,17 @@
 
 .bag-hidden {
 	opacity: 0;
+}
+
+@keyframes navItemAnimation {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.nav-item-animation {
+	animation: navItemAnimation both;
 }

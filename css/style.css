@@ -52,8 +52,37 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #000000;
-  -webkit-transition: top 0.3s;
-  transition: top 0.3s;
+  -webkit-transition: top 0.5s;
+  transition: top 0.5s;
+}
+.top__input-search {
+  padding-top: 5rem;
+}
+.top__input-form::-webkit-input-placeholder {
+  text-align: center;
+  color: #f5f5f7;
+}
+.top__input-form::-moz-placeholder {
+  text-align: center;
+  color: #f5f5f7;
+}
+.top__input-form:-ms-input-placeholder {
+  text-align: center;
+  color: #f5f5f7;
+}
+.top__input-form::-ms-input-placeholder {
+  text-align: center;
+  color: #f5f5f7;
+}
+.top__input-form::placeholder {
+  text-align: center;
+  color: #f5f5f7;
+}
+.top__input-form {
+  height: 2.5rem;
+  border-radius: 1rem;
+  border: 1px solid #f5f5f7;
+  background-color: rgba(29, 29, 31, 0.9);
 }
 
 .nav {
@@ -123,35 +152,6 @@ a {
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
-.nav__input-search {
-  padding-top: 5rem;
-}
-.nav__input-form::-webkit-input-placeholder {
-  text-align: center;
-  color: red;
-}
-.nav__input-form::-moz-placeholder {
-  text-align: center;
-  color: red;
-}
-.nav__input-form:-ms-input-placeholder {
-  text-align: center;
-  color: red;
-}
-.nav__input-form::-ms-input-placeholder {
-  text-align: center;
-  color: red;
-}
-.nav__input-form::placeholder {
-  text-align: center;
-  color: red;
-}
-.nav__input-form {
-  height: 2.5rem;
-  border-radius: 1rem;
-  border: 1px solid #f5f5f7;
-  background-color: inherit;
-}
 .nav img {
   height: 100%;
   width: 100%;
@@ -172,6 +172,28 @@ a {
 
 .bag-hidden {
   opacity: 0;
+}
+
+@-webkit-keyframes navItemAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes navItemAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.nav-item-animation {
+  -webkit-animation: navItemAnimation both;
+          animation: navItemAnimation both;
 }
 
 @media only screen and (min-width: 834px) {

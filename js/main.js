@@ -16,16 +16,16 @@ const showMenu = () => {
 		})
 	})
 
-	// handleNavItemsAnimation()
+	handleNavItemsAnimation()
 }
 
-// const handleNavItemsAnimation = () => {
-// 	let delayTime = 0
-// 	allNavItems.forEach(item => {
-// 		item.classList.toggle('nav-item-animation')
-// 		item.style.animationDelay = delayTime / 10 + 's'
-// 		delayTime++
-// 	})
-// }
+const handleNavItemsAnimation = () => {
+	let delayTime = 0
+	allNavItems.forEach(item => {
+		item.classList.toggle('nav-item-animation')
+		item.style.animationDelay = delayTime / 10 + 's'
+		delayTime++
+	})
+}
 
 navBtn.addEventListener('click', showMenu)
