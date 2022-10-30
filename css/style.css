@@ -34,6 +34,37 @@ a {
   max-width: 1024px;
 }
 
+.click-btn .nav__burger-bel--up {
+  -webkit-transform: rotate(-45deg) translateX(-5px);
+          transform: rotate(-45deg) translateX(-5px);
+}
+.click-btn .nav__burger-bel--down {
+  -webkit-transform: rotate(45deg) translateX(-5px);
+          transform: rotate(45deg) translateX(-5px);
+}
+
+@-webkit-keyframes navItemAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes navItemAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.nav-item-animation {
+  -webkit-animation: navItemAnimation both;
+          animation: navItemAnimation both;
+}
+
 .top__list {
   position: absolute;
   display: -webkit-box;
@@ -157,43 +188,12 @@ a {
   width: 100%;
 }
 
-.click-btn .nav__burger-bel--up {
-  -webkit-transform: rotate(-45deg) translateX(-5px);
-          transform: rotate(-45deg) translateX(-5px);
-}
-.click-btn .nav__burger-bel--down {
-  -webkit-transform: rotate(45deg) translateX(-5px);
-          transform: rotate(45deg) translateX(-5px);
-}
-
 .nav-hidden {
   top: 0;
 }
 
 .bag-hidden {
   opacity: 0;
-}
-
-@-webkit-keyframes navItemAnimation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes navItemAnimation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.nav-item-animation {
-  -webkit-animation: navItemAnimation both;
-          animation: navItemAnimation both;
 }
 
 @media only screen and (min-width: 834px) {
