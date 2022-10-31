@@ -2,28 +2,21 @@
 
 ////////////////////// navigation ///////////////////////
 /////////////////////////////////////////////////////////
-.top {
-	&__list {
-		position: absolute;
-		display: flex;
-		top: -100vh;
-		left: 0;
-		right: 0;
-		height: 100vh;
-		padding-left: 5rem;
-		align-items: flex-start;
-		flex-direction: column;
-		background-color: $third;
-		transition: top 0.5s;
-	}
+.top-list {
+	position: absolute;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	top: -100vh;
+	left: 0;
+	right: 0;
+	height: 100vh;
+	padding: 5rem;
+	background-color: $third;
+	transition: top 0.5s;
 
 	&__input-search {
 		padding-top: 5rem;
-	}
-
-	&__input-form::placeholder {
-		text-align: center;
-		color: $first;
 	}
 
 	&__input-form {
@@ -31,6 +24,11 @@
 		border-radius: 1rem;
 		border: 1px solid $first;
 		background-color: rgba($color: $second, $alpha: 0.9);
+	}
+
+	&__input-form::placeholder {
+		text-align: center;
+		color: $first;
 	}
 }
 
@@ -89,10 +87,5 @@
 	}
 }
 
-.nav-hidden {
-	top: 0;
-}
-
-.bag-hidden {
-	opacity: 0;
-}
+////////////////////////// header ///////////////////////
+/////////////////////////////////////////////////////////

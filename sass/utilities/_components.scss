@@ -1,18 +1,3 @@
-.wrapper {
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1024px;
-}
-
-.click-btn {
-	.nav__burger-bel--up {
-		transform: rotate(-45deg) translateX(-5px);
-	}
-	.nav__burger-bel--down {
-		transform: rotate(45deg) translateX(-5px);
-	}
-}
-
 ///////////////////////////////////////////////////////////
 //////////////////////// animations ///////////////////////
 @keyframes navItemAnimation {

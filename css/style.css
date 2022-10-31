@@ -34,15 +34,6 @@ a {
   max-width: 1024px;
 }
 
-.click-btn .nav__burger-bel--up {
-  -webkit-transform: rotate(-45deg) translateX(-5px);
-          transform: rotate(-45deg) translateX(-5px);
-}
-.click-btn .nav__burger-bel--down {
-  -webkit-transform: rotate(45deg) translateX(-5px);
-          transform: rotate(45deg) translateX(-5px);
-}
-
 @-webkit-keyframes navItemAnimation {
   from {
     opacity: 0;
@@ -65,16 +56,11 @@ a {
           animation: navItemAnimation both;
 }
 
-.top__list {
+.top-list {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  top: -100vh;
-  left: 0;
-  right: 0;
-  height: 100vh;
-  padding-left: 5rem;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -82,38 +68,43 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  top: -100vh;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  padding: 5rem;
   background-color: #000000;
   -webkit-transition: top 0.5s;
   transition: top 0.5s;
 }
-.top__input-search {
+.top-list__input-search {
   padding-top: 5rem;
 }
-.top__input-form::-webkit-input-placeholder {
-  text-align: center;
-  color: #f5f5f7;
-}
-.top__input-form::-moz-placeholder {
-  text-align: center;
-  color: #f5f5f7;
-}
-.top__input-form:-ms-input-placeholder {
-  text-align: center;
-  color: #f5f5f7;
-}
-.top__input-form::-ms-input-placeholder {
-  text-align: center;
-  color: #f5f5f7;
-}
-.top__input-form::placeholder {
-  text-align: center;
-  color: #f5f5f7;
-}
-.top__input-form {
+.top-list__input-form {
   height: 2.5rem;
   border-radius: 1rem;
   border: 1px solid #f5f5f7;
   background-color: rgba(29, 29, 31, 0.9);
+}
+.top-list__input-form::-webkit-input-placeholder {
+  text-align: center;
+  color: #f5f5f7;
+}
+.top-list__input-form::-moz-placeholder {
+  text-align: center;
+  color: #f5f5f7;
+}
+.top-list__input-form:-ms-input-placeholder {
+  text-align: center;
+  color: #f5f5f7;
+}
+.top-list__input-form::-ms-input-placeholder {
+  text-align: center;
+  color: #f5f5f7;
+}
+.top-list__input-form::placeholder {
+  text-align: center;
+  color: #f5f5f7;
 }
 
 .nav {
@@ -188,14 +179,6 @@ a {
   width: 100%;
 }
 
-.nav-hidden {
-  top: 0;
-}
-
-.bag-hidden {
-  opacity: 0;
-}
-
 @media only screen and (min-width: 834px) {
   .nav__list {
     display: -webkit-box;
@@ -220,4 +203,20 @@ a {
   .top__list {
     display: none;
   }
+}
+.nav-hidden {
+  top: 0;
+}
+
+.bag-hidden {
+  opacity: 0;
+}
+
+.click-btn .nav__burger-bel--up {
+  -webkit-transform: rotate(-45deg) translateX(-5px);
+          transform: rotate(-45deg) translateX(-5px);
+}
+.click-btn .nav__burger-bel--down {
+  -webkit-transform: rotate(45deg) translateX(-5px);
+          transform: rotate(45deg) translateX(-5px);
 }/*# sourceMappingURL=style.css.map */
