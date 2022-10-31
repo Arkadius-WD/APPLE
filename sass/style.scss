@@ -1,19 +1,2 @@
 @use 'utilities' as *;
 @use 'layouts' as *;
-
-.nav-hidden {
-	top: 0;
-}
-
-.bag-hidden {
-	opacity: 0;
-}
-
-.click-btn {
-	.nav__burger-bel--up {
-		transform: rotate(-45deg) translateX(-5px);
-	}
-	.nav__burger-bel--down {
-		transform: rotate(45deg) translateX(-5px);
-	}
-}

@@ -1,0 +1,18 @@
+@use '../utilities' as *;
+
+.click-btn {
+	.nav-bar__burger-bel--up {
+		transform: rotate(-45deg) translateX(-5px);
+	}
+	.nav-bar__burger-bel--down {
+		transform: rotate(45deg) translateX(-5px);
+	}
+}
+
+.nav-hidden {
+	top: 0;
+}
+
+.bag-hidden {
+	opacity: 0;
+}

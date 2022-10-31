@@ -1,25 +1,27 @@
 @use '../utilities' as *;
 
 @media only screen and (min-width: 834px) {
-	.nav__list {
-		display: flex;
-		position: relative;
-		margin-left: auto;
-		margin-right: auto;
-		flex-direction: row;
-		background-color: inherit;
+	.nav-bar {
+		&__list {
+			position: relative;
+			display: flex;
+			flex-direction: row;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: inherit;
+		}
+
+		&__burger {
+			display: none;
+		}
+
+		&__search {
+			display: block;
+			margin-right: 1rem;
+		}
 	}
 
-	.nav__burger {
-		display: none;
-	}
-
-	.nav__search {
-		display: block;
-		margin-right: 1rem;
-	}
-
-	.top__list {
+	.nav-top {
 		display: none;
 	}
 }

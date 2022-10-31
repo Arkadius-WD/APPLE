@@ -1,7 +1,7 @@
-const topNav = document.querySelector('.top-list')
-const navBtn = document.querySelector('.nav__burger')
-const navBag = document.querySelector('.nav__bag')
-const allNavItems = document.querySelectorAll('.top-list__item')
+const topNav = document.querySelector('.nav-top')
+const navBtn = document.querySelector('.nav-bar__burger')
+const navBag = document.querySelector('.nav-bar__bag')
+const allNavItems = document.querySelectorAll('.nav-top__item')
 
 const showMenu = () => {
 	topNav.classList.toggle('nav-hidden')
