@@ -30,7 +30,7 @@
 		padding: 4.5rem 1.5rem 1.5rem 1.5rem;
 		width: 100%;
 		min-width: 300px;
-		border-bottom: 1.5px solid #6e6e7370;
+		border-bottom: 1.5px solid $smoke;
 	}
 	&__container-two {
 		display: flex;
@@ -51,7 +51,7 @@
 		height: 4rem;
 		border-radius: 1rem;
 		border: none;
-		background-color: #6e6e7350;
+		background-color: $smoke;
 		font-size: 1.7rem;
 		font-weight: 100;
 		line-height: 4rem;
@@ -65,7 +65,7 @@
 	&__item {
 		padding: 1.3rem 0;
 		margin-left: 3rem;
-		border-bottom: 1.5px solid #6e6e7370;
+		border-bottom: 1.5px solid $smoke;
 		color: rgba($color: $first, $alpha: 0.8);
 	}
 
