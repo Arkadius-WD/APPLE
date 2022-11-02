@@ -23,7 +23,7 @@ const handleNavItemsAnimation = () => {
 	let delayTime = 0
 	allNavItems.forEach(item => {
 		item.classList.toggle('nav-item-animation')
-		item.style.animationDelay = delayTime / 10 + 's'
+		item.style.animationDelay = delayTime / 20 + 's'
 		delayTime++
 	})
 }

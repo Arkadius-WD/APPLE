@@ -1,9 +1,3 @@
-.wrapper {
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1024px;
-}
-
 ///////////////////////////////////////////////////////////
 //////////////////////// animations ///////////////////////
 @keyframes navItemAnimation {
@@ -16,5 +10,5 @@
 }
 
 .nav-item-animation {
-	animation: navItemAnimation both;
+	animation: navItemAnimation 1s both;
 }
