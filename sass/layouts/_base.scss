@@ -1,5 +1,17 @@
 @use '../utilities' as *;
 
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1024px;
+}
+
+.top-wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 600px;
+}
+
 ////////////////////// navigation ///////////////////////
 /////////////////////////////////////////////////////////
 .nav {
@@ -118,6 +130,23 @@
 			transition: transform 0.3s;
 		}
 	}
+}
+
+.click-btn {
+	.nav-bar__burger-bel--up {
+		transform: rotate(-45deg) translateX(-5px);
+	}
+	.nav-bar__burger-bel--down {
+		transform: rotate(45deg) translateX(-5px);
+	}
+}
+
+.nav-hidden {
+	top: 0;
+}
+
+.bag-hidden {
+	opacity: 0;
 }
 
 ////////////////////////// header ///////////////////////
