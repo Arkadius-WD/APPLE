@@ -27,35 +27,13 @@ a {
   cursor: pointer;
 }
 
-@-webkit-keyframes navItemAnimation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes navItemAnimation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.nav-item-animation {
-  -webkit-animation: navItemAnimation 1s both;
-          animation: navItemAnimation 1s both;
-}
-
 .wrapper {
   margin: 0 auto;
   width: 100%;
   max-width: 1024px;
 }
 
-.top-wrapper {
+.mobi-wrapper {
   margin: 0 auto;
   width: 100%;
   max-width: 600px;
@@ -92,7 +70,7 @@ a {
   -webkit-transition: top 0.7s;
   transition: top 0.7s;
 }
-.nav-top__container {
+.nav-top__container-one {
   padding: 4.5rem 1.5rem 1.5rem 1.5rem;
   width: 100%;
   min-width: 300px;
@@ -226,6 +204,28 @@ a {
 
 .bag-hidden {
   opacity: 0;
+}
+
+@-webkit-keyframes navItemAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes navItemAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.nav-item-animation {
+  -webkit-animation: navItemAnimation 1s both;
+          animation: navItemAnimation 1s both;
 }
 
 @media only screen and (min-width: 834px) {

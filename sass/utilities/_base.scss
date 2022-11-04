@@ -1,4 +1,4 @@
-@use '../utilities' as *;
+@use 'colors' as *;
 
 .wrapper {
 	margin: 0 auto;
@@ -6,7 +6,7 @@
 	max-width: 1024px;
 }
 
-.top-wrapper {
+.mobi-wrapper {
 	margin: 0 auto;
 	width: 100%;
 	max-width: 600px;
@@ -38,7 +38,7 @@
 	background-color: $third;
 	transition: top 0.7s;
 
-	&__container {
+	&__container-one {
 		padding: 4.5rem 1.5rem 1.5rem 1.5rem;
 		width: 100%;
 		min-width: 300px;
