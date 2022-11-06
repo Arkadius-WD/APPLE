@@ -1,4 +1,33 @@
-@media only screen and (min-width: 834px) {
+@media screen and (min-width: 734px) {
+	.homepage-section {
+		h2 {
+			font-size: 4rem;
+		}
+		h3 {
+			font-size: 2rem;
+		}
+
+		a {
+			font-size: 1.8rem;
+		}
+	}
+
+	.iPad-section {
+		flex-direction: row;
+
+		&__picture {
+			width: 90%;
+			order: 0;
+		}
+
+		&__text {
+			position: absolute;
+			right: 10rem;
+		}
+	}
+}
+
+@media screen and (min-width: 834px) {
 	.nav-bar {
 		&__list {
 			display: flex;
@@ -25,5 +54,33 @@
 
 	.nav-top {
 		display: none;
+	}
+
+	.iPad-section {
+		&__text {
+			position: absolute;
+			right: 20rem;
+		}
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.homepage-section {
+		h2 {
+			font-size: 4.5rem;
+		}
+		h3 {
+			font-size: 2.5rem;
+		}
+
+		a {
+			font-size: 1.8rem;
+		}
+	}
+
+	.iPad-section {
+		&__text {
+			right: 20rem;
+		}
 	}
 }

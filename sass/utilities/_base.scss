@@ -32,6 +32,7 @@
 	height: 4.4rem;
 	width: 100%;
 	background-color: rgba($color: $second, $alpha: 0.9);
+	z-index: 5;
 
 	img {
 		height: 100%;
@@ -167,14 +168,48 @@
 .homepage-section {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: repeat(3, 50rem);
-	color: black;
+	grid-template-rows: repeat(3, 70rem);
+	background-color: $bgcolor;
+
+	h2 {
+		padding-top: 2.5rem;
+		font-size: 3rem;
+		font-weight: 700;
+		margin-bottom: 0.5rem;
+	}
+	h3 {
+		font-size: 1.8rem;
+		font-weight: 500;
+		margin-bottom: 1.2rem;
+	}
 
 	a {
-		color: black;
+		font-size: 1.8rem;
+		font-weight: 500;
+		color: $link;
+		padding: 1.5rem;
 	}
 }
 
-.iPad-container {
+.iPad-section {
+	position: relative;
 	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	&__picture {
+		background-image: url('../img/iPad.jpg');
+		background-size: contain;
+		background-repeat: no-repeat;
+		height: 90%;
+		width: 70%;
+		min-width: 27rem;
+		order: 1;
+	}
+
+	&__text {
+		padding-bottom: 2.5rem;
+	}
 }

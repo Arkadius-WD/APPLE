@@ -58,6 +58,7 @@ a {
   height: 4.4rem;
   width: 100%;
   background-color: rgba(29, 29, 31, 0.9);
+  z-index: 5;
 }
 .nav img {
   height: 100%;
@@ -217,20 +218,87 @@ a {
 .homepage-section {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 50rem);
-  color: black;
+  grid-template-rows: repeat(3, 70rem);
+  background-color: #fff;
+}
+.homepage-section h2 {
+  padding-top: 2.5rem;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.homepage-section h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
 }
 .homepage-section a {
-  color: black;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #0066cc;
+  padding: 1.5rem;
 }
 
-.iPad-container {
+.iPad-section {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+.iPad-section__picture {
+  background-image: url("../img/iPad.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 90%;
+  width: 70%;
+  min-width: 27rem;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+.iPad-section__text {
+  padding-bottom: 2.5rem;
 }
 
-@media only screen and (min-width: 834px) {
+@media screen and (min-width: 734px) {
+  .homepage-section h2 {
+    font-size: 4rem;
+  }
+  .homepage-section h3 {
+    font-size: 2rem;
+  }
+  .homepage-section a {
+    font-size: 1.8rem;
+  }
+  .iPad-section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .iPad-section__picture {
+    width: 90%;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .iPad-section__text {
+    position: absolute;
+    right: 10rem;
+  }
+}
+@media screen and (min-width: 834px) {
   .nav-bar__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -258,6 +326,24 @@ a {
   }
   .nav-top {
     display: none;
+  }
+  .iPad-section__text {
+    position: absolute;
+    right: 20rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .homepage-section h2 {
+    font-size: 4.5rem;
+  }
+  .homepage-section h3 {
+    font-size: 2.5rem;
+  }
+  .homepage-section a {
+    font-size: 1.8rem;
+  }
+  .iPad-section__text {
+    right: 20rem;
   }
 }
 @-webkit-keyframes navItemAnimation {
