@@ -168,4 +168,13 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(3, 50rem);
+	color: black;
+
+	a {
+		color: black;
+	}
+}
+
+.iPad-container {
+	display: flex;
 }

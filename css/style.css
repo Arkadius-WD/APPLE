@@ -218,6 +218,16 @@ a {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 50rem);
+  color: black;
+}
+.homepage-section a {
+  color: black;
+}
+
+.iPad-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media only screen and (min-width: 834px) {
