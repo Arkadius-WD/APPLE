@@ -1,0 +1,12 @@
+@keyframes navItemAnimation {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.nav-item-animation {
+	animation: navItemAnimation 1s both;
+}

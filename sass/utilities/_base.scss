@@ -10,6 +10,18 @@
 	margin: 0 auto;
 	width: 100%;
 	max-width: 600px;
+	min-width: 300px;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(0px 0px 99.9% 99.9%);
+	overflow: hidden;
+	height: 1px;
+	width: 1px;
+	padding: 0;
+	border: 0;
 }
 
 ////////////////////// navigation ///////////////////////
@@ -17,7 +29,7 @@
 .nav {
 	position: sticky;
 	top: 0;
-	height: 4.8rem;
+	height: 4.4rem;
 	width: 100%;
 	background-color: rgba($color: $second, $alpha: 0.9);
 
@@ -41,7 +53,6 @@
 	&__container-one {
 		padding: 4.5rem 1.5rem 1.5rem 1.5rem;
 		width: 100%;
-		min-width: 300px;
 		border-bottom: 1.5px solid $smoke;
 	}
 	&__container-two {
@@ -50,11 +61,6 @@
 		flex-direction: column;
 		padding: 0 3.5rem;
 		width: 100%;
-		min-width: 300px;
-	}
-
-	&__input-search {
-		min-width: 300px;
 	}
 
 	&__input-form {
@@ -97,7 +103,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 4.8rem;
+	height: 4.4rem;
 	z-index: 0;
 
 	&__burger,
@@ -107,8 +113,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 4.8rem;
-		width: 4.8rem;
+		height: 4.4rem;
+		width: 4.4rem;
 		opacity: 0.8;
 	}
 
@@ -155,5 +161,11 @@
 	opacity: 0;
 }
 
-////////////////////////// header ///////////////////////
+////////////////////////// main /////////////////////////
 /////////////////////////////////////////////////////////
+
+.homepage-section {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(3, 50rem);
+}

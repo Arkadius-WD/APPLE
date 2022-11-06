@@ -1,1 +1,5 @@
-@use 'utilities' as *;
+@use './utilities/colors' as *;
+@use './utilities/reset' as *;
+@use './utilities/base' as *;
+@use './utilities/media' as *;
+@use './utilities/animations' as *;
