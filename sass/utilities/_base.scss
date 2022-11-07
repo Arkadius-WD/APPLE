@@ -1,16 +1,18 @@
 @use 'colors' as *;
 
-.wrapper {
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1024px;
-}
-
+.wrapper,
 .mobi-wrapper {
 	margin: 0 auto;
 	width: 100%;
-	max-width: 600px;
-	min-width: 300px;
+	min-width: 30rem;
+}
+
+.wrapper {
+	max-width: 100.24rem;
+}
+
+.mobi-wrapper {
+	max-width: 60rem;
 }
 
 .visually-hidden {
@@ -27,7 +29,7 @@
 ////////////////////// navigation ///////////////////////
 /////////////////////////////////////////////////////////
 .nav {
-	position: sticky;
+	position: fixed;
 	top: 0;
 	height: 4.4rem;
 	width: 100%;
@@ -166,34 +168,34 @@
 ////////////////////////// main /////////////////////////
 /////////////////////////////////////////////////////////
 
+.text-title {
+	margin-bottom: 0.5rem;
+	font-size: 3rem;
+	font-weight: 700;
+}
+.text-content {
+	margin-bottom: 1.2rem;
+	font-size: 1.8rem;
+	font-weight: 500;
+}
+
+.text-link {
+	padding: 1.5rem;
+	font-size: 1.8rem;
+	font-weight: 500;
+	color: $link;
+}
+
 .homepage-section {
 	display: grid;
-	grid-template-rows: repeat(3, 80vh);
+	grid-template-rows: 55rem 49rem 49rem;
 	gap: 1rem;
 	background-color: $bgcolor;
-
-	h2 {
-		padding-top: 3rem;
-		font-size: 3rem;
-		font-weight: 700;
-		margin-bottom: 0.5rem;
-	}
-	h3 {
-		font-size: 1.8rem;
-		font-weight: 500;
-		margin-bottom: 1.2rem;
-	}
-
-	a {
-		font-size: 1.8rem;
-		font-weight: 500;
-		color: $link;
-		padding: 1.5rem;
-	}
 }
 
 .iPad-section,
-.iPhone-section {
+.iPhone-section,
+.gift-section {
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -202,23 +204,41 @@
 }
 
 .iPad-section {
+	background-color: $first;
+	&__text {
+		position: absolute;
+		top: 8rem;
+	}
+
 	&__picture {
-		height: 70%;
-		padding: 3rem;
-		order: 1;
+		background-image: url('../img/iPad.jpg');
+		background-size: 75rem;
+		background-position: center bottom;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
 	}
 }
 
 .iPhone-section {
+	&__text {
+		position: absolute;
+		top: 5rem;
+	}
 	&__picture {
 		background-image: url('../img/iPhone.jpg');
-		background-size: cover;
-		background-position: center -2rem;
+		background-size: 210rem;
+		background-position: center bottom;
+		background-repeat: no-repeat;
 		width: 100%;
 		height: 100%;
 	}
+}
 
-	&__text {
-		position: absolute;
+.gift-section {
+	background-color: $bgdark;
+	.text-title,
+	.text-content {
+		color: $first;
 	}
 }
