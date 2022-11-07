@@ -112,7 +112,7 @@ a {
   height: 4rem;
   border-radius: 1rem;
   border: none;
-  background-color: rgba(110, 110, 115, 0.4392156863);
+  background-color: #1d1d1f;
   font-size: 1.7rem;
   font-weight: 100;
   line-height: 4rem;
@@ -227,17 +227,17 @@ a {
 .text-content {
   margin-bottom: 1.2rem;
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .text-link {
   padding: 1.5rem;
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 400;
   color: #0066cc;
 }
 
-.homepage-section {
+.main-homepage {
   display: grid;
   grid-template-rows: 55rem 49rem 49rem;
   gap: 1rem;
@@ -277,13 +277,16 @@ a {
   height: 100%;
 }
 
+.iPhone-section {
+  background-color: #fbfbfd;
+}
 .iPhone-section__text {
   position: absolute;
-  top: 5rem;
+  top: 4rem;
 }
 .iPhone-section__picture {
   background-image: url("../img/iPhone.jpg");
-  background-size: 210rem;
+  background-size: 75rem;
   background-position: center bottom;
   background-repeat: no-repeat;
   width: 100%;
@@ -296,6 +299,19 @@ a {
 .gift-section .text-title,
 .gift-section .text-content {
   color: #fbfbfd;
+}
+.gift-section__text {
+  position: absolute;
+  bottom: 4rem;
+  max-width: 40rem;
+}
+.gift-section__picture {
+  background-image: url("../../img/hero_endframe__8xosbwdvpaqe_small.jpg");
+  background-size: 75rem;
+  background-position: center -5rem;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (min-width: 834px) {
