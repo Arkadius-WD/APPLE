@@ -14,12 +14,13 @@ html {
 }
 
 body {
+	min-width: 34rem;
 	font-size: 1.7rem;
 	font-weight: 300;
 	font-family: 'Lato', sans-serif;
+	font-style: normal;
 	background-color: $first;
 	color: $second;
-	font-style: normal;
 }
 
 a {

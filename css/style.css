@@ -13,12 +13,13 @@ html {
 }
 
 body {
+  min-width: 34rem;
   font-size: 1.7rem;
   font-weight: 300;
   font-family: "Lato", sans-serif;
+  font-style: normal;
   background-color: #fbfbfd;
   color: #1d1d1f;
-  font-style: normal;
 }
 
 a {
@@ -239,14 +240,22 @@ a {
 
 .main-homepage {
   display: grid;
-  grid-template-rows: 55rem 49rem 49rem;
-  gap: 1rem;
+  grid-template-rows: 55rem 50rem 50rem;
+  gap: 1.2rem;
   background-color: #fff;
+}
+
+.base-picture {
+  background-size: 74rem;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
 }
 
 .iPad-section,
 .iPhone-section,
-.gift-section {
+.endframe-section {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -269,12 +278,7 @@ a {
   top: 8rem;
 }
 .iPad-section__picture {
-  background-image: url("../img/iPad.jpg");
-  background-size: 75rem;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+  background-image: url("../../img/hero_ipad__rh99l6c3yuyy_small.jpg");
 }
 
 .iPhone-section {
@@ -282,38 +286,39 @@ a {
 }
 .iPhone-section__text {
   position: absolute;
-  top: 4rem;
+  top: 3.5rem;
 }
 .iPhone-section__picture {
-  background-image: url("../img/iPhone.jpg");
-  background-size: 75rem;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+  background-image: url("../../img/hero_iphone14__fjmsqstr1ceq_small.jpg");
 }
 
-.gift-section {
+.endframe-section {
   background-color: #010127;
 }
-.gift-section .text-title,
-.gift-section .text-content {
+.endframe-section .text-title,
+.endframe-section .text-content {
   color: #fbfbfd;
 }
-.gift-section__text {
+.endframe-section__text {
   position: absolute;
-  bottom: 4rem;
-  max-width: 40rem;
+  bottom: 5rem;
+  max-width: 30rem;
 }
-.gift-section__picture {
+.endframe-section__picture {
   background-image: url("../../img/hero_endframe__8xosbwdvpaqe_small.jpg");
-  background-size: 75rem;
-  background-position: center -5rem;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
 }
 
+@media screen and (min-width: 734px) {
+  .iPad-section__picture {
+    background-image: url("../../img/hero_ipad__rh99l6c3yuyy_medium.jpg");
+  }
+  .iPhone-section__picture {
+    background-image: url("../../img/hero_iphone14__fjmsqstr1ceq_medium.jpg");
+  }
+  .endframe-section__picture {
+    background-image: url("../../img/hero_endframe__8xosbwdvpaqe_medium.jpg");
+  }
+}
 @media screen and (min-width: 834px) {
   .nav-bar__list {
     display: -webkit-box;
@@ -342,6 +347,17 @@ a {
   }
   .nav-top {
     display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .iPad-section__picture {
+    background-image: url("../../img/hero_ipad__rh99l6c3yuyy_large.jpg");
+  }
+  .iPhone-section__picture {
+    background-image: url("../../img/hero_iphone14__fjmsqstr1ceq_large.jpg");
+  }
+  .endframe-section__picture {
+    background-image: url("../../img/hero_endframe__8xosbwdvpaqe_large.jpg");
   }
 }
 @-webkit-keyframes navItemAnimation {

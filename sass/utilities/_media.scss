@@ -1,4 +1,21 @@
 @media screen and (min-width: 734px) {
+	.iPad-section {
+		&__picture {
+			background-image: url('../../img/hero_ipad__rh99l6c3yuyy_medium.jpg');
+		}
+	}
+
+	.iPhone-section {
+		&__picture {
+			background-image: url('../../img/hero_iphone14__fjmsqstr1ceq_medium.jpg');
+		}
+	}
+
+	.endframe-section {
+		&__picture {
+			background-image: url('../../img/hero_endframe__8xosbwdvpaqe_medium.jpg');
+		}
+	}
 }
 
 @media screen and (min-width: 834px) {
@@ -31,5 +48,22 @@
 	}
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
+	.iPad-section {
+		&__picture {
+			background-image: url('../../img/hero_ipad__rh99l6c3yuyy_large.jpg');
+		}
+	}
+
+	.iPhone-section {
+		&__picture {
+			background-image: url('../../img/hero_iphone14__fjmsqstr1ceq_large.jpg');
+		}
+	}
+
+	.endframe-section {
+		&__picture {
+			background-image: url('../../img/hero_endframe__8xosbwdvpaqe_large.jpg');
+		}
+	}
 }
