@@ -74,20 +74,22 @@
 		border-radius: 1rem;
 		border: none;
 		background-color: $second;
-		font-size: 1.7rem;
-		font-weight: 100;
-		line-height: 4rem;
 		background-image: url('../img/globalnav_search_image__grey.svg');
 		background-position: 1.5rem 1.3rem;
 		background-repeat: no-repeat;
 		padding-left: 40px;
+		font-family: 'Lato', sans-serif;
+		font-size: 1.7rem;
+		font-weight: 300;
+	}
+
+	&__input-form::placeholder {
+		color: $first;
+		opacity: 0.3;
 	}
 
 	&__input-form:focus {
 		color: $first;
-		font-size: 1.7rem;
-		font-weight: 100;
-		line-height: 4rem;
 	}
 
 	&__item {
@@ -193,14 +195,6 @@
 	background-color: $bgcolor;
 }
 
-.base-picture {
-	background-size: 74rem;
-	background-position: center bottom;
-	background-repeat: no-repeat;
-	width: 100%;
-	height: 100%;
-}
-
 .iPad-section,
 .iPhone-section,
 .endframe-section {
@@ -211,6 +205,16 @@
 	text-align: center;
 }
 
+.iPad-section__picture,
+.iPhone-section__picture,
+.endframe-section__picture {
+	background-size: 74rem;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
 .iPad-section {
 	background-color: $first;
 	&__text {
@@ -219,7 +223,7 @@
 	}
 
 	&__picture {
-		background-image: url('../../img/hero_ipad__rh99l6c3yuyy_small.jpg');
+		background-image: url('../img/hero_ipad__rh99l6c3yuyy_small.jpg');
 	}
 }
 
@@ -231,7 +235,7 @@
 	}
 
 	&__picture {
-		background-image: url('../../img/hero_iphone14__fjmsqstr1ceq_small.jpg');
+		background-image: url('../img/hero_iphone14__fjmsqstr1ceq_small.jpg');
 	}
 }
 
@@ -249,7 +253,6 @@
 	}
 
 	&__picture {
-		background-image: url('../../img/hero_endframe__8xosbwdvpaqe_small.jpg');
-		// background-position: center -5rem;
+		background-image: url('../img/hero_endframe__8xosbwdvpaqe_small.jpg');
 	}
 }

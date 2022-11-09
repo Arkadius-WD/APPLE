@@ -114,19 +114,36 @@ a {
   border-radius: 1rem;
   border: none;
   background-color: #1d1d1f;
-  font-size: 1.7rem;
-  font-weight: 100;
-  line-height: 4rem;
   background-image: url("../img/globalnav_search_image__grey.svg");
   background-position: 1.5rem 1.3rem;
   background-repeat: no-repeat;
   padding-left: 40px;
+  font-family: "Lato", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+.nav-top__input-form::-webkit-input-placeholder {
+  color: #fbfbfd;
+  opacity: 0.3;
+}
+.nav-top__input-form::-moz-placeholder {
+  color: #fbfbfd;
+  opacity: 0.3;
+}
+.nav-top__input-form:-ms-input-placeholder {
+  color: #fbfbfd;
+  opacity: 0.3;
+}
+.nav-top__input-form::-ms-input-placeholder {
+  color: #fbfbfd;
+  opacity: 0.3;
+}
+.nav-top__input-form::placeholder {
+  color: #fbfbfd;
+  opacity: 0.3;
 }
 .nav-top__input-form:focus {
   color: #fbfbfd;
-  font-size: 1.7rem;
-  font-weight: 100;
-  line-height: 4rem;
 }
 .nav-top__item {
   width: 100%;
@@ -245,14 +262,6 @@ a {
   background-color: #fff;
 }
 
-.base-picture {
-  background-size: 74rem;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-
 .iPad-section,
 .iPhone-section,
 .endframe-section {
@@ -270,6 +279,16 @@ a {
   text-align: center;
 }
 
+.iPad-section__picture,
+.iPhone-section__picture,
+.endframe-section__picture {
+  background-size: 74rem;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
 .iPad-section {
   background-color: #fbfbfd;
 }
@@ -278,7 +297,7 @@ a {
   top: 8rem;
 }
 .iPad-section__picture {
-  background-image: url("../../img/hero_ipad__rh99l6c3yuyy_small.jpg");
+  background-image: url("../img/hero_ipad__rh99l6c3yuyy_small.jpg");
 }
 
 .iPhone-section {
@@ -289,7 +308,7 @@ a {
   top: 3.5rem;
 }
 .iPhone-section__picture {
-  background-image: url("../../img/hero_iphone14__fjmsqstr1ceq_small.jpg");
+  background-image: url("../img/hero_iphone14__fjmsqstr1ceq_small.jpg");
 }
 
 .endframe-section {
@@ -305,18 +324,46 @@ a {
   max-width: 30rem;
 }
 .endframe-section__picture {
-  background-image: url("../../img/hero_endframe__8xosbwdvpaqe_small.jpg");
+  background-image: url("../img/hero_endframe__8xosbwdvpaqe_small.jpg");
 }
 
 @media screen and (min-width: 734px) {
+  .main-homepage {
+    grid-template-rows: 70rem 68rem 68rem;
+  }
   .iPad-section__picture {
-    background-image: url("../../img/hero_ipad__rh99l6c3yuyy_medium.jpg");
+    background-size: 120rem;
+    background-position: center;
+    background-image: url("../img/hero_ipad__rh99l6c3yuyy_medium.jpg");
+  }
+  .iPad-section__text {
+    top: 30rem;
+    left: 50%;
   }
   .iPhone-section__picture {
-    background-image: url("../../img/hero_iphone14__fjmsqstr1ceq_medium.jpg");
+    background-size: 130rem;
+    background-image: url("../img/hero_iphone14__fjmsqstr1ceq_medium.jpg");
+  }
+  .iPhone-section__text {
+    top: 6rem;
   }
   .endframe-section__picture {
-    background-image: url("../../img/hero_endframe__8xosbwdvpaqe_medium.jpg");
+    background-size: 110rem;
+    background-position: center 0.8rem;
+    background-image: url("../img/hero_endframe__8xosbwdvpaqe_medium.jpg");
+  }
+  .endframe-section__text {
+    max-width: 43rem;
+    bottom: 6rem;
+  }
+  .text-title {
+    font-size: 4.8rem;
+  }
+  .text-content {
+    font-size: 2.4rem;
+  }
+  .text-link {
+    font-size: 1.9rem;
   }
 }
 @media screen and (min-width: 834px) {
@@ -350,14 +397,37 @@ a {
   }
 }
 @media screen and (min-width: 1024px) {
+  .main-homepage {
+    grid-template-rows: 74rem 68rem 68rem;
+  }
   .iPad-section__picture {
-    background-image: url("../../img/hero_ipad__rh99l6c3yuyy_large.jpg");
+    background-size: 350rem;
+    background-image: url("../img/hero_ipad__rh99l6c3yuyy_large.jpg");
   }
   .iPhone-section__picture {
-    background-image: url("../../img/hero_iphone14__fjmsqstr1ceq_large.jpg");
+    background-size: 370rem;
+    background-image: url("../img/hero_iphone14__fjmsqstr1ceq_large.jpg");
+  }
+  .iPhone-section__text {
+    top: 5rem;
   }
   .endframe-section__picture {
-    background-image: url("../../img/hero_endframe__8xosbwdvpaqe_large.jpg");
+    background-size: 340rem;
+    background-position: center -1.5rem;
+    background-image: url("../img/hero_endframe__8xosbwdvpaqe_large.jpg");
+  }
+  .endframe-section__text {
+    max-width: 50rem;
+    bottom: 5rem;
+  }
+  .text-title {
+    font-size: 5.6rem;
+  }
+  .text-content {
+    font-size: 2.8rem;
+  }
+  .text-link {
+    font-size: 2.1rem;
   }
 }
 @-webkit-keyframes navItemAnimation {

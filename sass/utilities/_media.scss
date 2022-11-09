@@ -1,20 +1,55 @@
 @media screen and (min-width: 734px) {
+	.main-homepage {
+		grid-template-rows: 70rem 68rem 68rem;
+	}
+
 	.iPad-section {
 		&__picture {
-			background-image: url('../../img/hero_ipad__rh99l6c3yuyy_medium.jpg');
+			background-size: 120rem;
+			background-position: center;
+			background-image: url('../img/hero_ipad__rh99l6c3yuyy_medium.jpg');
+		}
+
+		&__text {
+			top: 30rem;
+			left: 50%;
 		}
 	}
 
 	.iPhone-section {
 		&__picture {
-			background-image: url('../../img/hero_iphone14__fjmsqstr1ceq_medium.jpg');
+			background-size: 130rem;
+			background-image: url('../img/hero_iphone14__fjmsqstr1ceq_medium.jpg');
+		}
+
+		&__text {
+			top: 6rem;
 		}
 	}
 
 	.endframe-section {
 		&__picture {
-			background-image: url('../../img/hero_endframe__8xosbwdvpaqe_medium.jpg');
+			background-size: 110rem;
+			background-position: center 0.8rem;
+			background-image: url('../img/hero_endframe__8xosbwdvpaqe_medium.jpg');
 		}
+
+		&__text {
+			max-width: 43rem;
+			bottom: 6rem;
+		}
+	}
+
+	.text-title {
+		font-size: 4.8rem;
+	}
+
+	.text-content {
+		font-size: 2.4rem;
+	}
+
+	.text-link {
+		font-size: 1.9rem;
 	}
 }
 
@@ -49,21 +84,50 @@
 }
 
 @media screen and (min-width: 1024px) {
+	.main-homepage {
+		grid-template-rows: 74rem 68rem 68rem;
+	}
+
 	.iPad-section {
 		&__picture {
-			background-image: url('../../img/hero_ipad__rh99l6c3yuyy_large.jpg');
+			background-size: 350rem;
+			background-image: url('../img/hero_ipad__rh99l6c3yuyy_large.jpg');
 		}
 	}
 
 	.iPhone-section {
 		&__picture {
-			background-image: url('../../img/hero_iphone14__fjmsqstr1ceq_large.jpg');
+			background-size: 370rem;
+			background-image: url('../img/hero_iphone14__fjmsqstr1ceq_large.jpg');
+		}
+
+		&__text {
+			top: 5rem;
 		}
 	}
 
 	.endframe-section {
 		&__picture {
-			background-image: url('../../img/hero_endframe__8xosbwdvpaqe_large.jpg');
+			background-size: 340rem;
+			background-position: center -1.5rem;
+			background-image: url('../img/hero_endframe__8xosbwdvpaqe_large.jpg');
 		}
+
+		&__text {
+			max-width: 50rem;
+			bottom: 5rem;
+		}
+	}
+
+	.text-title {
+		font-size: 5.6rem;
+	}
+
+	.text-content {
+		font-size: 2.8rem;
+	}
+
+	.text-link {
+		font-size: 2.1rem;
 	}
 }
