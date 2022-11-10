@@ -236,35 +236,40 @@ a {
   opacity: 0;
 }
 
-.text-title {
+.text-title,
+.text-M-title {
   margin-bottom: 0.5rem;
   font-size: 3rem;
   font-weight: 700;
 }
 
-.text-content {
+.text-content,
+.text-M-content {
   margin-bottom: 1.2rem;
   font-size: 1.8rem;
   font-weight: 400;
 }
 
-.text-link {
+.text-link,
+.text-M-link {
   padding: 1.5rem;
   font-size: 1.8rem;
   font-weight: 400;
   color: #0066cc;
 }
 
-.main-homepage {
-  display: grid;
-  grid-template-rows: 55rem 50rem 50rem;
-  gap: 1.2rem;
+.main {
   background-color: #fff;
 }
 
-.iPad-section,
-.iPhone-section,
-.endframe-section {
+.main-heroes {
+  display: grid;
+  grid-template-rows: 55rem 50rem 50rem;
+  gap: 1.2rem;
+}
+
+.main-heroes > *,
+.main-promos > * {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -279,9 +284,9 @@ a {
   text-align: center;
 }
 
-.iPad-section__picture,
-.iPhone-section__picture,
-.endframe-section__picture {
+.iPad-hero__picture,
+.iPhone-hero__picture,
+.endframe-hero__picture {
   background-size: 74rem;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -289,70 +294,77 @@ a {
   height: 100%;
 }
 
-.iPad-section {
+.iPad-hero {
   background-color: #fbfbfd;
 }
-.iPad-section__text {
+.iPad-hero__text {
   position: absolute;
   top: 8rem;
 }
-.iPad-section__picture {
+.iPad-hero__picture {
   background-image: url("../img/hero_ipad__rh99l6c3yuyy_small.jpg");
 }
 
-.iPhone-section {
+.iPhone-hero {
   background-color: #fbfbfd;
 }
-.iPhone-section__text {
+.iPhone-hero__text {
   position: absolute;
   top: 3.5rem;
 }
-.iPhone-section__picture {
+.iPhone-hero__picture {
   background-image: url("../img/hero_iphone14__fjmsqstr1ceq_small.jpg");
 }
 
-.endframe-section {
+.endframe-hero {
   background-color: #010127;
 }
-.endframe-section .text-title,
-.endframe-section .text-content {
+.endframe-hero .text-title,
+.endframe-hero .text-content {
   color: #fbfbfd;
 }
-.endframe-section__text {
+.endframe-hero__text {
   position: absolute;
   bottom: 5rem;
   max-width: 30rem;
 }
-.endframe-section__picture {
+.endframe-hero__picture {
   background-image: url("../img/hero_endframe__8xosbwdvpaqe_small.jpg");
 }
 
-@media screen and (min-width: 734px) {
-  .main-homepage {
+.main-promos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+@media only screen and (min-width: 734px) {
+  .main-heroes {
     grid-template-rows: 70rem 68rem 68rem;
   }
-  .iPad-section__picture {
+  .iPad-hero__picture {
     background-size: 120rem;
     background-position: center;
     background-image: url("../img/hero_ipad__rh99l6c3yuyy_medium.jpg");
   }
-  .iPad-section__text {
+  .iPad-hero__text {
     top: 30rem;
     left: 50%;
   }
-  .iPhone-section__picture {
+  .iPhone-hero__picture {
     background-size: 130rem;
     background-image: url("../img/hero_iphone14__fjmsqstr1ceq_medium.jpg");
   }
-  .iPhone-section__text {
+  .iPhone-hero__text {
     top: 6rem;
   }
-  .endframe-section__picture {
+  .endframe-hero__picture {
     background-size: 110rem;
     background-position: center 0.8rem;
     background-image: url("../img/hero_endframe__8xosbwdvpaqe_medium.jpg");
   }
-  .endframe-section__text {
+  .endframe-hero__text {
     max-width: 43rem;
     bottom: 6rem;
   }
@@ -366,7 +378,7 @@ a {
     font-size: 1.9rem;
   }
 }
-@media screen and (min-width: 834px) {
+@media only screen and (min-width: 834px) {
   .nav-bar__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -396,27 +408,27 @@ a {
     display: none;
   }
 }
-@media screen and (min-width: 1024px) {
-  .main-homepage {
+@media only screen and (min-width: 1024px) {
+  .main-heroes {
     grid-template-rows: 74rem 68rem 68rem;
   }
-  .iPad-section__picture {
+  .iPad-hero__picture {
     background-size: 350rem;
     background-image: url("../img/hero_ipad__rh99l6c3yuyy_large.jpg");
   }
-  .iPhone-section__picture {
+  .iPhone-hero__picture {
     background-size: 370rem;
     background-image: url("../img/hero_iphone14__fjmsqstr1ceq_large.jpg");
   }
-  .iPhone-section__text {
+  .iPhone-hero__text {
     top: 5rem;
   }
-  .endframe-section__picture {
+  .endframe-hero__picture {
     background-size: 340rem;
     background-position: center -1.5rem;
     background-image: url("../img/hero_endframe__8xosbwdvpaqe_large.jpg");
   }
-  .endframe-section__text {
+  .endframe-hero__text {
     max-width: 50rem;
     bottom: 5rem;
   }

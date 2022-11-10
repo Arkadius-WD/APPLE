@@ -1,9 +1,9 @@
-@media screen and (min-width: 734px) {
-	.main-homepage {
+@media only screen and (min-width: 734px) {
+	.main-heroes {
 		grid-template-rows: 70rem 68rem 68rem;
 	}
 
-	.iPad-section {
+	.iPad-hero {
 		&__picture {
 			background-size: 120rem;
 			background-position: center;
@@ -16,7 +16,7 @@
 		}
 	}
 
-	.iPhone-section {
+	.iPhone-hero {
 		&__picture {
 			background-size: 130rem;
 			background-image: url('../img/hero_iphone14__fjmsqstr1ceq_medium.jpg');
@@ -27,7 +27,7 @@
 		}
 	}
 
-	.endframe-section {
+	.endframe-hero {
 		&__picture {
 			background-size: 110rem;
 			background-position: center 0.8rem;
@@ -53,7 +53,7 @@
 	}
 }
 
-@media screen and (min-width: 834px) {
+@media only screen and (min-width: 834px) {
 	.nav-bar {
 		&__list {
 			display: flex;
@@ -83,19 +83,19 @@
 	}
 }
 
-@media screen and (min-width: 1024px) {
-	.main-homepage {
+@media only screen and (min-width: 1024px) {
+	.main-heroes {
 		grid-template-rows: 74rem 68rem 68rem;
 	}
 
-	.iPad-section {
+	.iPad-hero {
 		&__picture {
 			background-size: 350rem;
 			background-image: url('../img/hero_ipad__rh99l6c3yuyy_large.jpg');
 		}
 	}
 
-	.iPhone-section {
+	.iPhone-hero {
 		&__picture {
 			background-size: 370rem;
 			background-image: url('../img/hero_iphone14__fjmsqstr1ceq_large.jpg');
@@ -106,7 +106,7 @@
 		}
 	}
 
-	.endframe-section {
+	.endframe-hero {
 		&__picture {
 			background-size: 340rem;
 			background-position: center -1.5rem;
