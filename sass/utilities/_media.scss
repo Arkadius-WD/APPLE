@@ -1,10 +1,25 @@
 @media (orientation: landscape) {
 	.nav-top {
 		top: -200vh;
-		height: 200vh;
+		overflow-y: scroll;
 	}
 	.nav-hidden {
 		top: 0;
+
+		.nav-top__container-one {
+			position: fixed;
+			top: 0;
+			z-index: 1;
+			background-color: black;
+		}
+
+		.nav-top__container-two {
+			position: absolute;
+			top: 10rem;
+			left: 0;
+			right: 0;
+			z-index: 0;
+		}
 	}
 }
 

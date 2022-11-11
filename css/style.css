@@ -167,7 +167,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   height: 4.4rem;
-  z-index: 0;
+  z-index: 5;
 }
 .nav-bar__burger, .nav-bar__logo, .nav-bar__search, .nav-bar__bag {
   display: -webkit-box;
@@ -207,6 +207,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  cursor: pointer;
 }
 .nav-bar__burger-bel {
   margin: 0.3rem;
@@ -347,10 +348,23 @@ a {
 @media (orientation: landscape) {
   .nav-top {
     top: -200vh;
-    height: 200vh;
+    overflow-y: scroll;
   }
   .nav-hidden {
     top: 0;
+  }
+  .nav-hidden .nav-top__container-one {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+  }
+  .nav-hidden .nav-top__container-two {
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    right: 0;
+    z-index: 0;
   }
 }
 @media only screen and (min-widtand: 734px) {
