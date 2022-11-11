@@ -1,4 +1,14 @@
-@media only screen and (min-width: 734px) {
+@media (orientation: landscape) {
+	.nav-top {
+		top: -200vh;
+		height: 200vh;
+	}
+	.nav-hidden {
+		top: 0;
+	}
+}
+
+@media only screen and (min-widtand: 734px) {
 	.main-heroes {
 		grid-template-rows: 70rem 68rem 68rem;
 	}
@@ -50,6 +60,13 @@
 
 	.text-link {
 		font-size: 1.9rem;
+	}
+
+	.main-promos {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		gap: 1.2rem;
 	}
 }
 
