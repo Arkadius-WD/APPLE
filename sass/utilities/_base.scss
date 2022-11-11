@@ -73,11 +73,11 @@
 		height: 4rem;
 		border-radius: 1rem;
 		border: none;
-		background-color: $second;
 		background-image: url('../img/globalnav_search_image__grey.svg');
 		background-position: 1.5rem 1.3rem;
 		background-repeat: no-repeat;
 		padding-left: 40px;
+		background-color: $second;
 		font-family: 'Lato', sans-serif;
 		font-size: 1.7rem;
 		font-weight: 300;
@@ -169,6 +169,10 @@
 
 ////////////////////////// main /////////////////////////
 /////////////////////////////////////////////////////////
+.main {
+	background-color: $bgcolor;
+}
+
 .text-title,
 .text-M-title {
 	margin-bottom: 0.5rem;
@@ -188,13 +192,6 @@
 	font-size: 1.8rem;
 	font-weight: 400;
 	color: $link;
-}
-
-////////////////////////// main /////////////////////////
-/////////////////////////////////////////////////////////
-
-.main {
-	background-color: $bgcolor;
 }
 
 .main-heroes {
@@ -266,7 +263,12 @@
 
 .main-promos {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(6, 1fr);
 	gap: 1.2rem;
+	margin: 1.2rem;
+}
+
+.main-promos > * {
+	background-color: red;
 }
