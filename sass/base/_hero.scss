@@ -1,48 +1,12 @@
 @use '../variables/colors' as *;
 
-.main {
-	background-color: $bgcolor;
-}
-
-.text-title,
-.text-M-title {
-	margin-bottom: 0.5rem;
-	font-size: 3rem;
-	font-weight: 700;
-}
-.text-content,
-.text-M-content {
-	margin-bottom: 1.2rem;
-	font-size: 1.8rem;
-	font-weight: 400;
-}
-
-.text-link,
-.text-M-link {
-	padding: 1.5rem;
-	font-size: 1.8rem;
-	font-weight: 400;
-	color: $link;
-}
-
 .main-heroes {
 	display: grid;
 	grid-template-rows: 55rem 50rem 50rem;
 	gap: 1.2rem;
 }
 
-.main-heroes > *,
-.main-promos > * {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-}
-
-.iPad-hero__picture,
-.iPhone-hero__picture,
-.endframe-hero__picture {
+.hero-picture {
 	background-size: 74rem;
 	background-position: center bottom;
 	background-repeat: no-repeat;
@@ -90,16 +54,4 @@
 	&__picture {
 		background-image: url('../img/hero/hero_endframe__8xosbwdvpaqe_small.jpg');
 	}
-}
-
-.main-promos {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: repeat(6, 1fr);
-	gap: 1.2rem;
-	margin: 1.2rem;
-}
-
-.main-promos > * {
-	background-color: red;
 }

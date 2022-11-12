@@ -1,3 +1,5 @@
+@use '../variables/colors' as *;
+
 .wrapper,
 .mobi-wrapper {
 	margin: 0 auto;
@@ -22,4 +24,38 @@
 	width: 1px;
 	padding: 0;
 	border: 0;
+}
+
+.main {
+	background-color: $bgcolor;
+}
+
+.main-heroes > *,
+.main-promos > * {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.text-title,
+.text-M-title {
+	margin-bottom: 0.5rem;
+	font-size: 3rem;
+	font-weight: 700;
+}
+.text-content,
+.text-M-content {
+	margin-bottom: 1.2rem;
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+
+.text-link,
+.text-M-link {
+	padding: 1.5rem;
+	font-size: 1.8rem;
+	font-weight: 400;
+	color: $link;
 }

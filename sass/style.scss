@@ -5,7 +5,10 @@
 
 @use './base/common' as *;
 @use './base/nav' as *;
-@use './base/main' as *;
+@use './base/hero' as *;
+@use './base/promo' as *;
+@use './base/slider' as *;
+@use './base/footer' as *;
 
 @use './breakpoints/media_734' as *;
 @use './breakpoints/media_834' as *;

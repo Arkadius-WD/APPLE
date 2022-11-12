@@ -45,4 +45,48 @@
 	.text-link {
 		font-size: 2.1rem;
 	}
+
+	.main-promos {
+		grid-template-rows: repeat(3, 58rem);
+	}
+
+	.promo-picture {
+		background-size: 130rem;
+	}
+
+	.iPhone-promo {
+		&__picture {
+			background-image: url('../../img/promo/promo_iphone14pro__4n4twj56fzmu_large.jpg');
+		}
+	}
+
+	.tv-promo {
+		&__picture {
+			background-image: url('../../img/promo/promo_tv4k_avail__e17d9isb0vwy_large.jpg');
+		}
+	}
+
+	.iPad-promo {
+		&__picture {
+			background-image: url('../../img/promo/promo_ipadpro__ch217v9v7no2_large.jpg');
+		}
+	}
+
+	.watchU-promo {
+		&__picture {
+			background-image: url('../../img/promo/promo_apple_watch_ultra__gnsqulvdc4a6_large.jpg');
+		}
+	}
+
+	.watch8-promo {
+		&__picture {
+			background-image: url('../../img/promo/promo_apple_watch_series_8__ch7rexplmihe_large.jpg');
+		}
+	}
+
+	.fit-promo {
+		&__picture {
+			background-image: url('../../img/promo/promo_applefitnessplus_taylorswift__liig90blwtuu_large.jpg');
+		}
+	}
 }
