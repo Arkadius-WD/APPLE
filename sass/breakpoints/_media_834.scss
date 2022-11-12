@@ -1,0 +1,29 @@
+@media only screen and (min-width: 834px) {
+	.nav-bar {
+		&__list {
+			display: flex;
+			justify-content: space-evenly;
+			width: 80%;
+			height: 100%;
+			align-items: center;
+			opacity: 0.8;
+			&-item {
+				padding: 0 0.8rem;
+				font-size: 1.4rem;
+			}
+		}
+
+		&__burger {
+			display: none;
+		}
+
+		&__search {
+			display: block;
+			margin-right: 1rem;
+		}
+	}
+
+	.nav-top {
+		display: none;
+	}
+}

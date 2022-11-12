@@ -1,5 +1,15 @@
-@use './utilities/colors' as *;
-@use './utilities/reset' as *;
-@use './utilities/base' as *;
-@use './utilities/media' as *;
+@use './variables/colors' as *;
+@use './variables/fonts' as *;
+
+@use './reset/reset' as *;
+
+@use './base/common' as *;
+@use './base/nav' as *;
+@use './base/main' as *;
+
+@use './breakpoints/media_734' as *;
+@use './breakpoints/media_834' as *;
+@use './breakpoints/media_1024' as *;
+@use './breakpoints/media_landscape' as *;
+
 @use './utilities/animations' as *;

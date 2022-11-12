@@ -1,0 +1,48 @@
+@media only screen and (min-width: 1024px) {
+	.main-heroes {
+		grid-template-rows: 74rem 68rem 68rem;
+	}
+
+	.iPad-hero {
+		&__picture {
+			background-size: 350rem;
+			background-image: url('../img/hero/hero_ipad__rh99l6c3yuyy_large.jpg');
+		}
+	}
+
+	.iPhone-hero {
+		&__picture {
+			background-size: 370rem;
+			background-image: url('../img/hero/hero_iphone14__fjmsqstr1ceq_large.jpg');
+		}
+
+		&__text {
+			top: 5rem;
+		}
+	}
+
+	.endframe-hero {
+		&__picture {
+			background-size: 340rem;
+			background-position: center -1.5rem;
+			background-image: url('../img/hero/hero_endframe__8xosbwdvpaqe_large.jpg');
+		}
+
+		&__text {
+			max-width: 50rem;
+			bottom: 5rem;
+		}
+	}
+
+	.text-title {
+		font-size: 5.6rem;
+	}
+
+	.text-content {
+		font-size: 2.8rem;
+	}
+
+	.text-link {
+		font-size: 2.1rem;
+	}
+}

@@ -1,0 +1,25 @@
+.wrapper,
+.mobi-wrapper {
+	margin: 0 auto;
+	width: 100%;
+	min-width: 30rem;
+}
+
+.wrapper {
+	max-width: 100.24rem;
+}
+
+.mobi-wrapper {
+	max-width: 60rem;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(0px 0px 99.9% 99.9%);
+	overflow: hidden;
+	height: 1px;
+	width: 1px;
+	padding: 0;
+	border: 0;
+}

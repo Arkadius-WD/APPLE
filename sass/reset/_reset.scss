@@ -1,4 +1,5 @@
-@use 'colors' as *;
+@use '../variables/colors' as *;
+@use '../variables/fonts' as *;
 
 *,
 *::before,
@@ -17,7 +18,7 @@ body {
 	min-width: 34rem;
 	font-size: 1.7rem;
 	font-weight: 300;
-	font-family: 'Lato', sans-serif;
+	font-family: $font;
 	font-style: normal;
 	background-color: $first;
 	color: $second;

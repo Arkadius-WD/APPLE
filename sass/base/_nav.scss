@@ -1,0 +1,142 @@
+@use '../variables/colors' as *;
+@use '../variables/fonts' as *;
+
+.nav {
+	position: fixed;
+	top: 0;
+	height: 4.4rem;
+	width: 100%;
+	background-color: rgba($color: $second, $alpha: 0.9);
+	z-index: 5;
+
+	img {
+		height: 100%;
+		width: 100%;
+	}
+}
+
+.nav-top {
+	position: absolute;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	top: -100vh;
+	left: 0;
+	right: 0;
+	height: 100vh;
+	background-color: $third;
+	transition: top 0.7s;
+
+	&__container-one {
+		padding: 4.5rem 1.5rem 1.5rem 1.5rem;
+		width: 100%;
+		border-bottom: 1.5px solid $smoke;
+	}
+	&__container-two {
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		padding: 0 3.5rem;
+		width: 100%;
+	}
+
+	&__input-form {
+		display: block;
+		width: 100%;
+		height: 4rem;
+		border-radius: 1rem;
+		border: none;
+		background-image: url('../img/nav/globalnav_search_image__grey.svg');
+		background-position: 1.5rem 1.3rem;
+		background-repeat: no-repeat;
+		padding-left: 40px;
+		background-color: $second;
+		font-family: $font;
+		font-size: 1.7rem;
+		font-weight: 300;
+	}
+
+	&__input-form::placeholder {
+		color: $first;
+		opacity: 0.3;
+	}
+
+	&__input-form:focus {
+		color: $first;
+	}
+
+	&__item {
+		width: 100%;
+		padding: 1.3rem 0;
+		border-bottom: 1.5px solid $smoke;
+		color: rgba($color: $first, $alpha: 0.8);
+	}
+
+	&__item:last-child {
+		border-bottom: none;
+	}
+}
+
+.nav-bar {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 4.4rem;
+	z-index: 5;
+
+	&__burger,
+	&__logo,
+	&__search,
+	&__bag {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 4.4rem;
+		width: 4.4rem;
+		opacity: 0.8;
+	}
+
+	&__bag {
+		transition: opacity 0.3s;
+	}
+
+	&__search {
+		display: none;
+	}
+	&__list {
+		display: none;
+	}
+
+	&__burger {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		cursor: pointer;
+		&-bel {
+			margin: 0.3rem;
+			height: 0.1rem;
+			width: 2rem;
+			background-color: $first;
+			transition: transform 0.3s;
+		}
+	}
+}
+
+.click-btn {
+	.nav-bar__burger-bel--up {
+		transform: rotate(-45deg) translateX(-5px);
+	}
+	.nav-bar__burger-bel--down {
+		transform: rotate(45deg) translateX(-5px);
+	}
+}
+
+.nav-hidden {
+	top: 0;
+}
+
+.bag-hidden {
+	opacity: 0;
+}
