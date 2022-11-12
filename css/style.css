@@ -18,13 +18,13 @@ body {
   font-weight: 300;
   font-family: "Lato", sans-serif;
   font-style: normal;
-  background-color: #fbfbfd;
+  background-color: #f5f5f7;
   color: #1d1d1f;
 }
 
 a {
   text-decoration: none;
-  color: #fbfbfd;
+  color: #f5f5f7;
   cursor: pointer;
 }
 
@@ -165,33 +165,33 @@ a {
   font-weight: 300;
 }
 .nav-top__input-form::-webkit-input-placeholder {
-  color: #fbfbfd;
+  color: #f5f5f7;
   opacity: 0.3;
 }
 .nav-top__input-form::-moz-placeholder {
-  color: #fbfbfd;
+  color: #f5f5f7;
   opacity: 0.3;
 }
 .nav-top__input-form:-ms-input-placeholder {
-  color: #fbfbfd;
+  color: #f5f5f7;
   opacity: 0.3;
 }
 .nav-top__input-form::-ms-input-placeholder {
-  color: #fbfbfd;
+  color: #f5f5f7;
   opacity: 0.3;
 }
 .nav-top__input-form::placeholder {
-  color: #fbfbfd;
+  color: #f5f5f7;
   opacity: 0.3;
 }
 .nav-top__input-form:focus {
-  color: #fbfbfd;
+  color: #f5f5f7;
 }
 .nav-top__item {
   width: 100%;
   padding: 1.3rem 0;
   border-bottom: 1.5px solid rgba(110, 110, 115, 0.4392156863);
-  color: rgba(251, 251, 253, 0.8);
+  color: rgba(245, 245, 247, 0.8);
 }
 .nav-top__item:last-child {
   border-bottom: none;
@@ -255,7 +255,7 @@ a {
   margin: 0.3rem;
   height: 0.1rem;
   width: 2rem;
-  background-color: #fbfbfd;
+  background-color: #f5f5f7;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
@@ -294,7 +294,7 @@ a {
 }
 
 .iPad-hero {
-  background-color: #fbfbfd;
+  background-color: #f5f5f7;
 }
 .iPad-hero__text {
   position: absolute;
@@ -305,7 +305,7 @@ a {
 }
 
 .iPhone-hero {
-  background-color: #fbfbfd;
+  background-color: #f5f5f7;
 }
 .iPhone-hero__text {
   position: absolute;
@@ -320,7 +320,7 @@ a {
 }
 .endframe-hero .text-title,
 .endframe-hero .text-content {
-  color: #fbfbfd;
+  color: #f5f5f7;
 }
 .endframe-hero__text {
   position: absolute;
@@ -354,27 +354,27 @@ a {
 }
 
 .iPhone-promo__picture {
-  background-image: url("../../img/promo/promo_iphone14pro__4n4twj56fzmu_small.jpg");
+  background-image: url("../img/promo/promo_iphone14pro__4n4twj56fzmu_small.jpg");
 }
 
 .tv-promo__picture {
-  background-image: url("../../img/promo/promo_tv4k_avail__e17d9isb0vwy_small.jpg");
+  background-image: url("../img/promo/promo_tv4k_avail__e17d9isb0vwy_small.jpg");
 }
 
 .iPad-promo__picture {
-  background-image: url("../../img/promo/promo_ipadpro__ch217v9v7no2_small.jpg");
+  background-image: url("../img/promo/promo_ipadpro__ch217v9v7no2_small.jpg");
 }
 
 .watchU-promo__picture {
-  background-image: url("../../img/promo/promo_apple_watch_ultra__gnsqulvdc4a6_small.jpg");
+  background-image: url("../img/promo/promo_apple_watch_ultra__gnsqulvdc4a6_small.jpg");
 }
 
 .watch8-promo__picture {
-  background-image: url("../../img/promo/promo_apple_watch_series_8__ch7rexplmihe_small.jpg");
+  background-image: url("../img/promo/promo_apple_watch_series_8__ch7rexplmihe_small.jpg");
 }
 
 .fit-promo__picture {
-  background-image: url("../../img/promo/promo_applefitnessplus_taylorswift__liig90blwtuu_small.jpg");
+  background-image: url("../img/promo/promo_applefitnessplus_taylorswift__liig90blwtuu_small.jpg");
 }
 
 @media only screen and (min-width: 734px) {
@@ -428,22 +428,22 @@ a {
     top: 4rem;
   }
   .iPhone-promo__picture {
-    background-image: url("../../img/promo/promo_iphone14pro__4n4twj56fzmu_medium.jpg");
+    background-image: url("../img/promo/promo_iphone14pro__4n4twj56fzmu_medium.jpg");
   }
   .tv-promo__picture {
-    background-image: url("../../img/promo/promo_tv4k_avail__e17d9isb0vwy_medium.jpg");
+    background-image: url("../img/promo/promo_tv4k_avail__e17d9isb0vwy_medium.jpg");
   }
   .iPad-promo__picture {
-    background-image: url("../../img/promo/promo_ipadpro__ch217v9v7no2_medium.jpg");
+    background-image: url("../img/promo/promo_ipadpro__ch217v9v7no2_medium.jpg");
   }
   .watchU-promo__picture {
-    background-image: url("../../img/promo/promo_apple_watch_ultra__gnsqulvdc4a6_medium.jpg");
+    background-image: url("../img/promo/promo_apple_watch_ultra__gnsqulvdc4a6_medium.jpg");
   }
   .watch8-promo__picture {
-    background-image: url("../../img/promo/promo_apple_watch_series_8__ch7rexplmihe_medium.jpg");
+    background-image: url("../img/promo/promo_apple_watch_series_8__ch7rexplmihe_medium.jpg");
   }
   .fit-promo__picture {
-    background-image: url("../../img/promo/promo_applefitnessplus_taylorswift__liig90blwtuu_medium.jpg");
+    background-image: url("../img/promo/promo_applefitnessplus_taylorswift__liig90blwtuu_medium.jpg");
   }
 }
 @media only screen and (min-width: 834px) {
@@ -515,23 +515,23 @@ a {
   .promo-picture {
     background-size: 130rem;
   }
-  .iPhone-promo__picture {
-    background-image: url("../../img/promo/promo_iphone14pro__4n4twj56fzmu_large.jpg");
+  .promo-picture .iPhone-promo__picture {
+    background-image: url("../img/promo/promo_iphone14pro__4n4twj56fzmu_large.jpg");
   }
-  .tv-promo__picture {
-    background-image: url("../../img/promo/promo_tv4k_avail__e17d9isb0vwy_large.jpg");
+  .promo-picture .tv-promo__picture {
+    background-image: url("../img/promo/promo_tv4k_avail__e17d9isb0vwy_large.jpg");
   }
-  .iPad-promo__picture {
-    background-image: url("../../img/promo/promo_ipadpro__ch217v9v7no2_large.jpg");
+  .promo-picture .iPad-promo__picture {
+    background-image: url("../img/promo/promo_ipadpro__ch217v9v7no2_large.jpg");
   }
-  .watchU-promo__picture {
-    background-image: url("../../img/promo/promo_apple_watch_ultra__gnsqulvdc4a6_large.jpg");
+  .promo-picture .watchU-promo__picture {
+    background-image: url("../img/promo/promo_apple_watch_ultra__gnsqulvdc4a6_large.jpg");
   }
-  .watch8-promo__picture {
-    background-image: url("../../img/promo/promo_apple_watch_series_8__ch7rexplmihe_large.jpg");
+  .promo-picture .watch8-promo__picture {
+    background-image: url("../img/promo/promo_apple_watch_series_8__ch7rexplmihe_large.jpg");
   }
-  .fit-promo__picture {
-    background-image: url("../../img/promo/promo_applefitnessplus_taylorswift__liig90blwtuu_large.jpg");
+  .promo-picture .fit-promo__picture {
+    background-image: url("../img/promo/promo_applefitnessplus_taylorswift__liig90blwtuu_large.jpg");
   }
 }
 @media (orientation: landscape) {
