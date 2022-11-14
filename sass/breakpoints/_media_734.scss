@@ -1,5 +1,5 @@
 @media only screen and (min-width: 734px) {
-	.main-heroes {
+	.heroes {
 		grid-template-rows: 70rem 68rem 68rem;
 	}
 
@@ -52,7 +52,7 @@
 		font-size: 1.9rem;
 	}
 
-	.main-promos {
+	.promos {
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(3, 49rem);
 		margin-left: 1.2rem;
@@ -79,6 +79,7 @@
 		}
 
 		&__text-title {
+			height: 4rem;
 			background-image: url('../img/promo/promo_tv4k_logo__5m5umvk10duu_medium.png');
 		}
 	}

@@ -1,5 +1,5 @@
 @media only screen and (min-width: 1024px) {
-	.main-heroes {
+	.heroes {
 		grid-template-rows: 74rem 68rem 68rem;
 	}
 
@@ -46,7 +46,7 @@
 		font-size: 2.1rem;
 	}
 
-	.main-promos {
+	.promos {
 		grid-template-rows: repeat(3, 58rem);
 	}
 

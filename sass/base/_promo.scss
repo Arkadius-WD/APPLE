@@ -1,6 +1,6 @@
 @use '../variables/colors' as *;
 
-.main-promos {
+.promos {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(6, 50rem);

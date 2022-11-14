@@ -30,8 +30,8 @@
 	background-color: $bgcolor;
 }
 
-.main-heroes > *,
-.main-promos > * {
+.heroes > *,
+.promos > * {
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -62,4 +62,9 @@
 
 .text-white {
 	color: $first;
+}
+
+.text-link:hover,
+.text-M-link:hover {
+	text-decoration: underline;
 }
