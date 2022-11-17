@@ -29,7 +29,7 @@
 		min-width: 27rem;
 		height: 100%;
 		margin: 0 0.6rem;
-		background-size: cover;
+		object-fit: cover;
 		background-repeat: no-repeat;
 
 		&--1 {
@@ -47,6 +47,18 @@
 		&--5 {
 			background-image: url('../img/slider/5-slide-small-causeway.jpg');
 		}
+		&--6 {
+			background-image: url('../img/slider/6-slide-small-shantaram.jpg');
+		}
+		&--7 {
+			background-image: url('../img/slider/7-slide-small-morning.jpg');
+		}
+		&--8 {
+			background-image: url('../img/slider/8-slide-small-sisters.jpg');
+		}
+		&--9 {
+			background-image: url('../img/slider/9-slide-small-acapulco.jpg');
+		}
 	}
 
 	&__slide-link {
@@ -62,7 +74,7 @@
 		align-items: center;
 		height: 4rem;
 		width: 100%;
-		background-color: #fff;
+		background-color: $bgcolor;
 	}
 
 	&__nav-dots-contaner {
@@ -72,7 +84,13 @@
 	}
 
 	&__nav-dot {
-		margin: 0 1rem;
+		width: 0.7rem;
+		height: 0.7rem;
+		margin: 0 0.8rem;
+		border: none;
+		border-radius: 50%;
+		background-color: $second;
+		opacity: 0.2;
 	}
 
 	&__autoplay {
@@ -122,4 +140,8 @@
 			right: calc(40% - 15px);
 		}
 	}
+}
+
+.current-dot {
+	opacity: 0.8;
 }

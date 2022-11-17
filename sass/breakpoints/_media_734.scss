@@ -1,3 +1,6 @@
+@use '../variables/colors' as *;
+@use '../variables/fonts' as *;
+
 @media only screen and (min-width: 734px) {
 	.heroes {
 		grid-template-rows: 70rem 68rem 68rem;
@@ -121,6 +124,60 @@
 
 		&__text-title {
 			background-image: url('../img/promo/applefitness_logo_promo__gnq1diylj3qm_medium.png');
+		}
+	}
+
+	.slider {
+		height: 41rem;
+
+		&__track-container {
+			height: 37rem;
+		}
+		&__slide {
+			min-width: 69rem;
+			&--1 {
+				background-image: url('../img/slider/1-slide-medium-selena.jpg');
+			}
+			&--2 {
+				background-image: url('../img/slider/2-slide-medium-quest.jpg');
+			}
+			&--3 {
+				background-image: url('../img/slider/3-slide-medium-believe.jpg');
+			}
+			&--4 {
+				background-image: url('../img/slider/4-slide-medium-see.jpg');
+			}
+			&--5 {
+				background-image: url('../img/slider/5-slide-medium-causeway.jpg');
+			}
+			&--6 {
+				background-image: url('../img/slider/6-slide-medium-shantaram.jpg');
+			}
+			&--7 {
+				background-image: url('../img/slider/7-slide-medium-morning.jpg');
+			}
+			&--8 {
+				background-image: url('../img/slider/8-slide-medium-sisters.jpg');
+			}
+			&--9 {
+				background-image: url('../img/slider/9-slide-medium-acapulco.jpg');
+			}
+		}
+
+		&__autoplay {
+			right: 3.5rem;
+		}
+
+		&__button {
+			display: none;
+		}
+
+		&__previous {
+			right: calc(50% + 357px);
+		}
+
+		&__next {
+			left: calc(50% + 357px);
 		}
 	}
 }

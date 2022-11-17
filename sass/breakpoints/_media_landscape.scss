@@ -1,3 +1,6 @@
+@use '../variables/colors' as *;
+@use '../variables/fonts' as *;
+
 @media (orientation: landscape) {
 	.nav-top {
 		top: -200vh;
@@ -10,7 +13,7 @@
 			position: fixed;
 			top: 0;
 			z-index: 1;
-			background-color: black;
+			background-color: $third;
 		}
 
 		.nav-top__container-two {

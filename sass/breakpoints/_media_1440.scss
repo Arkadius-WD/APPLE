@@ -1,0 +1,50 @@
+@use '../variables/colors' as *;
+@use '../variables/fonts' as *;
+
+@media only screen and (min-width: 1440px) {
+	.slider {
+		height: 71rem;
+
+		&__track-container {
+			height: 67rem;
+		}
+		&__slide {
+			min-width: 125rem;
+			&--1 {
+				background-image: url('../img/slider/1-slide-xlarge-selena.jpg');
+			}
+			&--2 {
+				background-image: url('../img/slider/2-slide-xlarge-quest.jpg');
+			}
+			&--3 {
+				background-image: url('../img/slider/3-slide-xlarge-believe.jpg');
+			}
+			&--4 {
+				background-image: url('../img/slider/4-slide-xlarge-see.jpg');
+			}
+			&--5 {
+				background-image: url('../img/slider/5-slide-xlarge-causeway.jpg');
+			}
+			&--6 {
+				background-image: url('../img/slider/6-slide-xlarge-shantaram.jpg');
+			}
+			&--7 {
+				background-image: url('../img/slider/7-slide-xlarge-morning.jpg');
+			}
+			&--8 {
+				background-image: url('../img/slider/8-slide-xlarge-sisters.jpg');
+			}
+			&--9 {
+				background-image: url('../img/slider/9-slide-xlarge-acapulco.jpg');
+			}
+		}
+
+		&__previous {
+			right: calc(50% + 637px);
+		}
+
+		&__next {
+			left: calc(50% + 637px);
+		}
+	}
+}
