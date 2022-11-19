@@ -133,8 +133,12 @@
 		&__track-container {
 			height: 37rem;
 		}
+
 		&__slide {
-			min-width: 69rem;
+			width: 71.2rem;
+		}
+
+		&__slide-link {
 			&--1 {
 				background-image: url('../img/slider/1-slide-medium-selena.jpg');
 			}
