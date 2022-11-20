@@ -1,3 +1,6 @@
+//////////////////////// NAV ////////////////////////////
+/////////////////////////////////////////////////////////
+
 const topNav = document.querySelector('.nav-top')
 const navBtn = document.querySelector('.nav-bar__burger')
 const navBag = document.querySelector('.nav-bar__bag')
@@ -29,3 +32,43 @@ const handleNavItemsAnimation = () => {
 }
 
 navBtn.addEventListener('click', showMenu)
+
+////////////////////// SLIDER ///////////////////////////
+/////////////////////////////////////////////////////////
+
+const slides = document.querySelectorAll('.slider__slide')
+const leftBtn = document.querySelector('.slider__previous')
+const rightBtn = document.querySelector('.slider__next')
+
+let curSlide = 0
+const maxSlide = slides.length
+
+const goToSLide = slide => {
+	slides.forEach((s, i) => (s.style.transform = `translate(${100 * (i - slide)}%)`))
+}
+
+goToSLide(0)
+
+// NEXT SLIDE
+const nextSlide = () => {
+	if (curSlide === maxSlide - 1) {
+		curSlide = 0
+	} else {
+		curSlide++
+	}
+
+	goToSLide(curSlide)
+}
+
+// PREV SlIDE
+const prevSlide = () => {
+	if (curSlide === 0) {
+		curSlide = maxSlide - 1
+	} else {
+		curSlide--
+	}
+	goToSLide(curSlide)
+}
+
+rightBtn.addEventListener('click', nextSlide)
+leftBtn.addEventListener('click', prevSlide)

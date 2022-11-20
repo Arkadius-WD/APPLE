@@ -483,46 +483,11 @@ button {
   display: block;
   width: 28.2rem;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  background-repeat: no-repeat;
   padding: 0 0.6rem;
-}
-.slider__slide--1 {
-  -webkit-transform: translate(-100%);
-          transform: translate(-100%);
-}
-.slider__slide--2 {
-  -webkit-transform: translate(0%);
-          transform: translate(0%);
-}
-.slider__slide--3 {
-  -webkit-transform: translate(100%);
-          transform: translate(100%);
-}
-.slider__slide--4 {
-  -webkit-transform: translate(200%);
-          transform: translate(200%);
-}
-.slider__slide--5 {
-  -webkit-transform: translate(300%);
-          transform: translate(300%);
-}
-.slider__slide--6 {
-  -webkit-transform: translate(400%);
-          transform: translate(400%);
-}
-.slider__slide--7 {
-  -webkit-transform: translate(500%);
-          transform: translate(500%);
-}
-.slider__slide--8 {
-  -webkit-transform: translate(600%);
-          transform: translate(600%);
-}
-.slider__slide--9 {
-  -webkit-transform: translate(700%);
-          transform: translate(700%);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 .slider__slide-link {
   display: block;
@@ -610,14 +575,15 @@ button {
   bottom: 0;
   background-color: #f5f5f7;
   opacity: 0.7;
+  cursor: pointer;
 }
 .slider__previous {
   left: 0;
-  right: calc(50% + 147px);
+  right: calc(50% + 146px);
 }
 .slider__next {
   right: 0;
-  left: calc(50% + 147px);
+  left: calc(50% + 146px);
 }
 .slider__button {
   position: absolute;
@@ -738,7 +704,7 @@ button {
     height: 37rem;
   }
   .slider__slide {
-    width: 71.2rem;
+    width: 70rem;
   }
   .slider__slide-link--1 {
     background-image: url("../img/slider/1-slide-medium-selena.jpg");
@@ -774,10 +740,10 @@ button {
     display: none;
   }
   .slider__previous {
-    right: calc(50% + 357px);
+    right: calc(50% + 356px);
   }
   .slider__next {
-    left: calc(50% + 357px);
+    left: calc(50% + 356px);
   }
 }
 @media only screen and (min-width: 834px) {
@@ -906,7 +872,7 @@ button {
     height: 52rem;
   }
   .slider__slide {
-    width: 99.2rem;
+    width: 98rem;
   }
   .slider__slide-link--1 {
     background-image: url("../img/slider/1-slide-large-selena.jpg");
@@ -936,10 +902,10 @@ button {
     background-image: url("../img/slider/9-slide-large-acapulco.jpg");
   }
   .slider__previous {
-    right: calc(50% + 502px);
+    right: calc(50% + 495px);
   }
   .slider__next {
-    left: calc(50% + 502px);
+    left: calc(50% + 495px);
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -950,7 +916,7 @@ button {
     height: 67rem;
   }
   .slider__slide {
-    width: 126.2rem;
+    width: 125rem;
   }
   .slider__slide-link--1 {
     background-image: url("../img/slider/1-slide-xlarge-selena.jpg");
@@ -980,10 +946,10 @@ button {
     background-image: url("../img/slider/9-slide-xlarge-acapulco.jpg");
   }
   .slider__previous {
-    right: calc(50% + 637px);
+    right: calc(50% + 630px);
   }
   .slider__next {
-    left: calc(50% + 637px);
+    left: calc(50% + 630px);
   }
 }
 @media (orientation: landscape) {
