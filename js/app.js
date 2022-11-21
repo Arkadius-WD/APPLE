@@ -72,3 +72,8 @@ const prevSlide = () => {
 
 rightBtn.addEventListener('click', nextSlide)
 leftBtn.addEventListener('click', prevSlide)
+
+document.addEventListener('keydown', e => {
+	if (e.key === 'ArrowLeft') prevSlide()
+	if (e.key === 'ArrowRight') nextSlide()
+})
