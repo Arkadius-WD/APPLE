@@ -92,6 +92,10 @@
 		border-radius: 50%;
 		background-color: $second;
 		opacity: 0.2;
+
+		&--active {
+			opacity: 0.8;
+		}
 	}
 
 	&__autoplay {
@@ -144,6 +148,6 @@
 	}
 }
 
-.current-dot {
+.active-dot {
 	opacity: 0.8;
 }
