@@ -7,10 +7,11 @@
 
 		&__track-container {
 			height: 67rem;
+			width: 125rem;
 		}
 
 		&__slide {
-			width: 125rem;
+			min-width: 125rem;
 		}
 		&__slide-link {
 			&--1 {

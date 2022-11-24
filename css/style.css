@@ -443,51 +443,31 @@ button {
 }
 
 .slider {
+  position: relative;
   height: 54rem;
   width: 100%;
   overflow: hidden;
 }
 .slider__track-container {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin: 0 auto;
+  width: 28.2rem;
   height: 50rem;
-  width: 100%;
+  position: relative;
 }
 .slider__slides {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   height: 100%;
-  width: 100%;
-}
-.slider__slide {
-  position: absolute;
-  display: block;
-  width: 28.2rem;
-  height: 100%;
-  padding: 0 0.6rem;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
+}
+.slider__slide {
+  min-width: 28.2rem;
+  height: 100%;
+  padding: 0 0.6rem;
 }
 .slider__slide-link {
   display: block;
@@ -581,11 +561,11 @@ button {
   cursor: pointer;
 }
 .slider__previous {
-  left: 0;
+  left: 0rem;
   right: calc(50% + 146px);
 }
 .slider__next {
-  right: 0;
+  right: 0rem;
   left: calc(50% + 146px);
 }
 .slider__button {
@@ -705,9 +685,10 @@ button {
   }
   .slider__track-container {
     height: 37rem;
+    width: 70rem;
   }
   .slider__slide {
-    width: 70rem;
+    min-width: 70rem;
   }
   .slider__slide-link--1 {
     background-image: url("../img/slider/1-slide-medium-selena.jpg");
@@ -873,9 +854,10 @@ button {
   }
   .slider__track-container {
     height: 52rem;
+    width: 98rem;
   }
   .slider__slide {
-    width: 98rem;
+    min-width: 98rem;
   }
   .slider__slide-link--1 {
     background-image: url("../img/slider/1-slide-large-selena.jpg");
@@ -917,9 +899,10 @@ button {
   }
   .slider__track-container {
     height: 67rem;
+    width: 125rem;
   }
   .slider__slide {
-    width: 125rem;
+    min-width: 125rem;
   }
   .slider__slide-link--1 {
     background-image: url("../img/slider/1-slide-xlarge-selena.jpg");

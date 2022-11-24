@@ -139,10 +139,11 @@
 
 		&__track-container {
 			height: 52rem;
+			width: 98rem;
 		}
 
 		&__slide {
-			width: 98rem;
+			min-width: 98rem;
 		}
 		&__slide-link {
 			&--1 {

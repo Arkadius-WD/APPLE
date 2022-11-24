@@ -37,78 +37,79 @@ navAnimation()
 
 ////////////////////// SLIDER ///////////////////////////
 /////////////////////////////////////////////////////////
-const slider = () => {
-	const slides = document.querySelectorAll('.slider__slide')
-	const leftBtn = document.querySelector('.slider__previous')
-	const rightBtn = document.querySelector('.slider__next')
-	const dotContainer = document.querySelector('.slider__nav-dots-contaner')
 
-	let curSlide = 0
-	const maxSlide = slides.length
+const slideContainer = document.querySelector('.slider__track-container')
+const slides = document.querySelector('.slider__slides')
+const nextBtn = document.querySelector('.slider__next')
+const prevBtn = document.querySelector('.slider__previous')
+const dotContainer = document.querySelector('.slider__nav-dots-contaner')
+const interval = 3000
 
-	//FUNCTIONS
-	const createDots = () => {
-		slides.forEach((_, i) => {
-			dotContainer.insertAdjacentHTML('beforeend', `<button class="slider__nav-dot" data-slide="${i}"></button>`)
-		})
-	}
+let slide = document.querySelectorAll('.slider__slide')
+let index = 1
+let slideId
 
-	const activateDot = slide => {
-		document.querySelectorAll('.slider__nav-dot').forEach(dot => dot.classList.remove('slider__nav-dot--active'))
+const firstClone = slide[0].cloneNode(true)
+const lastClone = slide[slide.length - 1].cloneNode(true)
 
-		document.querySelector(`.slider__nav-dot[data-slide="${slide}"]`).classList.add('slider__nav-dot--active')
-	}
+firstClone.id = 'first-clone'
+lastClone.id = 'last-clone'
 
-	const goToSLide = slide => {
-		slides.forEach((s, i) => (s.style.transform = `translate(${100 * (i - slide)}%)`))
-	}
+slides.append(firstClone)
+slides.prepend(lastClone)
 
-	const init = () => {
-		goToSLide(1)
-		createDots()
-		activateDot(1)
-	}
+const slideWidth = slide[index].clientWidth
 
-	// NEXT SLIDE
-	const nextSlide = () => {
-		if (curSlide === maxSlide - 1) {
-			curSlide = 0
-		} else {
-			curSlide++
-		}
+slides.style.transform = `translateX(${-slideWidth * index}px)`
 
-		goToSLide(curSlide)
-		activateDot(curSlide)
-	}
-
-	// PREV SlIDE
-	const prevSlide = () => {
-		if (curSlide === 0) {
-			curSlide = maxSlide - 1
-		} else {
-			curSlide--
-		}
-		goToSLide(curSlide)
-		activateDot(curSlide)
-	}
-
-	init()
-
-	// EVENT HANDLERS
-	rightBtn.addEventListener('click', nextSlide)
-	leftBtn.addEventListener('click', prevSlide)
-
-	document.addEventListener('keydown', e => {
-		e.key === 'ArrowLeft' && prevSlide()
-		e.key === 'ArrowRight' && nextSlide()
-	})
-
-	dotContainer.addEventListener('click', e => {
-		if (e.target.classList.contains('slider__nav-dot')) {
-			const { slide } = e.target.dataset
-			goToSLide(slide)
-			activateDot(slide)
-		}
-	})
+const startSlide = () => {
+	slideId = setInterval(() => {
+		moveToNextSlide()
+		console.log(index)
+	}, interval)
 }
-slider()
+
+const getSlides = () => document.querySelectorAll('.slider__slide')
+
+slides.addEventListener('transitionend', () => {
+	slide = getSlides()
+	if (slide[index].id === firstClone.id) {
+		slides.style.transition = 'none'
+		index = 1
+		slides.style.transform = `translateX(${-slideWidth * index}px)`
+	}
+
+	if (slide[index].id === lastClone.id) {
+		slides.style.transition = 'none'
+		index = slide.length - 1
+		slides.style.transform = `translateX(${-slideWidth * index}px)`
+	}
+})
+
+const moveToNextSlide = () => {
+	slide = getSlides()
+	if (index >= slide.length - 1) return
+	index++
+	slides.style.transition = '.7s ease-out'
+	slides.style.transform = `translateX(${-slideWidth * index}px)`
+}
+
+const moveToPreviousSlide = () => {
+	if (index <= 0) return
+	index--
+	slides.style.transition = '.7s ease-out'
+	slides.style.transform = `translateX(${-slideWidth * index}px)`
+}
+
+slideContainer.addEventListener('mouseenter', () => {
+	clearInterval(slideId)
+})
+
+slideContainer.addEventListener('mouseleave', startSlide)
+nextBtn.addEventListener('click', moveToNextSlide)
+prevBtn.addEventListener('click', moveToPreviousSlide)
+
+startSlide()
+
+console.log(slide)
+console.log(index)
