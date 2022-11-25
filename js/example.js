@@ -62,10 +62,23 @@ const slideWidth = slide[index].clientWidth
 
 slides.style.transform = `translateX(${-slideWidth * index}px)`
 
+const createDots = () => {
+	slide.forEach((_, i) => {
+		dotContainer.insertAdjacentHTML('beforeend', `<button class="slider__nav-dot"data-slide="${i + 1}"></button>`)
+	})
+}
+createDots()
+
+const activateDot = slide => {
+	document.querySelectorAll('.slider__nav-dot').forEach(dot => dot.classList.remove('slider__nav-dot--active'))
+
+	document.querySelector(`.slider__nav-dot[data-slide="${slide}"]`).classList.add('slider__nav-dot--active')
+}
+activateDot(slide.length)
+
 const startSlide = () => {
 	slideId = setInterval(() => {
 		moveToNextSlide()
-		console.log(index)
 	}, interval)
 }
 
@@ -76,25 +89,28 @@ slides.addEventListener('transitionend', () => {
 	if (slide[index].id === firstClone.id) {
 		slides.style.transition = 'none'
 		index = 1
-		slides.style.transform = `translateX(${-slideWidth * index}px)`
+		slides.style.transform = `translate(${-slideWidth * index}px)`
 	}
 
 	if (slide[index].id === lastClone.id) {
 		slides.style.transition = 'none'
-		index = slide.length - 1
-		slides.style.transform = `translateX(${-slideWidth * index}px)`
+		index = slide.length - 2
+		slides.style.transform = `translate(${-slideWidth * index}px)`
 	}
 })
 
 const moveToNextSlide = () => {
 	slide = getSlides()
+	activateDot(index)
 	if (index >= slide.length - 1) return
 	index++
 	slides.style.transition = '.7s ease-out'
-	slides.style.transform = `translateX(${-slideWidth * index}px)`
+	slides.style.transform = `translate(${-slideWidth * index}px)`
 }
 
 const moveToPreviousSlide = () => {
+	slide = getSlides()
+	activateDot(index)
 	if (index <= 0) return
 	index--
 	slides.style.transition = '.7s ease-out'
@@ -105,11 +121,8 @@ slideContainer.addEventListener('mouseenter', () => {
 	clearInterval(slideId)
 })
 
-slideContainer.addEventListener('mouseleave', startSlide)
+// slideContainer.addEventListener('mouseleave', startSlide)
 nextBtn.addEventListener('click', moveToNextSlide)
 prevBtn.addEventListener('click', moveToPreviousSlide)
 
-startSlide()
-
-console.log(slide)
-console.log(index)
+// startSlide()
