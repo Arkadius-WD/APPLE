@@ -62,26 +62,6 @@ const slideWidth = slide[index].clientWidth
 
 slides.style.transform = `translateX(${-slideWidth * index}px)`
 
-const createDots = () => {
-	slide.forEach((_, i) => {
-		dotContainer.insertAdjacentHTML('beforeend', `<button class="slider__nav-dot"data-slide="${i + 1}"></button>`)
-	})
-}
-createDots()
-
-const activateDot = slide => {
-	document.querySelectorAll('.slider__nav-dot').forEach(dot => dot.classList.remove('slider__nav-dot--active'))
-
-	document.querySelector(`.slider__nav-dot[data-slide="${slide}"]`).classList.add('slider__nav-dot--active')
-}
-activateDot(slide.length)
-
-const startSlide = () => {
-	slideId = setInterval(() => {
-		moveToNextSlide()
-	}, interval)
-}
-
 const getSlides = () => document.querySelectorAll('.slider__slide')
 
 slides.addEventListener('transitionend', () => {
@@ -99,30 +79,75 @@ slides.addEventListener('transitionend', () => {
 	}
 })
 
+const createDots = () => {
+	slide.forEach((_, i) => {
+		dotContainer.insertAdjacentHTML('beforeend', `<button class="slider__nav-dot"data-slide="${i}"></button>`)
+	})
+}
+createDots(0)
+
+const activateDot = slide => {
+	document.querySelectorAll('.slider__nav-dot').forEach(dot => dot.classList.remove('slider__nav-dot--active'))
+
+	document.querySelector(`.slider__nav-dot[data-slide="${slide}"]`).classList.add('slider__nav-dot--active')
+}
+activateDot(1)
+
+const goToSLide = slide => {
+	slides.style.transform = `translate(${-slideWidth * slide}px)`
+}
+
+const startSlide = () => {
+	slideId = setInterval(() => {
+		moveToNextSlide()
+	}, interval)
+}
+startSlide()
+
+// NEXT SLIDE
 const moveToNextSlide = () => {
 	slide = getSlides()
+
 	activateDot(index)
+
 	if (index >= slide.length - 1) return
 	index++
 	slides.style.transition = '.7s ease-out'
 	slides.style.transform = `translate(${-slideWidth * index}px)`
+	console.log(index)
 }
 
+// PREV SLIDE
 const moveToPreviousSlide = () => {
-	slide = getSlides()
-	activateDot(index)
+	console.log(index)
+	console.log(slide.length)
 	if (index <= 0) return
 	index--
 	slides.style.transition = '.7s ease-out'
 	slides.style.transform = `translateX(${-slideWidth * index}px)`
+
+	if (index <= 0) {
+		activateDot(slide.length - 3)
+	} else {
+		activateDot(index - 1)
+	}
 }
 
+// EVENT HANDLERS
 slideContainer.addEventListener('mouseenter', () => {
 	clearInterval(slideId)
 })
 
-// slideContainer.addEventListener('mouseleave', startSlide)
+slideContainer.addEventListener('mouseleave', startSlide)
 nextBtn.addEventListener('click', moveToNextSlide)
 prevBtn.addEventListener('click', moveToPreviousSlide)
 
-// startSlide()
+dotContainer.addEventListener('click', e => {
+	if (e.target.classList.contains('slider__nav-dot')) {
+		const { slide } = e.target.dataset
+		goToSLide(slide)
+		activateDot(slide)
+
+		console.log(e.target)
+	}
+})
