@@ -81,10 +81,10 @@ slides.addEventListener('transitionend', () => {
 
 const createDots = () => {
 	slide.forEach((_, i) => {
-		dotContainer.insertAdjacentHTML('beforeend', `<button class="slider__nav-dot"data-slide="${i}"></button>`)
+		dotContainer.insertAdjacentHTML('beforeend', `<button class="slider__nav-dot"data-slide="${i + 1}"></button>`)
 	})
 }
-createDots(0)
+createDots()
 
 const activateDot = slide => {
 	document.querySelectorAll('.slider__nav-dot').forEach(dot => dot.classList.remove('slider__nav-dot--active'))
@@ -106,30 +106,32 @@ startSlide()
 
 // NEXT SLIDE
 const moveToNextSlide = () => {
-	slide = getSlides()
-
-	activateDot(index)
-
-	if (index >= slide.length - 1) return
-	index++
+	if (index >= slide.length - 1) {
+		return
+	} else {
+		index++
+	}
 	slides.style.transition = '.7s ease-out'
 	slides.style.transform = `translate(${-slideWidth * index}px)`
-	console.log(index)
+
+	if (index >= slide.length - 1) {
+		activateDot(1)
+	} else {
+		activateDot(index)
+	}
 }
 
 // PREV SLIDE
 const moveToPreviousSlide = () => {
-	console.log(index)
-	console.log(slide.length)
 	if (index <= 0) return
 	index--
 	slides.style.transition = '.7s ease-out'
 	slides.style.transform = `translateX(${-slideWidth * index}px)`
 
 	if (index <= 0) {
-		activateDot(slide.length - 3)
+		activateDot(slide.length - 2)
 	} else {
-		activateDot(index - 1)
+		activateDot(index)
 	}
 }
 
@@ -141,6 +143,11 @@ slideContainer.addEventListener('mouseenter', () => {
 slideContainer.addEventListener('mouseleave', startSlide)
 nextBtn.addEventListener('click', moveToNextSlide)
 prevBtn.addEventListener('click', moveToPreviousSlide)
+
+document.addEventListener('keydown', e => {
+	e.key === 'ArrowLeft' && moveToPreviousSlide()
+	e.key === 'ArrowRight' && moveToNextSlide()
+})
 
 dotContainer.addEventListener('click', e => {
 	if (e.target.classList.contains('slider__nav-dot')) {
