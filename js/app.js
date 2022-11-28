@@ -37,19 +37,53 @@ navAnimation()
 
 ////////////////////// SLIDER ///////////////////////////
 /////////////////////////////////////////////////////////
-const slider = () => {
-	const slides = document.querySelectorAll('.slider__slide')
-	const leftBtn = document.querySelector('.slider__previous')
-	const rightBtn = document.querySelector('.slider__next')
+const autoSlider = () => {
+	const slideContainer = document.querySelector('.slider__track-container')
+	const slides = document.querySelector('.slider__slides')
+	const nextBtn = document.querySelector('.slider__next')
+	const prevBtn = document.querySelector('.slider__previous')
 	const dotContainer = document.querySelector('.slider__nav-dots-contaner')
+	const interval = 3000
 
-	let curSlide = 0
-	const maxSlide = slides.length
+	let slide = document.querySelectorAll('.slider__slide')
+	let index = 1
+	let slideId
 
-	//FUNCTIONS
+	// CLONING SLIDE
+	const firstClone = slide[0].cloneNode(true)
+	const lastClone = slide[slide.length - 1].cloneNode(true)
+
+	firstClone.id = 'first-clone'
+	lastClone.id = 'last-clone'
+
+	slides.append(firstClone)
+	slides.prepend(lastClone)
+
+	const slideWidth = slide[index].clientWidth
+
+	slides.style.transform = `translateX(${-slideWidth * index}px)`
+
+	const getSlides = () => document.querySelectorAll('.slider__slide')
+
+	slides.addEventListener('transitionend', () => {
+		slide = getSlides()
+		if (slide[index].id === firstClone.id) {
+			slides.style.transition = 'none'
+			index = 1
+			slides.style.transform = `translate(${-slideWidth * index}px)`
+		}
+
+		if (slide[index].id === lastClone.id) {
+			slides.style.transition = 'none'
+			index = slide.length - 2
+			slides.style.transform = `translate(${-slideWidth * index}px)`
+		}
+	})
+
+	// FUNCTIONS
 	const createDots = () => {
-		slides.forEach((_, i) => {
-			dotContainer.insertAdjacentHTML('beforeend', `<button class="slider__nav-dot" data-slide="${i}"></button>`)
+		slide.forEach((_, i) => {
+			dotContainer.insertAdjacentHTML('beforeend', `<button class="slider__nav-dot"data-slide="${i + 1}"></button>`)
 		})
 	}
 
@@ -60,47 +94,67 @@ const slider = () => {
 	}
 
 	const goToSLide = slide => {
-		slides.forEach((s, i) => (s.style.transform = `translate(${100 * (i - slide)}%)`))
+		slides.style.transform = `translate(${-slideWidth * slide}px)`
+	}
+
+	const startSlide = () => {
+		slideId = setInterval(() => {
+			moveToNextSlide()
+		}, interval)
 	}
 
 	const init = () => {
-		goToSLide(0)
 		createDots()
-		activateDot(0)
+		goToSLide(1)
+		activateDot(1)
+		startSlide()
 	}
 
 	// NEXT SLIDE
-	const nextSlide = () => {
-		if (curSlide === maxSlide - 1) {
-			curSlide = 0
+	const moveToNextSlide = () => {
+		if (index >= slide.length - 1) {
+			return
 		} else {
-			curSlide++
+			index++
 		}
+		slides.style.transition = '.7s ease-out'
+		slides.style.transform = `translate(${-slideWidth * index}px)`
 
-		goToSLide(curSlide)
-		activateDot(curSlide)
+		if (index >= slide.length - 1) {
+			activateDot(1)
+		} else {
+			activateDot(index)
+		}
 	}
 
-	// PREV SlIDE
-	const prevSlide = () => {
-		if (curSlide === 0) {
-			curSlide = maxSlide - 1
+	// PREV SLIDE
+	const moveToPreviousSlide = () => {
+		if (index <= 0) return
+		index--
+		slides.style.transition = '.7s ease-out'
+		slides.style.transform = `translateX(${-slideWidth * index}px)`
+
+		if (index <= 0) {
+			activateDot(slide.length - 2)
 		} else {
-			curSlide--
+			activateDot(index)
 		}
-		goToSLide(curSlide)
-		activateDot(curSlide)
 	}
 
 	init()
 
 	// EVENT HANDLERS
-	rightBtn.addEventListener('click', nextSlide)
-	leftBtn.addEventListener('click', prevSlide)
+	slideContainer.addEventListener('mouseenter', () => {
+		clearInterval(slideId)
+	})
+
+	slideContainer.addEventListener('mouseleave', startSlide)
+	nextBtn.addEventListener('click', moveToNextSlide)
+	prevBtn.addEventListener('click', moveToPreviousSlide)
 
 	document.addEventListener('keydown', e => {
-		e.key === 'ArrowLeft' && prevSlide()
-		e.key === 'ArrowRight' && nextSlide()
+		e.key === 'ArrowLeft' && moveToPreviousSlide()
+		e.key === 'ArrowRight' && moveToNextSlide()
 	})
 
 	dotContainer.addEventListener('click', e => {
@@ -108,7 +162,9 @@ const slider = () => {
 			const { slide } = e.target.dataset
 			goToSLide(slide)
 			activateDot(slide)
+
+			console.log(e.target)
 		}
 	})
 }
-slider()
+autoSlider()
