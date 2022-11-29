@@ -449,6 +449,9 @@ button {
   overflow: hidden;
 }
 .slider__track-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0 auto;
   width: 28.2rem;
   height: 50rem;
@@ -468,6 +471,15 @@ button {
   min-width: 28.2rem;
   height: 100%;
   padding: 0 0.6rem;
+  opacity: 0.5;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+.slider__slide--active {
+  opacity: 1;
+}
+.slider__slide--active .slider__slide-info-bottom {
+  color: red;
 }
 .slider__slide-link {
   display: block;

@@ -81,6 +81,16 @@ const autoSlider = () => {
 	})
 
 	// FUNCTIONS
+	const getDataSlide = () => {
+		slide.forEach((e, i) => e.classList.add(`slider__slide--${i + 1}`))
+	}
+
+	const activateSlide = slide => {
+		document.querySelectorAll('.slider__slide').forEach(e => e.classList.remove('slider__slide--active'))
+
+		document.querySelector(`.slider__slide--${slide}`).classList.add('slider__slide--active')
+	}
+
 	const createDots = () => {
 		slide.forEach((_, i) => {
 			dotContainer.insertAdjacentHTML('beforeend', `<button class="slider__nav-dot"data-slide="${i + 1}"></button>`)
@@ -104,6 +114,8 @@ const autoSlider = () => {
 	}
 
 	const init = () => {
+		getDataSlide()
+		activateSlide(1)
 		createDots()
 		goToSLide(1)
 		activateDot(1)
@@ -122,8 +134,10 @@ const autoSlider = () => {
 
 		if (index >= slide.length - 1) {
 			activateDot(1)
+			activateSlide(1)
 		} else {
 			activateDot(index)
+			activateSlide(index)
 		}
 	}
 
@@ -136,8 +150,10 @@ const autoSlider = () => {
 
 		if (index <= 0) {
 			activateDot(slide.length - 2)
+			activateSlide(slide.length - 2)
 		} else {
 			activateDot(index)
+			activateSlide(index)
 		}
 	}
 
@@ -163,7 +179,7 @@ const autoSlider = () => {
 			goToSLide(slide)
 			activateDot(slide)
 
-			console.log(e.target)
+			console.log(e.target.dataset)
 		}
 	})
 }

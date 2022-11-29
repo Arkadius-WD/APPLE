@@ -81,8 +81,14 @@ const autoSlider = () => {
 	})
 
 	// FUNCTIONS
-	const getDataSlide = () => {
-		slide.forEach((e, i) => e.classList.add(`.slider__slide[data-index="${i + 1}"]`))
+	function getDataSlide() {
+		slide.forEach((e, i) => e.classList.add(`slider__slide--${i + 1}`))
+	}
+
+	const activateSlide = slide => {
+		document.querySelectorAll('.slider__slide').forEach(e => e.classList.remove('slider__slide--active'))
+
+		document.querySelector(`.slider__slide--${slide}`).classList.add('slider__slide--active')
 	}
 
 	const createDots = () => {
@@ -97,26 +103,19 @@ const autoSlider = () => {
 		document.querySelector(`.slider__nav-dot[data-slide="${slide}"]`).classList.add('slider__nav-dot--active')
 	}
 
-	// const activateSlide = slide => {
-	// 	document.querySelectorAll('.slider__slide').forEach(dot => dot.classList.remove('slider__slide--active'))
-
-	// 	document.querySelector(`.slider__slide[data-index="${slide}"]`).classList.add('slider__slide--active')
-	// }
-
-	// activateSlide()
-
 	const goToSLide = slide => {
 		slides.style.transform = `translate(${-slideWidth * slide}px)`
 	}
 
-	const startSlide = () => {
+	const startSlide = slide => {
 		slideId = setInterval(() => {
-			moveToNextSlide()
+			moveToNextSlide(slide)
 		}, interval)
 	}
 
 	const init = () => {
 		getDataSlide()
+		activateSlide(1)
 		createDots()
 		goToSLide(1)
 		activateDot(1)
@@ -135,8 +134,10 @@ const autoSlider = () => {
 
 		if (index >= slide.length - 1) {
 			activateDot(1)
+			activateSlide(1)
 		} else {
 			activateDot(index)
+			activateSlide(index)
 		}
 	}
 
@@ -149,8 +150,10 @@ const autoSlider = () => {
 
 		if (index <= 0) {
 			activateDot(slide.length - 2)
+			activateSlide(slide.length - 2)
 		} else {
 			activateDot(index)
+			activateSlide(index)
 		}
 	}
 

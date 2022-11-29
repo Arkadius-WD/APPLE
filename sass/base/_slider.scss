@@ -8,6 +8,7 @@
 	overflow: hidden;
 
 	&__track-container {
+		display: flex;
 		margin: 0 auto;
 		width: 28.2rem;
 		height: 50rem;
@@ -24,6 +25,15 @@
 		min-width: 28.2rem;
 		height: 100%;
 		padding: 0 0.6rem;
+		opacity: 0.5;
+		transition: opacity 1s;
+
+		&--active {
+			opacity: 1;
+			.slider__slide-info-bottom {
+				color: red;
+			}
+		}
 	}
 
 	&__slide-link {
