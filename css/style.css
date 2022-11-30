@@ -302,6 +302,11 @@ button {
   opacity: 0;
 }
 
+.nav-item-animation {
+  -webkit-animation: navItemAnimation 1s both;
+          animation: navItemAnimation 1s both;
+}
+
 .heroes {
   display: grid;
   grid-template-rows: 55rem 50rem 50rem;
@@ -990,8 +995,4 @@ button {
   to {
     opacity: 1;
   }
-}
-.nav-item-animation {
-  -webkit-animation: navItemAnimation 1s both;
-          animation: navItemAnimation 1s both;
 }/*# sourceMappingURL=style.css.map */

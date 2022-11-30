@@ -60,11 +60,15 @@ const autoSlider = () => {
 	slides.append(firstClone)
 	slides.prepend(lastClone)
 
-	const slideWidth = slide[index].clientWidth
+	let slideWidth = slide[index].clientWidth
 
 	slides.style.transform = `translateX(${-slideWidth * index}px)`
 
-	const getSlides = () => document.querySelectorAll('.slider__slide')
+	let getSlides = () => document.querySelectorAll('.slider__slide')
+
+	window.addEventListener('resize', () => {
+		slideWidth = slide[index].clientWidth
+	})
 
 	slides.addEventListener('transitionend', () => {
 		slide = getSlides()
