@@ -43,6 +43,7 @@ const autoSlider = () => {
 	const nextBtn = document.querySelector('.slider__next')
 	const prevBtn = document.querySelector('.slider__previous')
 	const dotContainer = document.querySelector('.slider__nav-dots-contaner')
+	const autoplayButton = document.querySelector('.slider__stop-play')
 	const interval = 3000
 
 	let slide = document.querySelectorAll('.slider__slide')
@@ -81,7 +82,7 @@ const autoSlider = () => {
 	})
 
 	// FUNCTIONS
-	const getDataSlide = () => {
+	function getDataSlide() {
 		slide.forEach((e, i) => e.classList.add(`slider__slide--${i + 1}`))
 	}
 
@@ -107,9 +108,9 @@ const autoSlider = () => {
 		slides.style.transform = `translate(${-slideWidth * slide}px)`
 	}
 
-	const startSlide = () => {
+	const startSlide = slide => {
 		slideId = setInterval(() => {
-			moveToNextSlide()
+			moveToNextSlide(slide)
 		}, interval)
 	}
 
@@ -157,14 +158,32 @@ const autoSlider = () => {
 		}
 	}
 
+	// START-STOP AUTOPLAY
+	const startStop = () => {
+		autoplayButton.classList.toggle('slider__stop-play')
+		autoplayButton.classList.toggle('slider__auto-play')
+
+		if (autoplayButton.classList.contains('slider__stop-play')) {
+			startSlide()
+		} else {
+			clearInterval(slideId)
+		}
+	}
+
+	const onlyStop = () => {
+		clearInterval(slideId)
+		if (autoplayButton.classList.contains('slider__stop-play')) {
+			autoplayButton.classList.remove('slider__stop-play')
+			autoplayButton.classList.add('slider__auto-play')
+		}
+	}
+
 	init()
 
 	// EVENT HANDLERS
-	slideContainer.addEventListener('mouseenter', () => {
-		clearInterval(slideId)
-	})
 
-	slideContainer.addEventListener('mouseleave', startSlide)
+	autoplayButton.addEventListener('click', startStop)
+
 	nextBtn.addEventListener('click', moveToNextSlide)
 	prevBtn.addEventListener('click', moveToPreviousSlide)
 
@@ -178,9 +197,12 @@ const autoSlider = () => {
 			const { slide } = e.target.dataset
 			goToSLide(slide)
 			activateDot(slide)
+			activateSlide(slide)
+			onlyStop()
 
-			console.log(e.target.dataset)
+			index = slide
 		}
 	})
 }
+
 autoSlider()
