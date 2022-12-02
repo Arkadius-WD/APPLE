@@ -144,6 +144,10 @@
 
 		&__slide {
 			min-width: 98rem;
+
+			&-info-bottom {
+				margin-bottom: -11rem;
+			}
 		}
 		&__slide-link {
 			&--1 {

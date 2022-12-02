@@ -44,7 +44,7 @@ const autoSlider = () => {
 	const prevBtn = document.querySelector('.slider__previous')
 	const dotContainer = document.querySelector('.slider__nav-dots-contaner')
 	const autoplayButton = document.querySelector('.slider__stop-play')
-	const interval = 3000
+	const interval = 5000
 
 	let slide = document.querySelectorAll('.slider__slide')
 	let index = 1
@@ -75,13 +75,13 @@ const autoSlider = () => {
 		if (slide[index].id === firstClone.id) {
 			slides.style.transition = 'none'
 			index = 1
-			slides.style.transform = `translate(${-slideWidth * index}px)`
+			slides.style.transform = `translateX(${-slideWidth * index}px)`
 		}
 
 		if (slide[index].id === lastClone.id) {
 			slides.style.transition = 'none'
 			index = slide.length - 2
-			slides.style.transform = `translate(${-slideWidth * index}px)`
+			slides.style.transform = `translateX(${-slideWidth * index}px)`
 		}
 	})
 
@@ -134,8 +134,8 @@ const autoSlider = () => {
 		} else {
 			index++
 		}
-		slides.style.transition = '.7s ease-out'
-		slides.style.transform = `translate(${-slideWidth * index}px)`
+		slides.style.transition = '1s ease-out'
+		slides.style.transform = `translateX(${-slideWidth * index}px)`
 
 		if (index >= slide.length - 1) {
 			activateDot(1)
@@ -150,7 +150,7 @@ const autoSlider = () => {
 	const moveToPreviousSlide = () => {
 		if (index <= 0) return
 		index--
-		slides.style.transition = '.7s ease-out'
+		slides.style.transition = '1s ease-out'
 		slides.style.transform = `translateX(${-slideWidth * index}px)`
 
 		if (index <= 0) {

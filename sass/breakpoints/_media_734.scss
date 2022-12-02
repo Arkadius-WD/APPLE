@@ -137,6 +137,35 @@
 
 		&__slide {
 			min-width: 70rem;
+
+			&-info-top {
+				display: none;
+			}
+
+			&-info-bottom {
+				flex-direction: row-reverse;
+				align-items: flex-end;
+
+				h4 {
+					order: 1;
+					font-size: 1.9rem;
+					margin-left: 2.5rem;
+					margin-bottom: 1.5rem;
+				}
+
+				&-text {
+					position: absolute;
+					bottom: 0.2rem;
+					left: 21.3rem;
+					font-size: 1.7rem;
+					text-align: left;
+				}
+			}
+			&-button {
+				order: 2;
+				margin-bottom: -1rem;
+				margin-left: 3rem;
+			}
 		}
 
 		&__slide-link {

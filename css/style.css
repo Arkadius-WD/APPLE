@@ -477,10 +477,19 @@ button {
   height: 100%;
   padding: 0 0.6rem;
   opacity: 0.2;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 .slider__slide--active {
+  opacity: 1;
+}
+.slider__slide--active .slider__slide-info-bottom {
+  -webkit-transition: opacity 0.7s, -webkit-transform 0.7s;
+  transition: opacity 0.7s, -webkit-transform 0.7s;
+  transition: transform 0.7s, opacity 0.7s;
+  transition: transform 0.7s, opacity 0.7s, -webkit-transform 0.7s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   opacity: 1;
 }
 .slider__slide-info-top {
@@ -491,9 +500,6 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -503,6 +509,7 @@ button {
 .slider__slide-info-top-icon {
   height: 3.3rem;
   width: 6.8rem;
+  margin-top: 1.5rem;
   -o-object-fit: cover;
      object-fit: cover;
   background-repeat: no-repeat;
@@ -513,9 +520,11 @@ button {
   height: 5.4rem;
   margin-top: 0.5rem;
   background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
 }
 .slider__slide-info-bottom {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -533,13 +542,18 @@ button {
   height: 35rem;
   padding: 1rem;
   margin-bottom: 1.7rem;
+  text-shadow: 2px 2px 3px rgb(66, 68, 90);
+  -webkit-transform: translateY(15rem);
+          transform: translateY(15rem);
+  opacity: 0;
 }
-.slider__slide-info-bottom p {
+.slider__slide-info-bottom-text {
   padding: 0.3rem;
   font-size: 1.6rem;
+  font-weight: 500;
   text-align: center;
 }
-.slider__slide-info-bottom button {
+.slider__slide-button button {
   position: relative;
   background-color: #f5f5f7;
   font-family: "Lato", sans-serif;
@@ -550,7 +564,7 @@ button {
   border: none;
   border-radius: 2.5rem;
 }
-.slider__slide-info-bottom ::before {
+.slider__slide-button ::before {
   position: absolute;
   display: inline-block;
   top: 1.4rem;
@@ -591,26 +605,50 @@ button {
 .slider__slide-link--2 {
   background-image: url("../img/slider/2-slide-small-quest.jpg");
 }
+.slider__slide-link--2 .slider__slide-info-top-title {
+  background-image: url("..//..//img/slider/2-quest-548x94.png");
+}
 .slider__slide-link--3 {
   background-image: url("../img/slider/3-slide-small-believe.jpg");
+}
+.slider__slide-link--3 .slider__slide-info-top-title {
+  background-image: url("..//..//img/slider/3-believe-548x79.png");
 }
 .slider__slide-link--4 {
   background-image: url("../img/slider/4-slide-small-see.jpg");
 }
+.slider__slide-link--4 .slider__slide-info-top-title {
+  background-image: url("..//..//img/slider/4-see-548x269.png");
+}
 .slider__slide-link--5 {
   background-image: url("../img/slider/5-slide-small-causeway.jpg");
+}
+.slider__slide-link--5 .slider__slide-info-top-title {
+  background-image: url("..//..//img/slider/5-causeway-548x96.png");
 }
 .slider__slide-link--6 {
   background-image: url("../img/slider/6-slide-small-shantaram.jpg");
 }
+.slider__slide-link--6 .slider__slide-info-top-title {
+  background-image: url("..//..//img/slider/6-shantaram-548x126.png");
+}
 .slider__slide-link--7 {
   background-image: url("../img/slider/7-slide-small-morning.jpg");
+}
+.slider__slide-link--7 .slider__slide-info-top-title {
+  background-image: url("..//..//img/slider/7-morning-548x165.png");
 }
 .slider__slide-link--8 {
   background-image: url("../img/slider/8-slide-small-sisters.jpg");
 }
+.slider__slide-link--8 .slider__slide-info-top-title {
+  background-image: url("..//..//img/slider/8-sisters-548x90.png");
+}
 .slider__slide-link--9 {
   background-image: url("../img/slider/9-slide-small-acapulco.jpg");
+}
+.slider__slide-link--9 .slider__slide-info-top-title {
+  background-image: url("..//..//img/slider/9-acapulco-548x118.png");
 }
 .slider__nav {
   position: relative;
@@ -801,6 +839,40 @@ button {
   .slider__slide {
     min-width: 70rem;
   }
+  .slider__slide-info-top {
+    display: none;
+  }
+  .slider__slide-info-bottom {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .slider__slide-info-bottom h4 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    font-size: 1.9rem;
+    margin-left: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .slider__slide-info-bottom-text {
+    position: absolute;
+    bottom: 0.2rem;
+    left: 21.3rem;
+    font-size: 1.7rem;
+    text-align: left;
+  }
+  .slider__slide-button {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-bottom: -1rem;
+    margin-left: 3rem;
+  }
   .slider__slide-link--1 {
     background-image: url("../img/slider/1-slide-medium-selena.jpg");
   }
@@ -970,6 +1042,9 @@ button {
   .slider__slide {
     min-width: 98rem;
   }
+  .slider__slide-info-bottom {
+    margin-bottom: -11rem;
+  }
   .slider__slide-link--1 {
     background-image: url("../img/slider/1-slide-large-selena.jpg");
   }
@@ -1014,6 +1089,31 @@ button {
   }
   .slider__slide {
     min-width: 125rem;
+  }
+  .slider__slide-info-bottom {
+    margin-bottom: 1.7rem;
+  }
+  .slider__slide-info-bottom h4 {
+    margin-bottom: -11rem;
+    font-size: 2.1rem;
+  }
+  .slider__slide-info-bottom-text {
+    bottom: -12.7rem;
+    left: 27rem;
+    font-size: 1.9rem;
+  }
+  .slider__slide-button {
+    margin-bottom: -14rem;
+    margin-left: 6rem;
+  }
+  .slider__slide-button button {
+    font-size: 1.9rem;
+    padding: 1.5rem 5.2rem 1.7rem 2.2rem;
+  }
+  .slider__slide-button ::before {
+    top: 1.7rem;
+    width: 1.9rem;
+    height: 1.9rem;
   }
   .slider__slide-link--1 {
     background-image: url("../img/slider/1-slide-xlarge-selena.jpg");

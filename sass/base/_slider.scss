@@ -26,16 +26,21 @@
 		height: 100%;
 		padding: 0 0.6rem;
 		opacity: 0.2;
-		transition: opacity 1s;
+		transition: opacity 0.5s;
 
 		&--active {
 			opacity: 1;
+
+			.slider__slide-info-bottom {
+				transition: transform 0.7s, opacity 0.7s;
+				transform: translateY(0);
+				opacity: 1;
+			}
 		}
 
 		&-info-top {
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
 			align-items: center;
 			width: 100%;
 			height: 15rem;
@@ -43,6 +48,7 @@
 			&-icon {
 				height: 3.3rem;
 				width: 6.8rem;
+				margin-top: 1.5rem;
 				object-fit: cover;
 				background-repeat: no-repeat;
 				background-image: url('..//img/slider/logo_hero_light__d7t8cya4x26a_small.png');
@@ -53,11 +59,13 @@
 				height: 5.4rem;
 				margin-top: 0.5rem;
 				background-size: contain;
+				background-position: center;
 				background-repeat: no-repeat;
 			}
 		}
 
 		&-info-bottom {
+			position: relative;
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
@@ -66,13 +74,19 @@
 			height: 35rem;
 			padding: 1rem;
 			margin-bottom: 1.7rem;
+			text-shadow: 2px 2px 3px rgba(66, 68, 90, 1);
+			transform: translateY(15rem);
+			opacity: 0;
 
-			p {
+			&-text {
 				padding: 0.3rem;
 				font-size: 1.6rem;
+				font-weight: 500;
 				text-align: center;
 			}
+		}
 
+		&-button {
 			button {
 				position: relative;
 				background-color: $first;
@@ -109,6 +123,7 @@
 		height: 100%;
 		object-fit: cover;
 		background-repeat: no-repeat;
+
 		&--1 {
 			background-image: url('../img/slider/1-slide-small-selena.jpg');
 
@@ -118,27 +133,59 @@
 		}
 		&--2 {
 			background-image: url('../img/slider/2-slide-small-quest.jpg');
+
+			.slider__slide-info-top-title {
+				background-image: url('..//..//img/slider/2-quest-548x94.png');
+			}
 		}
 		&--3 {
 			background-image: url('../img/slider/3-slide-small-believe.jpg');
+
+			.slider__slide-info-top-title {
+				background-image: url('..//..//img/slider/3-believe-548x79.png');
+			}
 		}
 		&--4 {
 			background-image: url('../img/slider/4-slide-small-see.jpg');
+
+			.slider__slide-info-top-title {
+				background-image: url('..//..//img/slider/4-see-548x269.png');
+			}
 		}
 		&--5 {
 			background-image: url('../img/slider/5-slide-small-causeway.jpg');
+
+			.slider__slide-info-top-title {
+				background-image: url('..//..//img/slider/5-causeway-548x96.png');
+			}
 		}
 		&--6 {
 			background-image: url('../img/slider/6-slide-small-shantaram.jpg');
+
+			.slider__slide-info-top-title {
+				background-image: url('..//..//img/slider/6-shantaram-548x126.png');
+			}
 		}
 		&--7 {
 			background-image: url('../img/slider/7-slide-small-morning.jpg');
+
+			.slider__slide-info-top-title {
+				background-image: url('..//..//img/slider/7-morning-548x165.png');
+			}
 		}
 		&--8 {
 			background-image: url('../img/slider/8-slide-small-sisters.jpg');
+
+			.slider__slide-info-top-title {
+				background-image: url('..//..//img/slider/8-sisters-548x90.png');
+			}
 		}
 		&--9 {
 			background-image: url('../img/slider/9-slide-small-acapulco.jpg');
+
+			.slider__slide-info-top-title {
+				background-image: url('..//..//img/slider/9-acapulco-548x118.png');
+			}
 		}
 	}
 

@@ -12,6 +12,33 @@
 
 		&__slide {
 			min-width: 125rem;
+			&-info-bottom {
+				margin-bottom: 1.7rem;
+				h4 {
+					margin-bottom: -11rem;
+					font-size: 2.1rem;
+				}
+
+				&-text {
+					bottom: -12.7rem;
+					left: 27rem;
+					font-size: 1.9rem;
+				}
+			}
+			&-button {
+				margin-bottom: -14rem;
+				margin-left: 6rem;
+
+				button {
+					font-size: 1.9rem;
+					padding: 1.5rem 5.2rem 1.7rem 2.2rem;
+				}
+				::before {
+					top: 1.7rem;
+					width: 1.9rem;
+					height: 1.9rem;
+				}
+			}
 		}
 		&__slide-link {
 			&--1 {
