@@ -1,3 +1,5 @@
+'use strict'
+
 //////////////////////// NAV ////////////////////////////
 /////////////////////////////////////////////////////////
 const navAnimation = () => {
@@ -134,7 +136,7 @@ const autoSlider = () => {
 		} else {
 			index++
 		}
-		slides.style.transition = '1s ease-out'
+		slides.style.transition = 'transform 1s'
 		slides.style.transform = `translateX(${-slideWidth * index}px)`
 
 		if (index >= slide.length - 1) {
@@ -150,7 +152,7 @@ const autoSlider = () => {
 	const moveToPreviousSlide = () => {
 		if (index <= 0) return
 		index--
-		slides.style.transition = '1s ease-out'
+		slides.style.transition = 'transform 1s'
 		slides.style.transform = `translateX(${-slideWidth * index}px)`
 
 		if (index <= 0) {
