@@ -46,7 +46,7 @@ const autoSlider = () => {
 	const prevBtn = document.querySelector('.slider__previous')
 	const dotContainer = document.querySelector('.slider__nav-dots-contaner')
 	const autoplayButton = document.querySelector('.slider__stop-play')
-	const interval = 5000
+	const interval = 4000
 
 	let slide = document.querySelectorAll('.slider__slide')
 	let index = 1
@@ -170,6 +170,7 @@ const autoSlider = () => {
 		autoplayButton.classList.toggle('slider__auto-play')
 
 		if (autoplayButton.classList.contains('slider__stop-play')) {
+			moveToNextSlide()
 			startSlide()
 		} else {
 			clearInterval(slideId)

@@ -25,6 +25,7 @@
 		height: 100%;
 		padding: 0 0.6rem;
 		opacity: 0.2;
+		transition: opacity 1s;
 
 		&--active {
 			opacity: 1;

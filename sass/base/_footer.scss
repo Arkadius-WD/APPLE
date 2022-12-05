@@ -2,6 +2,27 @@
 @use '../variables/fonts' as *;
 
 .footer {
-	height: 30rem;
-	background-color: lightblue;
+	padding: 1.5rem;
+	background-color: $smoke-light;
+	color: $foot-text;
+	font-size: 1.3rem;
+
+	&__notes {
+		&-bold {
+			font-weight: 700;
+		}
+		a {
+			font-family: $font;
+			font-weight: 500;
+			color: #424245;
+		}
+		li {
+			padding-bottom: 1rem;
+		}
+	}
+
+	&__nav {
+		margin-top: 2rem;
+		border-top: 1px solid $foot-border;
+	}
 }
