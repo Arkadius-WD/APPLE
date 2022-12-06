@@ -754,8 +754,23 @@ button {
   padding-bottom: 1rem;
 }
 .footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 43rem;
+  width: 100%;
   margin-top: 2rem;
+  padding-top: 2rem;
   border-top: 1px solid #d2d2d7;
+}
+.footer__nav-column {
+  height: 43rem;
 }
 
 @media only screen and (min-width: 734px) {
