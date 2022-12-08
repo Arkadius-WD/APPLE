@@ -100,7 +100,11 @@ const autoSlider = () => {
 
 	const createDots = () => {
 		slide.forEach((_, i) => {
-			dotContainer.insertAdjacentHTML('beforeend', `<button class="slider__nav-dot"data-slide="${i + 1}"></button>`)
+			dotContainer.insertAdjacentHTML(
+				'beforeend',
+				`<button class="slider__nav-dot"data-slide="${i + 1}" role="button"
+			aria-label="slider-button-dot"></button>`
+			)
 		})
 	}
 
