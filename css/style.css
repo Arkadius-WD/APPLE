@@ -757,12 +757,9 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 43rem;
   width: 100%;
   margin-top: 2rem;
@@ -770,7 +767,18 @@ button {
   border-top: 1px solid #d2d2d7;
 }
 .footer__nav-column {
-  height: 43rem;
+  background-color: aqua;
+}
+.footer__nav-column-section-item {
+  position: relative;
+  margin: 1rem 0;
+  background-color: yellow;
+}
+.footer__nav-column-section-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
 }
 
 @media only screen and (min-width: 734px) {
