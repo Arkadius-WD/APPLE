@@ -757,9 +757,10 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 43rem;
   width: 100%;
   margin-top: 2rem;
@@ -767,12 +768,23 @@ button {
   border-top: 1px solid #d2d2d7;
 }
 .footer__nav-column {
-  background-color: aqua;
+  display: block;
+}
+.footer__nav-column-section {
+  position: relative;
+}
+.footer__nav-column-section-title {
+  font-weight: 500;
+}
+.footer__nav-column-section-icon {
+  position: absolute;
+  top: 0;
+  right: 2rem;
 }
 .footer__nav-column-section-item {
+  display: none;
   position: relative;
   margin: 1rem 0;
-  background-color: yellow;
 }
 .footer__nav-column-section-link {
   position: absolute;
@@ -947,6 +959,21 @@ button {
   }
   .slider__next {
     left: calc(50% + 356px);
+  }
+  .footer__nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer__nav-column-section-icon {
+    display: none;
+  }
+  .footer__nav-column-section-item {
+    display: block;
   }
 }
 @media only screen and (min-width: 834px) {

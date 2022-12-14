@@ -214,4 +214,22 @@
 			left: calc(50% + 356px);
 		}
 	}
+
+	.footer {
+		&__nav {
+			flex-direction: row;
+			justify-content: space-between;
+
+			&-column {
+				&-section {
+					&-icon {
+						display: none;
+					}
+					&-item {
+						display: block;
+					}
+				}
+			}
+		}
+	}
 }
