@@ -792,6 +792,9 @@ button {
   height: 100%;
   padding: 1rem;
 }
+.footer__nav-column-section-icon {
+  color: red;
+}
 
 @media only screen and (min-width: 734px) {
   .heroes {
