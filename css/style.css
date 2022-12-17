@@ -793,7 +793,8 @@ button {
   padding: 1rem;
 }
 .footer__nav-column-section-icon {
-  color: red;
+  font-style: normal;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 734px) {
