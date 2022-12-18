@@ -219,3 +219,27 @@ autoSlider()
 
 ////////////////////// FOOTER ///////////////////////////
 /////////////////////////////////////////////////////////
+
+const footerIcon = document.querySelectorAll('.footer__nav-column-section-icon')
+
+// FUNCTIONS
+function getDataIdFooter() {
+	footerIcon.forEach((e, i) => e.classList.add(`data-id-${i + 1}`))
+}
+getDataIdFooter()
+
+footerIcon.forEach(el =>
+	el.addEventListener('click', e => {
+		// document.querySelectorAll('.slider__slide').forEach(e => e.classList.remove('slider__slide--active'))
+
+		// document.querySelector(`.slider__slide--${slide}`).classList.add('slider__slide--active')
+
+		if (e.target.classList.contains('icon--active')) {
+			el.classList.remove('icon--active')
+		} else {
+			el.classList.add('icon-active')
+		}
+
+		console.log(el)
+	})
+)
