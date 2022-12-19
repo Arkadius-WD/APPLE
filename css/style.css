@@ -476,17 +476,91 @@ button {
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
 }
+.slider__slide-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-repeat: no-repeat;
+}
+.slider__slide-link--1 {
+  background-image: url("../img/slider/1-slide-small-selena.jpg");
+}
+.slider__slide-link--1 .slider__slide-info-top-title {
+  background-image: url("..//..//img/slider/1-selena-548x133.png");
+}
+.slider__slide-link--2 {
+  background-image: url("../img/slider/2-slide-small-quest.jpg");
+}
+.slider__slide-link--2 .slider__slide-info-top-title {
+  background-image: url("..//..//img/slider/2-quest-548x94.png");
+}
+.slider__slide-link--3 {
+  background-image: url("../img/slider/3-slide-small-believe.jpg");
+}
+.slider__slide-link--3 .slider__slide-info-top-title {
+  background-image: url("..//..//img/slider/3-believe-548x79.png");
+}
+.slider__slide-link--4 {
+  background-image: url("../img/slider/4-slide-small-see.jpg");
+}
+.slider__slide-link--4 .slider__slide-info-top-title {
+  background-image: url("..//..//img/slider/4-see-548x269.png");
+}
+.slider__slide-link--5 {
+  background-image: url("../img/slider/5-slide-small-causeway.jpg");
+}
+.slider__slide-link--5 .slider__slide-info-top-title {
+  background-image: url("..//..//img/slider/5-causeway-548x96.png");
+}
+.slider__slide-link--6 {
+  background-image: url("../img/slider/6-slide-small-shantaram.jpg");
+}
+.slider__slide-link--6 .slider__slide-info-top-title {
+  background-image: url("..//..//img/slider/6-shantaram-548x126.png");
+}
+.slider__slide-link--7 {
+  background-image: url("../img/slider/7-slide-small-morning.jpg");
+}
+.slider__slide-link--7 .slider__slide-info-top-title {
+  background-image: url("..//..//img/slider/7-morning-548x165.png");
+}
+.slider__slide-link--8 {
+  background-image: url("../img/slider/8-slide-small-sisters.jpg");
+}
+.slider__slide-link--8 .slider__slide-info-top-title {
+  background-image: url("..//..//img/slider/8-sisters-548x90.png");
+}
+.slider__slide-link--9 {
+  background-image: url("../img/slider/9-slide-small-acapulco.jpg");
+}
+.slider__slide-link--9 .slider__slide-info-top-title {
+  background-image: url("..//..//img/slider/9-acapulco-548x118.png");
+}
 .slider__slide--active {
   opacity: 1;
 }
 .slider__slide--active .slider__slide-info-bottom {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
   -webkit-transition: opacity 1s, -webkit-transform 1s;
   transition: opacity 1s, -webkit-transform 1s;
   transition: transform 1s, opacity 1s;
   transition: transform 1s, opacity 1s, -webkit-transform 1s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 .slider__slide-info-top {
   display: -webkit-box;
@@ -571,80 +645,6 @@ button {
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("..//img/buttons/black-play.svg");
-}
-.slider__slide-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  background-repeat: no-repeat;
-}
-.slider__slide-link--1 {
-  background-image: url("../img/slider/1-slide-small-selena.jpg");
-}
-.slider__slide-link--1 .slider__slide-info-top-title {
-  background-image: url("..//..//img/slider/1-selena-548x133.png");
-}
-.slider__slide-link--2 {
-  background-image: url("../img/slider/2-slide-small-quest.jpg");
-}
-.slider__slide-link--2 .slider__slide-info-top-title {
-  background-image: url("..//..//img/slider/2-quest-548x94.png");
-}
-.slider__slide-link--3 {
-  background-image: url("../img/slider/3-slide-small-believe.jpg");
-}
-.slider__slide-link--3 .slider__slide-info-top-title {
-  background-image: url("..//..//img/slider/3-believe-548x79.png");
-}
-.slider__slide-link--4 {
-  background-image: url("../img/slider/4-slide-small-see.jpg");
-}
-.slider__slide-link--4 .slider__slide-info-top-title {
-  background-image: url("..//..//img/slider/4-see-548x269.png");
-}
-.slider__slide-link--5 {
-  background-image: url("../img/slider/5-slide-small-causeway.jpg");
-}
-.slider__slide-link--5 .slider__slide-info-top-title {
-  background-image: url("..//..//img/slider/5-causeway-548x96.png");
-}
-.slider__slide-link--6 {
-  background-image: url("../img/slider/6-slide-small-shantaram.jpg");
-}
-.slider__slide-link--6 .slider__slide-info-top-title {
-  background-image: url("..//..//img/slider/6-shantaram-548x126.png");
-}
-.slider__slide-link--7 {
-  background-image: url("../img/slider/7-slide-small-morning.jpg");
-}
-.slider__slide-link--7 .slider__slide-info-top-title {
-  background-image: url("..//..//img/slider/7-morning-548x165.png");
-}
-.slider__slide-link--8 {
-  background-image: url("../img/slider/8-slide-small-sisters.jpg");
-}
-.slider__slide-link--8 .slider__slide-info-top-title {
-  background-image: url("..//..//img/slider/8-sisters-548x90.png");
-}
-.slider__slide-link--9 {
-  background-image: url("../img/slider/9-slide-small-acapulco.jpg");
-}
-.slider__slide-link--9 .slider__slide-info-top-title {
-  background-image: url("..//..//img/slider/9-acapulco-548x118.png");
 }
 .slider__nav {
   position: relative;
