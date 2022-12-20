@@ -222,11 +222,11 @@
 
 			&-column {
 				&-section {
+					&-list {
+						display: block;
+					}
 					&-icon {
 						display: none;
-					}
-					&-item {
-						display: block;
 					}
 				}
 			}

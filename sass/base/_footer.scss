@@ -42,14 +42,29 @@
 					font-weight: 500;
 				}
 
+				&-list {
+					display: none;
+					transition: display 2s;
+				}
+
 				&-icon {
 					position: absolute;
 					top: 0;
 					right: 2rem;
+					font-style: normal;
+					cursor: pointer;
+					transition: rotate 2s;
+
+					&--active {
+						transform: rotate(45deg);
+
+						~ .footer__nav-column-section-list {
+							display: block;
+						}
+					}
 				}
 
 				&-item {
-					display: none;
 					position: relative;
 					margin: 1rem 0;
 				}
@@ -59,11 +74,6 @@
 					width: 100%;
 					height: 100%;
 					padding: 1rem;
-				}
-
-				&-icon {
-					font-style: normal;
-					cursor: pointer;
 				}
 			}
 		}
