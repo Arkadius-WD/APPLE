@@ -1,18 +1,18 @@
 'use strict'
 
 export const footerList = () => {
-	const footerIcon = document.querySelectorAll('.footer__nav-column-section-icon')
+	const footerSections = document.querySelectorAll('.footer__nav-column-section')
 
 	// FUNCTIONS
 	function getDataIdFooter() {
-		footerIcon.forEach((el, i) => el.setAttribute('data-id', `${i + 1}`))
+		footerSections.forEach((el, i) => el.setAttribute('data-id', `${i + 1}`))
 	}
 	getDataIdFooter()
 
-	footerIcon.forEach(el =>
-		el.addEventListener('click', e => {
-			e.target.classList.toggle('footer__nav-column-section-icon--active')
-			console.log(e.target)
+	footerSections.forEach(el =>
+		el.addEventListener('click', () => {
+			el.classList.toggle('footer__nav-column-section--active')
+			console.log(el)
 		})
 	)
 }
