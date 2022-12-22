@@ -774,6 +774,9 @@ button {
   position: relative;
   cursor: pointer;
 }
+.footer__nav-column-section :hover {
+  font-weight: bold;
+}
 .footer__nav-column-section-title {
   font-weight: 500;
 }

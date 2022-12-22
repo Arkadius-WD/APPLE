@@ -39,6 +39,10 @@
 				position: relative;
 				cursor: pointer;
 
+				:hover {
+					font-weight: bold;
+				}
+
 				&-title {
 					font-weight: 500;
 				}
