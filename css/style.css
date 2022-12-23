@@ -774,8 +774,8 @@ button {
   position: relative;
   cursor: pointer;
 }
-.footer__nav-column-section :hover {
-  font-weight: bold;
+.footer__nav-column-section:hover > .footer__nav-column-section-title, .footer__nav-column-section:hover > .footer__nav-column-section-icon {
+  color: red;
 }
 .footer__nav-column-section-title {
   font-weight: 500;
@@ -809,6 +809,9 @@ button {
 .footer__nav-column-section--active .footer__nav-column-section-icon {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+.footer__nav-column-section:hover > .footer__nav-column-title {
+  color: red;
 }
 
 @media only screen and (min-width: 734px) {

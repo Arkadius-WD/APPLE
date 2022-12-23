@@ -39,8 +39,9 @@
 				position: relative;
 				cursor: pointer;
 
-				:hover {
-					font-weight: bold;
+				&:hover > &-title,
+				&:hover > &-icon {
+					color: red;
 				}
 
 				&-title {
@@ -79,6 +80,10 @@
 						transform: rotate(45deg);
 					}
 				}
+			}
+
+			&-section:hover > &-title {
+				color: red;
 			}
 		}
 	}
