@@ -810,9 +810,6 @@ button {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-.footer__nav-column-section:hover > .footer__nav-column-title {
-  color: red;
-}
 
 @media only screen and (min-width: 734px) {
   .heroes {
