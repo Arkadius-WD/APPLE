@@ -775,7 +775,7 @@ button {
   cursor: pointer;
 }
 .footer__nav-column-section:hover > .footer__nav-column-section-title, .footer__nav-column-section:hover > .footer__nav-column-section-icon {
-  color: red;
+  font-weight: bold;
 }
 .footer__nav-column-section-title {
   font-weight: 500;
