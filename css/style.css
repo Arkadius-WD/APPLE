@@ -776,6 +776,7 @@ button {
 }
 .footer__nav-column-section:hover > .footer__nav-column-section-title, .footer__nav-column-section:hover > .footer__nav-column-section-icon {
   font-weight: bold;
+  color: red;
 }
 .footer__nav-column-section-title {
   font-weight: 500;
