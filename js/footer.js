@@ -12,7 +12,6 @@ export const footerList = () => {
 	footerSections.forEach(el =>
 		el.addEventListener('click', () => {
 			el.classList.toggle('footer__nav-column-section--active')
-			console.log(el)
 		})
 	)
 }

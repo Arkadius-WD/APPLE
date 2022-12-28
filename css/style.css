@@ -740,7 +740,8 @@ button {
   padding: 1.5rem;
   background-color: #f5f5f7;
   color: #6e6e73;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 .footer__notes-bold {
   font-weight: 700;
@@ -775,28 +776,35 @@ button {
   cursor: pointer;
 }
 .footer__nav-column-section:hover > .footer__nav-column-section-title, .footer__nav-column-section:hover > .footer__nav-column-section-icon {
-  font-weight: bold;
-  color: red;
+  color: #000000;
 }
 .footer__nav-column-section-title {
-  font-weight: 500;
+  font-weight: 400;
+  padding: 1rem 0;
+  border-bottom: 1px solid #d2d2d7;
 }
 .footer__nav-column-section-list {
   display: none;
+  padding-bottom: 1.3rem;
 }
 .footer__nav-column-section-icon {
   position: absolute;
-  top: 0;
+  top: 1rem;
   right: 2rem;
   font-style: normal;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  font-size: 1.6rem;
+  -webkit-transition: -webkit-transform 0.5s, -webkit-transform-origin 0.5s;
+  transition: -webkit-transform 0.5s, -webkit-transform-origin 0.5s;
+  transition: transform 0.5s, transform-origin 0.5s;
+  transition: transform 0.5s, transform-origin 0.5s, -webkit-transform 0.5s, -webkit-transform-origin 0.5s;
 }
 .footer__nav-column-section-item {
   position: relative;
   margin: 1rem 0;
+  padding: 0.2rem 1rem;
+}
+.footer__nav-column-section-item:hover {
+  text-decoration: underline;
 }
 .footer__nav-column-section-link {
   position: absolute;
@@ -804,12 +812,21 @@ button {
   height: 100%;
   padding: 1rem;
 }
+.footer__nav-column-section--active .footer__nav-column-section-title {
+  border-bottom: none;
+  color: #000000;
+}
 .footer__nav-column-section--active .footer__nav-column-section-list {
   display: block;
+  border-bottom: 1px solid #d2d2d7;
+  color: rgba(0, 0, 0, 0.8);
 }
 .footer__nav-column-section--active .footer__nav-column-section-icon {
+  -webkit-transform-origin: center;
+          transform-origin: center;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  color: #000000;
 }
 
 @media only screen and (min-width: 734px) {

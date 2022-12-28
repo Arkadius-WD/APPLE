@@ -5,7 +5,8 @@
 	padding: 1.5rem;
 	background-color: $smoke-light;
 	color: $foot-text;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
+	font-weight: 400;
 
 	&__notes {
 		&-bold {
@@ -41,29 +42,37 @@
 
 				&:hover > &-title,
 				&:hover > &-icon {
-					font-weight: bold;
-					color: red;
+					color: $third;
 				}
 
 				&-title {
-					font-weight: 500;
+					font-weight: 400;
+					padding: 1rem 0;
+
+					border-bottom: 1px solid $foot-border;
 				}
 
 				&-list {
 					display: none;
+					padding-bottom: 1.3rem;
 				}
 
 				&-icon {
 					position: absolute;
-					top: 0;
+					top: 1rem;
 					right: 2rem;
 					font-style: normal;
-					transition: transform 0.5s;
+					font-size: 1.6rem;
+					transition: transform 0.5s, transform-origin 0.5s;
 				}
 
 				&-item {
 					position: relative;
 					margin: 1rem 0;
+					padding: 0.2rem 1rem;
+					&:hover {
+						text-decoration: underline;
+					}
 				}
 
 				&-link {
@@ -74,11 +83,19 @@
 				}
 
 				&--active {
+					.footer__nav-column-section-title {
+						border-bottom: none;
+						color: $third;
+					}
 					.footer__nav-column-section-list {
 						display: block;
+						border-bottom: 1px solid $foot-border;
+						color: rgba($color: $third, $alpha: 0.8);
 					}
 					.footer__nav-column-section-icon {
+						transform-origin: center;
 						transform: rotate(45deg);
+						color: $third;
 					}
 				}
 			}
