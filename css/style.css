@@ -767,9 +767,6 @@ button {
   padding-top: 2rem;
   border-top: 1px solid #d2d2d7;
 }
-.footer__nav-column {
-  display: block;
-}
 .footer__nav-column-section {
   position: relative;
   cursor: pointer;
@@ -785,6 +782,12 @@ button {
 .footer__nav-column-section-list {
   display: none;
   padding-bottom: 1.3rem;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 .footer__nav-column-section-icon {
   position: absolute;
@@ -817,6 +820,8 @@ button {
 }
 .footer__nav-column-section--active .footer__nav-column-section-list {
   display: block;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   border-bottom: 1px solid #d2d2d7;
   color: rgba(0, 0, 0, 0.8);
 }

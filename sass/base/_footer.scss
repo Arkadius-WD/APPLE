@@ -33,8 +33,6 @@
 		border-top: 1px solid $foot-border;
 
 		&-column {
-			display: block;
-
 			&-section {
 				position: relative;
 				cursor: pointer;
@@ -54,6 +52,8 @@
 				&-list {
 					display: none;
 					padding-bottom: 1.3rem;
+					transform: translateY(-100%);
+					transition: transform 0.5s;
 				}
 
 				&-icon {
@@ -88,6 +88,7 @@
 					}
 					.footer__nav-column-section-list {
 						display: block;
+						transform: translateY(0);
 						border-bottom: 1px solid $foot-border;
 						color: rgba($color: $third, $alpha: 0.8);
 					}
