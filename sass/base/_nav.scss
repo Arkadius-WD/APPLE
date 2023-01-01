@@ -20,12 +20,13 @@
 	display: flex;
 	align-items: flex-start;
 	flex-direction: column;
-	top: -100vh;
+	// top: -100vh;
+	transform: translateY(-100%);
 	left: 0;
 	right: 0;
 	height: 100vh;
 	background-color: $third;
-	transition: top 0.7s;
+	transition: transform 0.7s;
 
 	&__container-one {
 		padding: 4.5rem 1.5rem 1.5rem 1.5rem;
@@ -139,7 +140,7 @@
 }
 
 .nav-hidden {
-	top: 0;
+	transform: translateY(0);
 }
 
 .bag-hidden {
