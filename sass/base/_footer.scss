@@ -1,5 +1,6 @@
 @use '../variables/colors' as *;
 @use '../variables/fonts' as *;
+@use '../utilities/animations' as *;
 
 .footer {
 	padding: 1.5rem;
@@ -48,11 +49,6 @@
 					border-bottom: 1px solid $foot-border;
 				}
 
-				&-list {
-					display: none;
-					padding-bottom: 1.3rem;
-				}
-
 				&-icon {
 					position: absolute;
 					top: 1rem;
@@ -62,11 +58,21 @@
 					transition: transform 0.5s, transform-origin 0.5s;
 				}
 
+				&-disp {
+					display: none;
+					padding-bottom: 1.3rem;
+					transition: transform 0.5s;
+				}
+
+				&-list {
+					transition: transform 0.5s;
+					transform: translateY(-100%);
+				}
+
 				&-item {
 					position: relative;
 					margin: 1rem 0;
 					padding: 0.2rem 1rem;
-
 					&:hover {
 						text-decoration: underline;
 					}
@@ -84,10 +90,13 @@
 						border-bottom: none;
 						color: $third;
 					}
-					.footer__nav-column-section-list {
+					.footer__nav-column-section-disp {
 						display: block;
 						border-bottom: 1px solid $foot-border;
 						color: rgba($color: $third, $alpha: 0.8);
+					}
+					.footer__nav-column-section-list {
+						transform: translateY(0);
 					}
 					.footer__nav-column-section-icon {
 						transform-origin: center;
