@@ -61,12 +61,7 @@
 				&-disp {
 					display: none;
 					padding-bottom: 1.3rem;
-					transition: transform 0.5s;
-				}
-
-				&-list {
-					transition: transform 0.5s;
-					transform: translateY(-100%);
+					overflow: hidden;
 				}
 
 				&-item {
@@ -96,7 +91,7 @@
 						color: rgba($color: $third, $alpha: 0.8);
 					}
 					.footer__nav-column-section-list {
-						transform: translateY(0);
+						animation: footAnimation 1s;
 					}
 					.footer__nav-column-section-icon {
 						transform-origin: center;
