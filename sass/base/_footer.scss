@@ -1,57 +1,73 @@
 @use '../variables/colors' as *;
 @use '../variables/fonts' as *;
+@use '../utilities/animations' as *;
 
 .footer {
 	padding: 1.5rem;
 	background-color: $smoke-light;
 	color: $foot-text;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
+	font-weight: 400;
 
 	&__notes {
 		&-bold {
 			font-weight: 700;
 		}
-
 		a {
 			font-family: $font;
 			font-weight: 500;
 			color: #424245;
 		}
-
 		li {
 			padding-bottom: 1rem;
 		}
 	}
-
 	&__nav {
 		display: flex;
 		flex-direction: column;
-		height: 43rem;
 		width: 100%;
 		margin-top: 2rem;
 		padding-top: 2rem;
 		border-top: 1px solid $foot-border;
 
 		&-column {
-			display: block;
-
 			&-section {
 				position: relative;
+				cursor: pointer;
+
+				&:hover > &-title,
+				&:hover > &-icon {
+					color: $third;
+				}
 
 				&-title {
-					font-weight: 500;
+					font-weight: 400;
+					padding: 1rem 0;
+					border-bottom: 1px solid $foot-border;
 				}
 
 				&-icon {
 					position: absolute;
-					top: 0;
+					top: 1rem;
 					right: 2rem;
+					font-style: normal;
+					font-size: 1.6rem;
+					transition: transform 0.5s, transform-origin 0.5s;
+				}
+
+				&-disp {
+					display: none;
+					padding-bottom: 1.3rem;
+					overflow: hidden;
 				}
 
 				&-item {
-					display: none;
 					position: relative;
 					margin: 1rem 0;
+					padding: 0.2rem 1rem;
+					&:hover {
+						text-decoration: underline;
+					}
 				}
 
 				&-link {
@@ -60,7 +76,31 @@
 					height: 100%;
 					padding: 1rem;
 				}
+
+				&--active {
+					.footer__nav-column-section-title {
+						border-bottom: none;
+						color: $third;
+					}
+					.footer__nav-column-section-disp {
+						display: block;
+						border-bottom: 1px solid $foot-border;
+						color: rgba($color: $third, $alpha: 0.8);
+					}
+					.footer__nav-column-section-list {
+						animation: footAnimation 1s;
+					}
+					.footer__nav-column-section-icon {
+						transform-origin: center;
+						transform: rotate(45deg);
+						color: $third;
+					}
+				}
 			}
 		}
+	}
+
+	&__contact {
+		background-color: yellow;
 	}
 }
