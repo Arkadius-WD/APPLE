@@ -11,7 +11,11 @@ export const footerList = () => {
 
 	footerSections.forEach(el =>
 		el.addEventListener('click', () => {
-			el.classList.toggle('footer__nav-column-section--active')
+			if (window.innerWidth > 834) {
+				return
+			} else {
+				el.classList.toggle('footer__nav-column-section--active')
+			}
 		})
 	)
 }

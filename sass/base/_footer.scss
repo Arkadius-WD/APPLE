@@ -43,6 +43,7 @@
 				&-title {
 					font-weight: 400;
 					padding: 1rem 0;
+					font-size: 1.3rem;
 					border-bottom: 1px solid $foot-border;
 				}
 
@@ -101,6 +102,42 @@
 	}
 
 	&__contact {
-		background-color: yellow;
+		font-size: 1.3rem;
+		a {
+			color: $foot-link;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		&-shop {
+			padding-top: 1.5rem;
+			a {
+				color: $foot-link-blue;
+			}
+		}
+
+		&-locale {
+			padding: 1.5rem 0;
+		}
+
+		&-copyright {
+			padding-bottom: 0.7rem;
+		}
+
+		&-legal {
+			padding-bottom: 1.5rem;
+
+			&-link {
+				margin-right: 1rem;
+				padding-right: 1rem;
+				border-right: 1px solid $foot-border;
+
+				&:last-child {
+					border-right: none;
+				}
+			}
+		}
 	}
 }
