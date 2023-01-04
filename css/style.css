@@ -1136,8 +1136,7 @@ button {
   }
 }
 @media only screen and (min-width: 834px) {
-  .nav-bar--active .nav-bar__input-search {
-    display: block;
+  .nav-bar--active {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1147,6 +1146,9 @@ button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .nav-bar--active .nav-bar__input-search {
+    display: block;
   }
   .nav-bar--active .nav-bar__logo {
     display: none;
