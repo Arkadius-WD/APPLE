@@ -2,6 +2,15 @@
 
 @media only screen and (min-width: 834px) {
 	.nav-bar {
+		&--active {
+			.nav-bar__input-search {
+				display: block;
+			}
+			.nav-bar__list {
+				display: none;
+			}
+		}
+
 		&__list {
 			display: flex;
 			justify-content: space-evenly;

@@ -20,7 +20,6 @@
 	display: flex;
 	align-items: flex-start;
 	flex-direction: column;
-	// top: -100vh;
 	transform: translateY(-100%);
 	left: 0;
 	right: 0;
@@ -91,6 +90,32 @@
 	height: 4.4rem;
 	z-index: 5;
 
+	&__input-form {
+		display: block;
+		width: 100%;
+		min-width: 73rem;
+		height: 3rem;
+		border-radius: 1rem;
+		border: none;
+		background-image: url('../img/nav/globalnav_search_image__grey.svg');
+		background-position: 1.5rem 0.9rem;
+		background-repeat: no-repeat;
+		padding-left: 40px;
+		background-color: $second;
+		font-family: $font;
+		font-size: 1.7rem;
+		font-weight: 300;
+	}
+
+	&__input-form::placeholder {
+		color: $first;
+		opacity: 0.3;
+	}
+
+	&__input-form:focus {
+		color: $first;
+	}
+
 	&__burger,
 	&__logo,
 	&__search,
@@ -103,6 +128,10 @@
 		opacity: 0.8;
 	}
 
+	&__input-search {
+		display: none;
+	}
+
 	&__bag {
 		transition: opacity 0.3s;
 	}
@@ -110,6 +139,7 @@
 	&__search {
 		display: none;
 	}
+
 	&__list {
 		display: none;
 	}
