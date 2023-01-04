@@ -237,44 +237,65 @@ button {
   height: 4.4rem;
   z-index: 5;
 }
+.nav-bar__input-search {
+  position: relative;
+}
 .nav-bar__input-form {
   display: block;
   width: 100%;
-  min-width: 73rem;
+  min-width: 65rem;
   height: 2.8rem;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   border: none;
   background-image: url("../img/nav/globalnav_search_image__grey.svg");
-  background-position: 1.5rem 0.9rem;
+  background-position: 1.5rem 0.8rem;
   background-repeat: no-repeat;
   padding-left: 40px;
   background-color: #1d1d1f;
   font-family: "Lato", sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: 300;
 }
 .nav-bar__input-form::-webkit-input-placeholder {
   color: #f5f5f7;
+  border: none;
   opacity: 0.3;
 }
 .nav-bar__input-form::-moz-placeholder {
   color: #f5f5f7;
+  border: none;
   opacity: 0.3;
 }
 .nav-bar__input-form:-ms-input-placeholder {
   color: #f5f5f7;
+  border: none;
   opacity: 0.3;
 }
 .nav-bar__input-form::-ms-input-placeholder {
   color: #f5f5f7;
+  border: none;
   opacity: 0.3;
 }
 .nav-bar__input-form::placeholder {
   color: #f5f5f7;
+  border: none;
   opacity: 0.3;
 }
 .nav-bar__input-form:focus {
   color: #f5f5f7;
+  border: none;
+}
+.nav-bar__input-close {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  width: 2.7rem;
+  height: 2.7rem;
+  cursor: pointer;
+}
+.nav-bar__input-close img {
+  -webkit-filter: invert(45%) sepia(6%) saturate(284%) hue-rotate(202deg) brightness(92%) contrast(87%);
+          filter: invert(45%) sepia(6%) saturate(284%) hue-rotate(202deg) brightness(92%) contrast(87%);
 }
 .nav-bar__burger, .nav-bar__logo, .nav-bar__search, .nav-bar__bag {
   display: -webkit-box;
@@ -1117,8 +1138,26 @@ button {
 @media only screen and (min-width: 834px) {
   .nav-bar--active .nav-bar__input-search {
     display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-bar--active .nav-bar__logo {
+    display: none;
   }
   .nav-bar--active .nav-bar__list {
+    display: none;
+  }
+  .nav-bar--active .nav-bar__search {
+    display: none;
+  }
+  .nav-bar--active .nav-bar__bag {
     display: none;
   }
   .nav-bar__list {

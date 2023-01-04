@@ -90,30 +90,48 @@
 	height: 4.4rem;
 	z-index: 5;
 
+	&__input-search {
+		position: relative;
+	}
+
 	&__input-form {
 		display: block;
 		width: 100%;
-		min-width: 73rem;
+		min-width: 65rem;
 		height: 2.8rem;
-		border-radius: 1rem;
+		border-radius: 1.5rem;
 		border: none;
 		background-image: url('../img/nav/globalnav_search_image__grey.svg');
-		background-position: 1.5rem 0.9rem;
+		background-position: 1.5rem 0.8rem;
 		background-repeat: no-repeat;
 		padding-left: 40px;
 		background-color: $second;
 		font-family: $font;
-		font-size: 1.7rem;
+		font-size: 1.6rem;
 		font-weight: 300;
 	}
 
 	&__input-form::placeholder {
 		color: $first;
+		border: none;
 		opacity: 0.3;
 	}
 
 	&__input-form:focus {
 		color: $first;
+		border: none;
+	}
+
+	&__input-close {
+		position: absolute;
+		top: 0;
+		right: 1rem;
+		width: 2.7rem;
+		height: 2.7rem;
+		cursor: pointer;
+		img {
+			filter: invert(45%) sepia(6%) saturate(284%) hue-rotate(202deg) brightness(92%) contrast(87%);
+		}
 	}
 
 	&__burger,
