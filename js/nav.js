@@ -1,5 +1,4 @@
 'use strict'
-
 export const navAnimation = () => {
 	const topNav = document.querySelector('.nav-top')
 	const navBar = document.querySelector('.nav-bar')
