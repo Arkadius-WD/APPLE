@@ -9,6 +9,7 @@
 @use './base/promo' as *;
 @use './base/slider' as *;
 @use './base/footer' as *;
+@use './base/store' as *;
 
 @use './breakpoints/media_734' as *;
 @use './breakpoints/media_834' as *;
