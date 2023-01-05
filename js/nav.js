@@ -4,6 +4,7 @@ export const navAnimation = () => {
 	const navBar = document.querySelector('.nav-bar')
 	const navBtn = document.querySelector('.nav-bar__burger')
 	const navBag = document.querySelector('.nav-bar__bag')
+	const navBarClose = document.querySelector('.nav-bar__input-close')
 	const navSearch = document.querySelector('.nav-bar__search')
 	const allNavItems = document.querySelectorAll('.nav-top__item')
 
@@ -38,4 +39,5 @@ export const navAnimation = () => {
 
 	navBtn.addEventListener('click', showMenu)
 	navSearch.addEventListener('click', showSearchInput)
+	navBarClose.addEventListener('click', showSearchInput)
 }
