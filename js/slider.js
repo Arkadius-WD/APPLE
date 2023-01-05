@@ -1,7 +1,6 @@
 'use strict'
 
 export const autoSlider = () => {
-	const slideContainer = document.querySelector('.slider__track-container')
 	const slides = document.querySelector('.slider__slides')
 	const nextBtn = document.querySelector('.slider__next')
 	const prevBtn = document.querySelector('.slider__previous')
