@@ -971,15 +971,58 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   height: 50rem;
-  padding: 1rem;
+  padding: 0 1.5rem;
+}
+.head-store__title {
+  padding-top: 10rem;
+  max-width: 60rem;
+}
+.head-store__title h2 {
+  font-size: 3.6rem;
+  color: #6e6e73;
+}
+.head-store__title span {
+  color: #1d1d1f;
 }
 .head-store__help {
   display: none;
+  padding-top: 12.5rem;
+  min-width: 15rem;
+}
+.head-store__help h4 {
+  padding-bottom: 0.2rem;
+}
+.head-store__help a {
+  font-weight: 400;
+  color: #0066cc;
+}
+.head-store__help a:hover {
+  text-decoration: underline;
+}
+.head-store__help-up, .head-store__help-down {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.head-store__help-up::before, .head-store__help-down::before {
+  position: absolute;
+  content: "";
+  top: 0.3rem;
+  left: -4rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-size: contain;
+}
+.head-store__help-up::before {
+  background-image: url("../../img/store/store-chat-specialist-icon.jpg");
+}
+.head-store__help-down::before {
+  background-image: url("../../img/store/iconmonstr-speech-bubble-comments-thin.svg");
+  background-position: 0.4rem 0.4rem;
 }
 
 @media only screen and (min-width: 734px) {
@@ -1265,6 +1308,15 @@ button {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+  }
+  .head-store__title {
+    padding-top: 12rem;
+  }
+  .head-store__title h2 {
+    font-size: 4.6rem;
+  }
+  .head-store__help {
+    display: block;
   }
 }
 @media only screen and (min-width: 1024px) {

@@ -3,12 +3,67 @@
 
 .head-store {
 	display: flex;
-	align-items: center;
+	justify-content: space-between;
 	width: 100%;
 	height: 50rem;
-	padding: 1rem;
+	padding: 0 1.5rem;
+
+	&__title {
+		padding-top: 10rem;
+		max-width: 60rem;
+
+		h2 {
+			font-size: 3.6rem;
+			color: $foot-text;
+		}
+
+		span {
+			color: $second;
+		}
+	}
 
 	&__help {
 		display: none;
+		padding-top: 12.5rem;
+		min-width: 15rem;
+
+		h4 {
+			padding-bottom: 0.2rem;
+		}
+
+		a {
+			font-weight: 400;
+			color: $link;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		&-up,
+		&-down {
+			position: relative;
+			margin-bottom: 1.5rem;
+			&::before {
+				position: absolute;
+				content: '';
+				top: 0.3rem;
+				left: -4rem;
+				width: 3.5rem;
+				height: 3.5rem;
+				background-size: contain;
+			}
+		}
+
+		&-up {
+			&::before {
+				background-image: url('../../img/store/store-chat-specialist-icon.jpg');
+			}
+		}
+		&-down {
+			&::before {
+				background-image: url('../../img/store/iconmonstr-speech-bubble-comments-thin.svg');
+				background-position: 0.4rem 0.4rem;
+			}
+		}
 	}
 }

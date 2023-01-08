@@ -116,4 +116,17 @@
 			}
 		}
 	}
+
+	.head-store {
+		&__title {
+			padding-top: 12rem;
+			h2 {
+				font-size: 4.6rem;
+			}
+		}
+
+		&__help {
+			display: block;
+		}
+	}
 }
