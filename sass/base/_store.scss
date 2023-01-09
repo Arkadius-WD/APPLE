@@ -56,14 +56,20 @@
 
 		&-up {
 			&::before {
-				background-image: url('../../img/store/store-chat-specialist-icon.jpg');
+				background-image: url('../img/store/store-chat-specialist-icon.jpg');
 			}
 		}
 		&-down {
 			&::before {
-				background-image: url('../../img/store/iconmonstr-speech-bubble-comments-thin.svg');
+				background-image: url('../img/store/iconmonstr-speech-bubble-comments-thin.svg');
 				background-position: 0.4rem 0.4rem;
 			}
 		}
+	}
+}
+
+.carousel-store {
+	&__container {
+		display: flex;
 	}
 }

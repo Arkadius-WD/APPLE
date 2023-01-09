@@ -1018,11 +1018,17 @@ button {
   background-size: contain;
 }
 .head-store__help-up::before {
-  background-image: url("../../img/store/store-chat-specialist-icon.jpg");
+  background-image: url("../img/store/store-chat-specialist-icon.jpg");
 }
 .head-store__help-down::before {
-  background-image: url("../../img/store/iconmonstr-speech-bubble-comments-thin.svg");
+  background-image: url("../img/store/iconmonstr-speech-bubble-comments-thin.svg");
   background-position: 0.4rem 0.4rem;
+}
+
+.carousel-store__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media only screen and (min-width: 734px) {
