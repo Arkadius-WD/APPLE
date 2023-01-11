@@ -967,6 +967,11 @@ button {
   border-right: none;
 }
 
+.main-store {
+  height: 50rem;
+  width: 100%;
+}
+
 .head-store {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -974,12 +979,10 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
-  height: 50rem;
   padding: 0 1.5rem;
 }
 .head-store__title {
-  padding-top: 10rem;
+  padding: 10rem 0;
   max-width: 60rem;
 }
 .head-store__title h2 {
@@ -1029,6 +1032,9 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.carousel-store__card {
+  text-align: center;
 }
 
 @media only screen and (min-width: 734px) {
