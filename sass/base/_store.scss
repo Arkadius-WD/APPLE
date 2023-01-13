@@ -2,8 +2,10 @@
 @use '../variables/fonts' as *;
 
 .main-store {
-	height: 50rem;
 	width: 100%;
+	h4 {
+		font-weight: 500;
+	}
 }
 
 .head-store {
@@ -12,7 +14,8 @@
 	padding: 0 1.5rem;
 
 	&__title {
-		padding: 10rem 0;
+		padding-top: 10rem;
+		padding-bottom: 6rem;
 		max-width: 60rem;
 
 		h2 {
@@ -31,11 +34,12 @@
 		min-width: 15rem;
 
 		h4 {
-			padding-bottom: 0.2rem;
+			padding-bottom: 0.3rem;
 		}
 
 		a {
 			font-weight: 400;
+			font-size: 1.5rem;
 			color: $link;
 			&:hover {
 				text-decoration: underline;
@@ -74,9 +78,12 @@
 .carousel-store {
 	&__container {
 		display: flex;
+		overflow: hidden;
 	}
 
 	&__card {
 		text-align: center;
+		padding: 0 1.5rem;
+		padding-bottom: 6rem;
 	}
 }

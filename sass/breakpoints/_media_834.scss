@@ -6,8 +6,12 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+
 			.nav-bar__input-search {
 				display: block;
+			}
+			.nav-bar__input-form {
+				background-position: 1.5rem 0.8rem;
 			}
 
 			.nav-bar__logo {
@@ -118,13 +122,6 @@
 	}
 
 	.head-store {
-		&__title {
-			padding-top: 12rem;
-			h2 {
-				font-size: 4.6rem;
-			}
-		}
-
 		&__help {
 			display: block;
 		}

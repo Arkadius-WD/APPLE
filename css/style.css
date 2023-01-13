@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&display=swap");
 *,
 *::before,
 *::after {
@@ -165,7 +165,7 @@ button {
   border-radius: 1rem;
   border: none;
   background-image: url("../img/nav/globalnav_search_image__grey.svg");
-  background-position: 1.5rem 1.3rem;
+  background-position: 1.5rem 1.4rem;
   background-repeat: no-repeat;
   padding-left: 40px;
   background-color: #1d1d1f;
@@ -244,11 +244,11 @@ button {
   display: block;
   width: 100%;
   min-width: 70rem;
-  height: 2.8rem;
+  height: 2.7rem;
   border-radius: 1.5rem;
   border: none;
   background-image: url("../img/nav/globalnav_search_image__grey.svg");
-  background-position: 1.5rem 0.8rem;
+  background-position: 1.5rem 1.4rem;
   background-repeat: no-repeat;
   padding-left: 40px;
   background-color: #1d1d1f;
@@ -323,6 +323,7 @@ button {
 }
 .nav-bar__list {
   display: none;
+  margin-bottom: 0.3rem;
 }
 .nav-bar__burger {
   display: -webkit-box;
@@ -968,8 +969,10 @@ button {
 }
 
 .main-store {
-  height: 50rem;
   width: 100%;
+}
+.main-store h4 {
+  font-weight: 500;
 }
 
 .head-store {
@@ -982,7 +985,8 @@ button {
   padding: 0 1.5rem;
 }
 .head-store__title {
-  padding: 10rem 0;
+  padding-top: 10rem;
+  padding-bottom: 6rem;
   max-width: 60rem;
 }
 .head-store__title h2 {
@@ -998,10 +1002,11 @@ button {
   min-width: 15rem;
 }
 .head-store__help h4 {
-  padding-bottom: 0.2rem;
+  padding-bottom: 0.3rem;
 }
 .head-store__help a {
   font-weight: 400;
+  font-size: 1.5rem;
   color: #0066cc;
 }
 .head-store__help a:hover {
@@ -1032,9 +1037,12 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
 }
 .carousel-store__card {
   text-align: center;
+  padding: 0 1.5rem;
+  padding-bottom: 6rem;
 }
 
 @media only screen and (min-width: 734px) {
@@ -1204,6 +1212,24 @@ button {
   .slider__next {
     left: calc(50% + 356px);
   }
+  .head-store__title {
+    padding-top: 12rem;
+    padding-bottom: 10rem;
+  }
+  .head-store__title h2 {
+    font-size: 4.6rem;
+  }
+  .carousel-store__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+  }
+  .carousel-store__card {
+    text-align: center;
+    padding: 0 1.5rem;
+    padding-bottom: 10rem;
+  }
 }
 @media only screen and (min-width: 834px) {
   .nav-bar--active {
@@ -1219,6 +1245,9 @@ button {
   }
   .nav-bar--active .nav-bar__input-search {
     display: block;
+  }
+  .nav-bar--active .nav-bar__input-form {
+    background-position: 1.5rem 0.8rem;
   }
   .nav-bar--active .nav-bar__logo {
     display: none;
@@ -1320,12 +1349,6 @@ button {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-  }
-  .head-store__title {
-    padding-top: 12rem;
-  }
-  .head-store__title h2 {
-    font-size: 4.6rem;
   }
   .head-store__help {
     display: block;
