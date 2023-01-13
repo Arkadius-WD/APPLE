@@ -151,7 +151,21 @@
 	}
 
 	&__bag {
+		position: relative;
 		transition: opacity 0.3s;
+		cursor: pointer;
+	}
+
+	&__bag-amount {
+		position: absolute;
+		top: 0.5rem;
+		left: 2.5rem;
+		padding: 0.1rem 0.6rem;
+		background-color: $link;
+		font-size: 1.3rem;
+		color: $first;
+		text-align: center;
+		border-radius: 0.5rem;
 	}
 
 	&__search {
