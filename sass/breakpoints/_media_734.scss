@@ -226,15 +226,20 @@
 	}
 
 	.carousel-store {
+		padding: 0 1.5rem;
+		padding-bottom: 8rem;
 		&__container {
 			display: flex;
-			overflow: hidden;
 		}
 
 		&__card {
 			text-align: center;
-			padding: 0 1.5rem;
-			padding-bottom: 10rem;
+		}
+	}
+
+	.iPhone-store {
+		&__title {
+			font-size: 2rem;
 		}
 	}
 }
