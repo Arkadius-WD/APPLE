@@ -1,3 +1,5 @@
 'use strict'
 
-export const storeApp = () => {}
+export const storeApp = () => {
+	console.log('Hello')
+}

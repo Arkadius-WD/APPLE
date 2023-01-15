@@ -1,6 +1,20 @@
 @use '../variables/colors' as *;
 @use '../variables/fonts' as *;
 
+.header {
+	position: relative;
+}
+
+.bag-message {
+	position: fixed;
+	top: 4rem;
+	right: 0;
+	width: 20rem;
+	height: 30rem;
+	background-color: #fe8046;
+	z-index: 5;
+}
+
 .nav {
 	position: fixed;
 	top: 0;
