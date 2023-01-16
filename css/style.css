@@ -125,8 +125,7 @@ button {
   position: fixed;
   top: 4rem;
   right: 0;
-  width: 20rem;
-  height: 30rem;
+  padding: 1rem;
   background-color: #fe8046;
   z-index: 5;
 }
