@@ -121,15 +121,6 @@ button {
   position: relative;
 }
 
-.bag-message {
-  position: fixed;
-  top: 4rem;
-  right: 0;
-  padding: 1rem;
-  background-color: #fe8046;
-  z-index: 5;
-}
-
 .nav {
   position: fixed;
   top: 0;
@@ -377,6 +368,14 @@ button {
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.bag-message {
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  padding: 1rem;
+  background-color: #fe8046;
 }
 
 .click-btn .nav-bar__burger-bel--up {
