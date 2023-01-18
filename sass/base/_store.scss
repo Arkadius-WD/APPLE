@@ -110,18 +110,17 @@
 		background-size: 3rem;
 		background-repeat: no-repeat;
 		background-position: center;
-		opacity: 0.5;
+		background-color: rgba($color: #fff, $alpha: 0.3);
 		border-radius: 50%;
-		overflow: hidden;
+		filter: invert(100%) sepia(89%) saturate(0%) hue-rotate(172deg) brightness(104%) contrast(105%);
+
 		&--left {
 			left: 1.5rem;
 			background-image: url('../img/buttons/left.png');
-			filter: invert(100%) sepia(89%) saturate(0%) hue-rotate(172deg) brightness(104%) contrast(105%);
 		}
 		&--right {
 			right: 1.5rem;
 			background-image: url('../img/buttons/right.png');
-			filter: invert(100%) sepia(89%) saturate(0%) hue-rotate(172deg) brightness(104%) contrast(105%);
 		}
 	}
 }
