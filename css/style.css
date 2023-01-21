@@ -1001,6 +1001,41 @@ button {
   font-weight: 500;
 }
 
+.carousel-store,
+.iPhone-store,
+.iPhone-store__accessories {
+  position: relative;
+}
+.carousel-store__button,
+.iPhone-store__button,
+.iPhone-store__accessories__button {
+  position: absolute;
+  top: 2rem;
+  width: 5rem;
+  height: 5rem;
+  border: none;
+  background-size: 3rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f5f5f7;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(110, 110, 115, 0.4392156863);
+          box-shadow: 0px 0px 10px 0px rgba(110, 110, 115, 0.4392156863);
+  border-radius: 50%;
+  z-index: 5;
+}
+.carousel-store__button--left,
+.iPhone-store__button--left,
+.iPhone-store__accessories__button--left {
+  left: 1.5rem;
+  background-image: url("../img/buttons/left.png");
+}
+.carousel-store__button--right,
+.iPhone-store__button--right,
+.iPhone-store__accessories__button--right {
+  right: 1.5rem;
+  background-image: url("../img/buttons/right.png");
+}
+
 .head-store {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1060,7 +1095,6 @@ button {
 }
 
 .carousel-store {
-  position: relative;
   padding: 0 1.5rem;
   padding-bottom: 6rem;
 }
@@ -1082,30 +1116,9 @@ button {
   border: 1px solid #0071e3;
   cursor: pointer;
 }
-.carousel-store__button {
-  position: absolute;
-  top: 2rem;
-  width: 5rem;
-  height: 5rem;
-  border: none;
-  background-size: 3rem;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #f5f5f7;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(110, 110, 115, 0.4392156863);
-          box-shadow: 0px 0px 10px 0px rgba(110, 110, 115, 0.4392156863);
-  border-radius: 50%;
-}
-.carousel-store__button--left {
-  left: 1.5rem;
-  background-image: url("../img/buttons/left.png");
-}
-.carousel-store__button--right {
-  right: 1.5rem;
-  background-image: url("../img/buttons/right.png");
-}
 
 .iPhone-store {
+  position: relative;
   padding: 0 1.5rem;
 }
 .iPhone-store__title {
@@ -1232,6 +1245,19 @@ button {
 }
 .iPhone-store__accessories-card-text {
   color: rgba(110, 110, 115, 0.7);
+}
+.iPhone-store__button {
+  top: 21rem;
+}
+
+.iPhone-store__accessories .iPhone-store__button {
+  top: 23rem;
+}
+.iPhone-store__accessories .iPhone-store__button--left {
+  left: 0;
+}
+.iPhone-store__accessories .iPhone-store__button--right {
+  right: 0;
 }
 
 @media only screen and (min-width: 734px) {

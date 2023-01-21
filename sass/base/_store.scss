@@ -8,6 +8,36 @@
 	}
 }
 
+.carousel-store,
+.iPhone-store,
+.iPhone-store__accessories {
+	position: relative;
+
+	&__button {
+		position: absolute;
+		top: 2rem;
+		width: 5rem;
+		height: 5rem;
+		border: none;
+		background-size: 3rem;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: $first;
+		box-shadow: 0px 0px 10px 0px $smoke;
+		border-radius: 50%;
+		z-index: 5;
+
+		&--left {
+			left: 1.5rem;
+			background-image: url('../img/buttons/left.png');
+		}
+		&--right {
+			right: 1.5rem;
+			background-image: url('../img/buttons/right.png');
+		}
+	}
+}
+
 .head-store {
 	display: flex;
 	justify-content: space-between;
@@ -76,7 +106,6 @@
 }
 
 .carousel-store {
-	position: relative;
 	padding: 0 1.5rem;
 	padding-bottom: 6rem;
 
@@ -100,32 +129,10 @@
 			cursor: pointer;
 		}
 	}
-
-	&__button {
-		position: absolute;
-		top: 2rem;
-		width: 5rem;
-		height: 5rem;
-		border: none;
-		background-size: 3rem;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-color: $first;
-		box-shadow: 0px 0px 10px 0px $smoke;
-		border-radius: 50%;
-
-		&--left {
-			left: 1.5rem;
-			background-image: url('../img/buttons/left.png');
-		}
-		&--right {
-			right: 1.5rem;
-			background-image: url('../img/buttons/right.png');
-		}
-	}
 }
 
 .iPhone-store {
+	position: relative;
 	padding: 0 1.5rem;
 
 	&__title {
@@ -257,5 +264,21 @@
 
 	&__accessories-card-text {
 		color: rgba($color: $foot-text, $alpha: 0.7);
+	}
+
+	&__button {
+		top: 21rem;
+	}
+}
+
+.iPhone-store__accessories {
+	.iPhone-store__button {
+		top: 23rem;
+		&--left {
+			left: 0;
+		}
+		&--right {
+			right: 0;
+		}
 	}
 }
