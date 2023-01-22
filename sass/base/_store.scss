@@ -10,7 +10,7 @@
 
 .carousel-store,
 .iPhone-store,
-.iPhone-store__accessories {
+.acc-store {
 	position: relative;
 
 	&__button {
@@ -25,7 +25,6 @@
 		background-color: $first;
 		box-shadow: 0px 0px 10px 0px $smoke;
 		border-radius: 50%;
-		z-index: 5;
 
 		&--left {
 			left: 1.5rem;
@@ -131,7 +130,8 @@
 	}
 }
 
-.iPhone-store {
+.iPhone-store,
+.acc {
 	position: relative;
 	padding: 0 1.5rem;
 
@@ -268,17 +268,5 @@
 
 	&__button {
 		top: 21rem;
-	}
-}
-
-.iPhone-store__accessories {
-	.iPhone-store__button {
-		top: 23rem;
-		&--left {
-			left: 0;
-		}
-		&--right {
-			right: 0;
-		}
 	}
 }
