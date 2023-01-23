@@ -1001,40 +1001,6 @@ button {
   font-weight: 500;
 }
 
-.carousel-store,
-.iPhone-store,
-.acc-store {
-  position: relative;
-}
-.carousel-store__button,
-.iPhone-store__button,
-.acc-store__button {
-  position: absolute;
-  top: 2rem;
-  width: 5rem;
-  height: 5rem;
-  border: none;
-  background-size: 3rem;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #f5f5f7;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(110, 110, 115, 0.4392156863);
-          box-shadow: 0px 0px 10px 0px rgba(110, 110, 115, 0.4392156863);
-  border-radius: 50%;
-}
-.carousel-store__button--left,
-.iPhone-store__button--left,
-.acc-store__button--left {
-  left: 1.5rem;
-  background-image: url("../img/buttons/left.png");
-}
-.carousel-store__button--right,
-.iPhone-store__button--right,
-.acc-store__button--right {
-  right: 1.5rem;
-  background-image: url("../img/buttons/right.png");
-}
-
 .head-store {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1093,8 +1059,41 @@ button {
   background-position: 0.4rem 0.4rem;
 }
 
+.carousel-store,
+.iPhone-store,
+.acc-store {
+  position: relative;
+}
+.carousel-store__button,
+.iPhone-store__button,
+.acc-store__button {
+  position: absolute;
+  top: 2rem;
+  width: 5rem;
+  height: 5rem;
+  border: none;
+  background-size: 3rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f5f5f7;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(110, 110, 115, 0.4392156863);
+          box-shadow: 0px 0px 10px 0px rgba(110, 110, 115, 0.4392156863);
+  border-radius: 50%;
+}
+.carousel-store__button--left,
+.iPhone-store__button--left,
+.acc-store__button--left {
+  left: 1.5rem;
+  background-image: url("../img/buttons/left.png");
+}
+.carousel-store__button--right,
+.iPhone-store__button--right,
+.acc-store__button--right {
+  right: 1.5rem;
+  background-image: url("../img/buttons/right.png");
+}
+
 .carousel-store {
-  padding: 0 1.5rem;
   padding-bottom: 6rem;
 }
 .carousel-store__container {
@@ -1117,22 +1116,21 @@ button {
 }
 
 .iPhone-store,
-.acc {
+.acc-store {
   position: relative;
-  padding: 0 1.5rem;
 }
 .iPhone-store__title,
-.acc__title {
+.acc-store__title {
   font-size: 1.7rem;
   color: #6e6e73;
 }
 .iPhone-store__title span,
-.acc__title span {
+.acc-store__title span {
   color: #1d1d1f;
 }
 .iPhone-store__devices-cards, .iPhone-store__accessories-cards,
-.acc__devices-cards,
-.acc__accessories-cards {
+.acc-store__devices-cards,
+.acc-store__accessories-cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1143,8 +1141,8 @@ button {
   overflow: hidden;
 }
 .iPhone-store__devices-card, .iPhone-store__accessories-card,
-.acc__devices-card,
-.acc__accessories-card {
+.acc-store__devices-card,
+.acc-store__accessories-card {
   position: relative;
   height: 40rem;
   min-width: 30rem;
@@ -1155,27 +1153,27 @@ button {
           box-shadow: 10px 10px 10px -10px rgba(110, 110, 115, 0.4392156863);
 }
 .iPhone-store__devices-card-title, .iPhone-store__accessories-card-title,
-.acc__devices-card-title,
-.acc__accessories-card-title {
+.acc-store__devices-card-title,
+.acc-store__accessories-card-title {
   font-size: 1.7rem;
   padding: 4rem 2rem 2rem;
   max-width: 70%;
 }
 .iPhone-store__devices-card-img, .iPhone-store__accessories-card-img,
-.acc__devices-card-img,
-.acc__accessories-card-img {
+.acc-store__devices-card-img,
+.acc-store__accessories-card-img {
   width: 25rem;
   height: 20rem;
   margin: 0 auto;
 }
 .iPhone-store__devices-card-img img, .iPhone-store__accessories-card-img img,
-.acc__devices-card-img img,
-.acc__accessories-card-img img {
+.acc-store__devices-card-img img,
+.acc-store__accessories-card-img img {
   width: 100%;
 }
 .iPhone-store__devices-card-dots, .iPhone-store__accessories-card-dots,
-.acc__devices-card-dots,
-.acc__accessories-card-dots {
+.acc-store__devices-card-dots,
+.acc-store__accessories-card-dots {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1190,8 +1188,8 @@ button {
   margin: 1rem auto;
 }
 .iPhone-store__devices-card-dot, .iPhone-store__accessories-card-dot,
-.acc__devices-card-dot,
-.acc__accessories-card-dot {
+.acc-store__devices-card-dot,
+.acc-store__accessories-card-dot {
   width: 1.2rem;
   height: 1.2rem;
   margin: 0 0.3rem;
@@ -1199,64 +1197,64 @@ button {
   cursor: pointer;
 }
 .iPhone-store__devices-card-dot--1, .iPhone-store__accessories-card-dot--1,
-.acc__devices-card-dot--1,
-.acc__accessories-card-dot--1 {
+.acc-store__devices-card-dot--1,
+.acc-store__accessories-card-dot--1 {
   background-color: #424245;
 }
 .iPhone-store__devices-card-dot--2, .iPhone-store__accessories-card-dot--2,
-.acc__devices-card-dot--2,
-.acc__accessories-card-dot--2 {
+.acc-store__devices-card-dot--2,
+.acc-store__accessories-card-dot--2 {
   background-color: #f4e8cd;
   -webkit-box-shadow: inset 0px 1px 1px rgba(110, 110, 115, 0.4392156863);
           box-shadow: inset 0px 1px 1px rgba(110, 110, 115, 0.4392156863);
 }
 .iPhone-store__devices-card-dot--3, .iPhone-store__accessories-card-dot--3,
-.acc__devices-card-dot--3,
-.acc__accessories-card-dot--3 {
+.acc-store__devices-card-dot--3,
+.acc-store__accessories-card-dot--3 {
   background-color: #f1f2f2;
   -webkit-box-shadow: inset 0px 1px 1px rgba(110, 110, 115, 0.4392156863);
           box-shadow: inset 0px 1px 1px rgba(110, 110, 115, 0.4392156863);
 }
 .iPhone-store__devices-card-dot--4, .iPhone-store__accessories-card-dot--4,
-.acc__devices-card-dot--4,
-.acc__accessories-card-dot--4 {
+.acc-store__devices-card-dot--4,
+.acc-store__accessories-card-dot--4 {
   background-color: #495b48;
 }
 .iPhone-store__devices-card-dot--5, .iPhone-store__accessories-card-dot--5,
-.acc__devices-card-dot--5,
-.acc__accessories-card-dot--5 {
+.acc-store__devices-card-dot--5,
+.acc-store__accessories-card-dot--5 {
   background-color: #bcb5e7;
   -webkit-box-shadow: inset 0px 1px 1px rgba(110, 110, 115, 0.4392156863);
           box-shadow: inset 0px 1px 1px rgba(110, 110, 115, 0.4392156863);
 }
 .iPhone-store__devices-card-dot--6, .iPhone-store__accessories-card-dot--6,
-.acc__devices-card-dot--6,
-.acc__accessories-card-dot--6 {
+.acc-store__devices-card-dot--6,
+.acc-store__accessories-card-dot--6 {
   background-color: #fc1432;
   -webkit-box-shadow: inset 0px 1px 1px rgba(110, 110, 115, 0.4392156863);
           box-shadow: inset 0px 1px 1px rgba(110, 110, 115, 0.4392156863);
 }
 .iPhone-store__devices-card-dot--7, .iPhone-store__accessories-card-dot--7,
-.acc__devices-card-dot--7,
-.acc__accessories-card-dot--7 {
+.acc-store__devices-card-dot--7,
+.acc-store__accessories-card-dot--7 {
   background-color: #a8bacc;
   -webkit-box-shadow: inset 0px 1px 1px rgba(110, 110, 115, 0.4392156863);
           box-shadow: inset 0px 1px 1px rgba(110, 110, 115, 0.4392156863);
 }
 .iPhone-store__devices-card-dot--8, .iPhone-store__accessories-card-dot--8,
-.acc__devices-card-dot--8,
-.acc__accessories-card-dot--8 {
+.acc-store__devices-card-dot--8,
+.acc-store__accessories-card-dot--8 {
   background-color: #fe8046;
 }
 .iPhone-store__devices-card-text, .iPhone-store__accessories-card-text,
-.acc__devices-card-text,
-.acc__accessories-card-text {
+.acc-store__devices-card-text,
+.acc-store__accessories-card-text {
   margin-left: 2rem;
   margin-top: 1.9rem;
 }
 .iPhone-store__devices-card-button, .iPhone-store__accessories-card-button,
-.acc__devices-card-button,
-.acc__accessories-card-button {
+.acc-store__devices-card-button,
+.acc-store__accessories-card-button {
   position: absolute;
   bottom: 2rem;
   right: 3.5rem;
@@ -1268,28 +1266,28 @@ button {
   border-radius: 1.8rem;
 }
 .iPhone-store__devices-card:first-child, .iPhone-store__accessories-card:first-child,
-.acc__devices-card:first-child,
-.acc__accessories-card:first-child {
+.acc-store__devices-card:first-child,
+.acc-store__accessories-card:first-child {
   margin-left: 0;
 }
 .iPhone-store__accessories-card-title h3,
-.acc__accessories-card-title h3 {
+.acc-store__accessories-card-title h3 {
   font-weight: normal;
 }
 .iPhone-store__accessories-card-title span,
-.acc__accessories-card-title span {
+.acc-store__accessories-card-title span {
   color: #0066cc;
 }
 .iPhone-store__accessories-card-img,
-.acc__accessories-card-img {
+.acc-store__accessories-card-img {
   width: 20rem;
 }
 .iPhone-store__accessories-card-text,
-.acc__accessories-card-text {
+.acc-store__accessories-card-text {
   color: rgba(110, 110, 115, 0.7);
 }
 .iPhone-store__button,
-.acc__button {
+.acc-store__button {
   top: 21rem;
 }
 

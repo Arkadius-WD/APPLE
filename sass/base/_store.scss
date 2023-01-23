@@ -8,35 +8,6 @@
 	}
 }
 
-.carousel-store,
-.iPhone-store,
-.acc-store {
-	position: relative;
-
-	&__button {
-		position: absolute;
-		top: 2rem;
-		width: 5rem;
-		height: 5rem;
-		border: none;
-		background-size: 3rem;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-color: $first;
-		box-shadow: 0px 0px 10px 0px $smoke;
-		border-radius: 50%;
-
-		&--left {
-			left: 1.5rem;
-			background-image: url('../img/buttons/left.png');
-		}
-		&--right {
-			right: 1.5rem;
-			background-image: url('../img/buttons/right.png');
-		}
-	}
-}
-
 .head-store {
 	display: flex;
 	justify-content: space-between;
@@ -104,8 +75,37 @@
 	}
 }
 
+.carousel-store,
+.iPhone-store,
+.acc-store {
+	position: relative;
+
+	&__button {
+		position: absolute;
+		top: 2rem;
+		width: 5rem;
+		height: 5rem;
+		border: none;
+		background-size: 3rem;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: $first;
+		box-shadow: 0px 0px 10px 0px $smoke;
+		border-radius: 50%;
+
+		&--left {
+			left: 1.5rem;
+			background-image: url('../img/buttons/left.png');
+		}
+		&--right {
+			right: 1.5rem;
+			background-image: url('../img/buttons/right.png');
+		}
+	}
+}
+
 .carousel-store {
-	padding: 0 1.5rem;
+	// padding: 0 1.5rem;
 	padding-bottom: 6rem;
 
 	&__container {
@@ -131,9 +131,8 @@
 }
 
 .iPhone-store,
-.acc {
+.acc-store {
 	position: relative;
-	padding: 0 1.5rem;
 
 	&__title {
 		font-size: 1.7rem;
