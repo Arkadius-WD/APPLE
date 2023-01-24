@@ -226,20 +226,22 @@
 	}
 
 	.carousel-store {
-		padding: 0 1.5rem;
-		padding-bottom: 8rem;
-		&__container {
-			display: flex;
-		}
-
-		&__card {
-			text-align: center;
-		}
+		padding-bottom: 9rem;
 	}
 
-	.iPhone-store {
-		&__title {
-			font-size: 2rem;
+	.iPhone-store,
+	.acc-store {
+		padding-left: 2rem;
+		&__title,
+		&__accessories-title {
+			font-size: 2.2rem;
+		}
+
+		&__devices,
+		&__accessories {
+			&-card {
+				min-width: 30.8rem;
+			}
 		}
 	}
 }

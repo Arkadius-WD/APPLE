@@ -1094,6 +1094,7 @@ button {
 }
 
 .carousel-store {
+  padding-left: 1rem;
   padding-bottom: 6rem;
 }
 .carousel-store__container {
@@ -1105,27 +1106,24 @@ button {
 .carousel-store__card {
   width: 100%;
   height: 100%;
+  padding: 0 0.2rem;
   text-align: center;
-  cursor: pointer;
-}
-.carousel-store__card:nth-child(2) img {
-  margin-left: 1rem;
-  padding: 0.5rem;
-  border: 1px solid #0071e3;
-  cursor: pointer;
 }
 
 .iPhone-store,
 .acc-store {
   position: relative;
+  padding-left: 1rem;
 }
-.iPhone-store__title,
-.acc-store__title {
+.iPhone-store__title, .iPhone-store__accessories-title,
+.acc-store__title,
+.acc-store__accessories-title {
   font-size: 1.7rem;
   color: #6e6e73;
 }
-.iPhone-store__title span,
-.acc-store__title span {
+.iPhone-store__title span, .iPhone-store__accessories-title span,
+.acc-store__title span,
+.acc-store__accessories-title span {
   color: #1d1d1f;
 }
 .iPhone-store__devices-cards, .iPhone-store__accessories-cards,
@@ -1466,19 +1464,21 @@ button {
     font-size: 4.6rem;
   }
   .carousel-store {
-    padding: 0 1.5rem;
-    padding-bottom: 8rem;
+    padding-bottom: 9rem;
   }
-  .carousel-store__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .iPhone-store,
+.acc-store {
+    padding-left: 2rem;
   }
-  .carousel-store__card {
-    text-align: center;
+  .iPhone-store__title, .iPhone-store__accessories-title,
+.acc-store__title,
+.acc-store__accessories-title {
+    font-size: 2.2rem;
   }
-  .iPhone-store__title {
-    font-size: 2rem;
+  .iPhone-store__devices-card, .iPhone-store__accessories-card,
+.acc-store__devices-card,
+.acc-store__accessories-card {
+    min-width: 30.8rem;
   }
 }
 @media only screen and (min-width: 834px) {

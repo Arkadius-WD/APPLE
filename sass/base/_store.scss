@@ -105,7 +105,7 @@
 }
 
 .carousel-store {
-	// padding: 0 1.5rem;
+	padding-left: 1rem;
 	padding-bottom: 6rem;
 
 	&__container {
@@ -116,25 +116,18 @@
 	&__card {
 		width: 100%;
 		height: 100%;
+		padding: 0 0.2rem;
 		text-align: center;
-		cursor: pointer;
-	}
-
-	&__card:nth-child(2) {
-		img {
-			margin-left: 1rem;
-			padding: 0.5rem;
-			border: 1px solid $button;
-			cursor: pointer;
-		}
 	}
 }
 
 .iPhone-store,
 .acc-store {
 	position: relative;
+	padding-left: 1rem;
 
-	&__title {
+	&__title,
+	&__accessories-title {
 		font-size: 1.7rem;
 		color: $foot-text;
 
