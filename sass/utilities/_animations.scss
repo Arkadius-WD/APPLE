@@ -6,20 +6,12 @@
 		opacity: 1;
 	}
 }
+
 @keyframes footAnimation {
 	from {
 		transform: translateY(-100%);
 	}
 	to {
 		transform: translateY(0);
-	}
-}
-@keyframes buttonStoreAnimation {
-	from {
-		transform: scale(0);
-	}
-	to {
-		transform: scale(1);
-		// opacity: 1;
 	}
 }
