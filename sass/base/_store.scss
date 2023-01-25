@@ -79,6 +79,7 @@
 .iPhone-store,
 .acc-store {
 	position: relative;
+	overflow: hidden;
 
 	&__button {
 		position: absolute;
@@ -95,6 +96,7 @@
 		opacity: 0;
 		transform: scale(0);
 		transition: opacity 0.5s, transform 0.5s;
+		z-index: 1;
 
 		&--left {
 			left: 1.5rem;
@@ -119,18 +121,16 @@
 }
 
 .carousel-store {
-	padding-left: 1rem;
 	margin-bottom: 6rem;
 
 	&__container {
 		display: flex;
-		overflow: hidden;
 	}
 
 	&__card {
 		width: 100%;
 		height: 100%;
-		padding: 0 0.2rem;
+		padding: 0 0.25rem;
 		text-align: center;
 	}
 }
@@ -158,7 +158,6 @@
 			width: 100%;
 			padding: 2rem 0;
 			margin-bottom: 3rem;
-			overflow: hidden;
 		}
 
 		&-card {

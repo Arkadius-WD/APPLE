@@ -8,5 +8,11 @@ export const storeSlides = () => {
 
 	const slideWidth = slides[0].getBoundingClientRect().width
 
-	console.log(slideWidth)
+	nextButton.addEventListener('click', () => {
+		container.style.transform = `translateX(-${slideWidth}px)`
+	})
+
+	prevButton.addEventListener('click', () => {
+		container.style.transform = `translateX(${slideWidth}px)`
+	})
 }
