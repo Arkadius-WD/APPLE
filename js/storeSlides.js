@@ -58,7 +58,7 @@ export const storeSlides = () => {
 		let index = 0
 		prevButton.style.display = 'none'
 
-		const slideWidth = slides[0].getBoundingClientRect().width
+		const slideWidth = slides[0].getBoundingClientRect().width + 20
 		const containerWidth = container.getBoundingClientRect().width
 		const shiftSlide = slides.length - Math.round(containerWidth / slideWidth)
 
@@ -95,10 +95,57 @@ export const storeSlides = () => {
 
 		nextButton.addEventListener('click', moveToNextSlide)
 		prevButton.addEventListener('click', moveToPreviousSlide)
+	}
 
-		console.log(slideWidth)
+	const accSlider = () => {
+		const container = document.querySelector('.acc-store__accessories-cards')
+		const slides = document.querySelectorAll('.acc-store__accessories-card')
+		const nextButton = document.querySelector('.acc-store__next')
+		const prevButton = document.querySelector('.acc-store__previous')
+
+		let index = 0
+		prevButton.style.display = 'none'
+
+		const slideWidth = slides[0].getBoundingClientRect().width + 20
+		const containerWidth = container.getBoundingClientRect().width
+		const shiftSlide = slides.length - Math.round(containerWidth / slideWidth)
+
+		const moveToNextSlide = () => {
+			if (index >= shiftSlide - 1) {
+				nextButton.style.display = 'none'
+			}
+
+			if (index >= shiftSlide) {
+				return
+			} else {
+				index++
+				prevButton.style.display = 'block'
+			}
+			container.style.transition = 'transform 1s'
+			container.style.transform = `translateX(-${slideWidth * index}px)`
+		}
+
+		const moveToPreviousSlide = () => {
+			if (index <= 0 + 1) {
+				prevButton.style.display = 'none'
+			}
+
+			if (index <= 0) {
+				return
+			} else {
+				index--
+				nextButton.style.display = 'block'
+			}
+
+			container.style.transition = 'transform 1s'
+			container.style.transform = `translateX(${-slideWidth * index}px)`
+		}
+
+		nextButton.addEventListener('click', moveToNextSlide)
+		prevButton.addEventListener('click', moveToPreviousSlide)
 	}
 
 	carouselSlider()
 	iPhoneSlider()
+	accSlider()
 }

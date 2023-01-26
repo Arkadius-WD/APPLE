@@ -6,7 +6,6 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  outline: 1px solid lime;
 }
 
 html {
@@ -1168,8 +1167,8 @@ button {
   margin-left: 2rem;
   background-color: #fff;
   border-radius: 1.5rem;
-  -webkit-box-shadow: 10px 10px 10px -10px rgba(110, 110, 115, 0.4392156863);
-          box-shadow: 10px 10px 10px -10px rgba(110, 110, 115, 0.4392156863);
+  -webkit-box-shadow: 0px 10px 10px -10px rgba(110, 110, 115, 0.4392156863);
+          box-shadow: 0px 10px 10px -10px rgba(110, 110, 115, 0.4392156863);
 }
 .iPhone-store__devices-card-title, .iPhone-store__accessories-card-title,
 .acc-store__devices-card-title,
