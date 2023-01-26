@@ -11,7 +11,7 @@
 .head-store {
 	display: flex;
 	justify-content: space-between;
-	padding: 0 1.5rem;
+	padding: 0 2rem;
 
 	&__title {
 		padding-top: 10rem;
@@ -128,17 +128,19 @@
 	}
 
 	&__card {
-		width: 100%;
-		height: 100%;
-		padding: 0 0.25rem;
+		padding-left: 2rem;
 		text-align: center;
+
+		img {
+			height: 6.7rem;
+		}
 	}
 }
 
 .iPhone-store,
 .acc-store {
 	position: relative;
-	padding-left: 1rem;
+	padding: 0 1rem;
 
 	&__title,
 	&__accessories-title {
@@ -164,7 +166,7 @@
 			position: relative;
 			height: 40rem;
 			min-width: 30rem;
-			margin: 0 1rem;
+			margin-left: 2rem;
 			background-color: $bgcolor;
 			border-radius: 1.5rem;
 			box-shadow: 10px 10px 10px -10px $smoke;
