@@ -1233,6 +1233,18 @@ button {
   -webkit-box-shadow: inset 0px 1px 1px rgba(110, 110, 115, 0.4392156863);
           box-shadow: inset 0px 1px 1px rgba(110, 110, 115, 0.4392156863);
 }
+.iPhone-store__devices-card-dot--4, .iPhone-store__accessories-card-dot--4,
+.acc-store__devices-card-dot--4,
+.acc-store__accessories-card-dot--4 {
+  background-color: #495b48;
+}
+.iPhone-store__devices-card-dot--5, .iPhone-store__accessories-card-dot--5,
+.acc-store__devices-card-dot--5,
+.acc-store__accessories-card-dot--5 {
+  background-color: #bcb5e7;
+  -webkit-box-shadow: inset 0px 1px 1px rgba(110, 110, 115, 0.4392156863);
+          box-shadow: inset 0px 1px 1px rgba(110, 110, 115, 0.4392156863);
+}
 .iPhone-store__devices-card-dot--6, .iPhone-store__accessories-card-dot--6,
 .acc-store__devices-card-dot--6,
 .acc-store__accessories-card-dot--6 {
