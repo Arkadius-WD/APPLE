@@ -1233,18 +1233,6 @@ button {
   -webkit-box-shadow: inset 0px 1px 1px rgba(110, 110, 115, 0.4392156863);
           box-shadow: inset 0px 1px 1px rgba(110, 110, 115, 0.4392156863);
 }
-.iPhone-store__devices-card-dot--4, .iPhone-store__accessories-card-dot--4,
-.acc-store__devices-card-dot--4,
-.acc-store__accessories-card-dot--4 {
-  background-color: #495b48;
-}
-.iPhone-store__devices-card-dot--5, .iPhone-store__accessories-card-dot--5,
-.acc-store__devices-card-dot--5,
-.acc-store__accessories-card-dot--5 {
-  background-color: #bcb5e7;
-  -webkit-box-shadow: inset 0px 1px 1px rgba(110, 110, 115, 0.4392156863);
-          box-shadow: inset 0px 1px 1px rgba(110, 110, 115, 0.4392156863);
-}
 .iPhone-store__devices-card-dot--6, .iPhone-store__accessories-card-dot--6,
 .acc-store__devices-card-dot--6,
 .acc-store__accessories-card-dot--6 {
@@ -1307,21 +1295,6 @@ button {
 .iPhone-store__button,
 .acc-store__button {
   top: 21rem;
-}
-
-.active-dot {
-  position: relative;
-}
-.active-dot::before {
-  position: absolute;
-  content: "";
-  top: -0.4rem;
-  left: -0.3rem;
-  width: 1.9rem;
-  height: 1.9rem;
-  background-color: transparent;
-  border: 2px solid #0066cc;
-  border-radius: 50%;
 }
 
 @media only screen and (min-width: 734px) {

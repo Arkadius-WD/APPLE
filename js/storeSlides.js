@@ -145,7 +145,15 @@ export const storeSlides = () => {
 		prevButton.addEventListener('click', moveToPreviousSlide)
 	}
 
-	const dots = () => {}
+	const dots = () => {
+		const accCards = document.querySelector('.acc-store__accessories-cards')
+
+		accCards.addEventListener('click', e => {
+			e.target.classlist
+
+			console.log(e)
+		})
+	}
 
 	carouselSlider()
 	iPhoneSlider()
