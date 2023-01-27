@@ -58,7 +58,7 @@ export const storeSlides = () => {
 		let index = 0
 		prevButton.style.display = 'none'
 
-		const slideWidth = slides[0].getBoundingClientRect().width + 20
+		const slideWidth = slides[0].getBoundingClientRect().width + 21
 		const containerWidth = container.getBoundingClientRect().width
 		const shiftSlide = slides.length - Math.round(containerWidth / slideWidth)
 
@@ -106,7 +106,7 @@ export const storeSlides = () => {
 		let index = 0
 		prevButton.style.display = 'none'
 
-		const slideWidth = slides[0].getBoundingClientRect().width + 20
+		const slideWidth = slides[0].getBoundingClientRect().width + 21
 		const containerWidth = container.getBoundingClientRect().width
 		const shiftSlide = slides.length - Math.round(containerWidth / slideWidth)
 
@@ -145,7 +145,10 @@ export const storeSlides = () => {
 		prevButton.addEventListener('click', moveToPreviousSlide)
 	}
 
+	const dots = () => {}
+
 	carouselSlider()
 	iPhoneSlider()
 	accSlider()
+	dots()
 }

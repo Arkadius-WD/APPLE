@@ -1309,6 +1309,21 @@ button {
   top: 21rem;
 }
 
+.active-dot {
+  position: relative;
+}
+.active-dot::before {
+  position: absolute;
+  content: "";
+  top: -0.4rem;
+  left: -0.3rem;
+  width: 1.9rem;
+  height: 1.9rem;
+  background-color: transparent;
+  border: 2px solid #0066cc;
+  border-radius: 50%;
+}
+
 @media only screen and (min-width: 734px) {
   .heroes {
     grid-template-rows: 70rem 68rem 68rem;
