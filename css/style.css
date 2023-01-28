@@ -370,14 +370,6 @@ button {
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
-.bag-message {
-  position: absolute;
-  top: 4rem;
-  right: 0;
-  padding: 1rem;
-  background-color: #fe8046;
-}
-
 .click-btn .nav-bar__burger-bel--up {
   -webkit-transform: rotate(-45deg) translateX(-5px);
           transform: rotate(-45deg) translateX(-5px);
@@ -399,6 +391,15 @@ button {
 .nav-item-animation {
   -webkit-animation: navItemAnimation 1s both;
           animation: navItemAnimation 1s both;
+}
+
+.shop-bag {
+  position: absolute;
+  top: 4.4rem;
+  right: 0;
+  width: 20rem;
+  padding: 1rem;
+  background-color: #fe8046;
 }
 
 .heroes {

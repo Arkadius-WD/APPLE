@@ -198,14 +198,6 @@
 	}
 }
 
-.bag-message {
-	position: absolute;
-	top: 4rem;
-	right: 0;
-	padding: 1rem;
-	background-color: #fe8046;
-}
-
 .click-btn {
 	.nav-bar__burger-bel--up {
 		transform: rotate(-45deg) translateX(-5px);
@@ -225,4 +217,13 @@
 
 .nav-item-animation {
 	animation: navItemAnimation 1s both;
+}
+
+.shop-bag {
+	position: absolute;
+	top: 4.4rem;
+	right: 0;
+	width: 20rem;
+	padding: 1rem;
+	background-color: #fe8046;
 }
