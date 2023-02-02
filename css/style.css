@@ -393,15 +393,6 @@ button {
           animation: navItemAnimation 1s both;
 }
 
-.shop-bag {
-  position: absolute;
-  top: 4.4rem;
-  right: 0;
-  width: 20rem;
-  padding: 1rem;
-  background-color: #fe8046;
-}
-
 .heroes {
   display: grid;
   grid-template-rows: 55rem 50rem 50rem;
@@ -1308,6 +1299,24 @@ button {
 .iPhone-store__button,
 .acc-store__button {
   top: 21rem;
+}
+
+.shop-bag {
+  position: absolute;
+  top: 4.4rem;
+  right: 0;
+  width: 20rem;
+  padding: 1rem;
+  background-color: #fe8046;
+}
+.shop-bag::before {
+  position: absolute;
+  top: -1rem;
+  right: 2.7rem;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background: greenyellow;
 }
 
 @media only screen and (min-width: 734px) {
