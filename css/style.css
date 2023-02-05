@@ -1426,13 +1426,20 @@ button {
 }
 .bag-cart__menu {
   margin-left: auto;
+  height: 100%;
 }
 .bag-cart__menu img {
   width: 1rem;
   height: 1rem;
   cursor: pointer;
 }
-.bag-cart__menu p {
+.bag-cart__menu-up {
+  margin-bottom: -0.3rem;
+}
+.bag-cart__menu-down {
+  margin-top: -0.3rem;
+}
+.bag-cart__menu-amount {
   color: #06c;
   font-size: 1.4rem;
   padding-left: 0.1rem;
