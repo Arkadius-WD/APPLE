@@ -291,6 +291,7 @@
 	border: 0.1rem solid $smoke;
 	border-radius: 1.5rem;
 	box-shadow: 0px 0px 10px 0px $smoke;
+	transition: transform 0.5s;
 	// display: none;
 
 	&::before {
@@ -306,11 +307,6 @@
 		border: 0.1rem solid $smoke;
 		border-right: none;
 		border-top: none;
-	}
-
-	p {
-		text-align: center;
-		padding: 2rem 1rem;
 	}
 
 	&__title {
@@ -337,4 +333,14 @@
 			filter: invert(45%) sepia(6%) saturate(284%) hue-rotate(202deg) brightness(92%) contrast(87%);
 		}
 	}
+
+	&__info {
+		text-align: center;
+		padding: 2rem 1rem;
+		display: none;
+	}
+}
+
+.cart-movRight {
+	transform: translateX(35rem);
 }
