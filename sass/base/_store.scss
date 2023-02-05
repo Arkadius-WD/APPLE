@@ -284,17 +284,19 @@
 .bag-cart {
 	position: absolute;
 	top: 4.7rem;
-	right: 0;
-	width: 20rem;
+	right: 1rem;
+	width: 30rem;
 	padding: 1rem;
 	background-color: $bgcolor;
 	border: 0.1rem solid $smoke;
-	border-radius: 2rem;
+	border-radius: 1.5rem;
+	box-shadow: 0px 0px 10px 0px $smoke;
+	// display: none;
 
 	&::before {
 		position: absolute;
 		top: -0.5rem;
-		right: 2.6rem;
+		right: 1.6rem;
 		content: '';
 		width: 1rem;
 		height: 1rem;
@@ -302,8 +304,37 @@
 		transform: rotate(135deg);
 		background-color: $bgcolor;
 		border: 0.1rem solid $smoke;
+		border-right: none;
+		border-top: none;
+	}
 
-		// border: 0.8rem solid transparent;
-		// border-bottom: 0.8rem solid $bgcolor;
+	p {
+		text-align: center;
+		padding: 2rem 1rem;
+	}
+
+	&__title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem 1rem;
+		border-bottom: 1px solid $smoke;
+
+		h2 {
+			font-size: 1.8rem;
+			color: $foot-link;
+		}
+
+		button {
+			border: none;
+			background-color: transparent;
+			width: 1.5rem;
+			height: 1.5rem;
+			padding: 0.5;
+		}
+
+		img {
+			filter: invert(45%) sepia(6%) saturate(284%) hue-rotate(202deg) brightness(92%) contrast(87%);
+		}
 	}
 }
