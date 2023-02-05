@@ -1398,6 +1398,13 @@ button {
   padding: 2rem 1rem;
   display: none;
 }
+.bag-cart__content {
+  padding: 2rem 1rem;
+}
+.bag-cart__content img {
+  width: 5rem;
+  height: 4rem;
+}
 
 .cart-show {
   opacity: 1;

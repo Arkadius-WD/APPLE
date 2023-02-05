@@ -341,6 +341,14 @@
 		padding: 2rem 1rem;
 		display: none;
 	}
+
+	&__content {
+		padding: 2rem 1rem;
+		img {
+			width: 5rem;
+			height: 4rem;
+		}
+	}
 }
 
 .cart-show {
