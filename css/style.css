@@ -1426,29 +1426,33 @@ button {
 }
 .bag-cart__menu {
   margin-left: auto;
-  height: 100%;
 }
 .bag-cart__menu img {
-  width: 1rem;
-  height: 1rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.5rem;
+  -webkit-filter: invert(28%) sepia(100%) saturate(1502%) hue-rotate(194deg) brightness(94%) contrast(106%);
+          filter: invert(28%) sepia(100%) saturate(1502%) hue-rotate(194deg) brightness(94%) contrast(106%);
   cursor: pointer;
 }
 .bag-cart__menu-up {
-  margin-bottom: -0.3rem;
+  margin-bottom: -0.8rem;
 }
 .bag-cart__menu-down {
-  margin-top: -0.3rem;
+  margin-top: -0.2rem;
 }
 .bag-cart__menu-amount {
-  color: #06c;
   font-size: 1.4rem;
-  padding-left: 0.1rem;
+  text-align: center;
+}
+.bag-cart__trash {
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
 }
 .bag-cart__trash img {
   width: 2.5rem;
   height: 2.5rem;
   padding: 0.5rem;
-  margin-left: 1rem;
   cursor: pointer;
 }
 
