@@ -1302,7 +1302,7 @@ button {
   background-color: #0071e3;
   font-size: 1.7rem;
   color: #fff;
-  border-radius: 1.8rem;
+  border-radius: 2rem;
 }
 .iPhone-store__devices-card:first-child, .iPhone-store__accessories-card:first-child,
 .acc-store__devices-card:first-child,
@@ -1341,6 +1341,7 @@ button {
   border-radius: 1.5rem;
   -webkit-box-shadow: 0px 0px 10px 0px rgba(110, 110, 115, 0.4392156863);
           box-shadow: 0px 0px 10px 0px rgba(110, 110, 115, 0.4392156863);
+  overflow: scroll;
   opacity: 0;
   -webkit-transform: scale(0);
           transform: scale(0);
@@ -1454,6 +1455,33 @@ button {
   height: 2.5rem;
   padding: 0.5rem;
   cursor: pointer;
+}
+.bag-cart__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.bag-cart__footer button {
+  margin: 1.5rem 0;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #0071e3;
+  border: none;
+  border-radius: 2rem;
 }
 
 .cart-show {
