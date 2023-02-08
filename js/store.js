@@ -16,7 +16,8 @@ export const storeApp = () => {
 		async getProducts() {
 			try {
 				let result = await fetch('products.json')
-				return
+				let data = await result.json()
+				return data
 			} catch (error) {
 				console.log(error)
 			}
@@ -32,5 +33,8 @@ export const storeApp = () => {
 	document.addEventListener('DOMContentLoaded', () => {
 		const ui = new UI()
 		const products = new Products()
+
+		// get all products
+		products.getProducts().then(data => console.log(data))
 	})
 }
