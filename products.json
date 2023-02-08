@@ -1,0 +1,86 @@
+{
+	"items": [
+		{
+			"sys": { "id": "1" },
+			"fields": {
+				"title": "iPhone 14 pro",
+				"price": 999,
+				"image": {
+					"fields": { "file": { "url": "./img/store/iPhone section/iphone-card-40-iphone14pro-202209.jpeg" } }
+				}
+			}
+		},
+		{
+			"sys": { "id": "2" },
+			"fields": {
+				"title": "iphone 14",
+				"price": 799,
+				"image": { "fields": { "file": { "url": "./img/store/iPhone section/iphone-card-40-iphone14-202209.jpeg" } } }
+			}
+		},
+		{
+			"sys": { "id": "3" },
+			"fields": {
+				"title": "iPhone 13",
+				"price": 599,
+				"image": { "fields": { "file": { "url": "./img/store/iPhone section/iphone-card-40-iphone13-202209.jpeg" } } }
+			}
+		},
+		{
+			"sys": { "id": "4" },
+			"fields": {
+				"title": "iPhone se",
+				"price": 429,
+				"image": { "fields": { "file": { "url": "./img/store/iPhone section/iphone-card-40-iphonese-202203.jpeg" } } }
+			}
+		},
+		{
+			"sys": { "id": "5" },
+			"fields": {
+				"title": "iPhone 12",
+				"price": 599,
+				"image": { "fields": { "file": { "url": "./img/store/iPhone section/iphone-card-40-iphone12-202209.jpeg" } } }
+			}
+		},
+		{
+			"sys": { "id": "6" },
+			"fields": {
+				"title": "silicone case",
+				"price": 49.99,
+				"image": { "fields": { "file": { "url": "./img/store/iPhone section/MPTR3.jpeg" } } }
+			}
+		},
+		{
+			"sys": { "id": "7" },
+			"fields": {
+				"title": "leather wallet",
+				"price": 39.99,
+				"image": { "fields": { "file": { "url": "./img/store/iPhone section/MPPY3.jpeg" } } }
+			}
+		},
+		{
+			"sys": { "id": "8" },
+			"fields": {
+				"title": "air tag loop",
+				"price": 29.99,
+				"image": { "fields": { "file": { "url": "./img/store/iPhone section/MLYY3.jpeg" } } }
+			}
+		},
+		{
+			"sys": { "id": "9" },
+			"fields": {
+				"title": "otter box figura",
+				"price": 19.99,
+				"image": { "fields": { "file": { "url": "./img/store/iPhone section/HQ0K2.jpeg" } } }
+			}
+		},
+		{
+			"sys": { "id": "10" },
+			"fields": {
+				"title": "airPods",
+				"price": 129,
+				"image": { "fields": { "file": { "url": "./img/store/iPhone section/MV7N2.jpeg" } } }
+			}
+		}
+	]
+}
