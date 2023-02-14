@@ -7,11 +7,13 @@ export const storeSlides = () => {
 		const nextButton = document.querySelector('.carousel-store__next')
 		const prevButton = document.querySelector('.carousel-store__previous')
 
+		console.log(slides[0].clientWidth)
+
 		let index = 0
 		prevButton.style.display = 'none'
 
-		const slideWidth = slides[0].getBoundingClientRect().width
-		const containerWidth = container.getBoundingClientRect().width
+		const slideWidth = slides[0].getBoundingClientRect().clientWidth
+		const containerWidth = container.getBoundingClientRect().clientWidth
 		const shiftSlide = slides.length - Math.round(containerWidth / slideWidth)
 
 		const moveToNextSlide = () => {

@@ -4,6 +4,6 @@ import { footerList } from './footer.js'
 import { storeApp } from './store.js'
 
 navAnimation()
+storeApp()
 autoSlider()
 footerList()
-storeApp()
