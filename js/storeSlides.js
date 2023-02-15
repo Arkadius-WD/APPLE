@@ -7,8 +7,6 @@ export const storeSlides = () => {
 		const nextButton = document.querySelector('.carousel-store__next')
 		const prevButton = document.querySelector('.carousel-store__previous')
 
-		console.log(slides[0].clientWidth)
-
 		let index = 0
 		prevButton.style.display = 'none'
 
@@ -56,10 +54,10 @@ export const storeSlides = () => {
 		const slides = document.querySelectorAll('.iPhone-store__devices-card')
 		const nextButton = document.querySelector('.iPhone-store__next')
 		const prevButton = document.querySelector('.iPhone-store__previous')
+		console.log(slides)
 
 		let index = 0
 		prevButton.style.display = 'none'
-
 		const slideWidth = slides[0].getBoundingClientRect().width + 21
 		const containerWidth = container.getBoundingClientRect().width
 		const shiftSlide = slides.length - Math.round(containerWidth / slideWidth)

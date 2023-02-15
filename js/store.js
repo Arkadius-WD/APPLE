@@ -31,7 +31,7 @@ export const storeApp = () => {
 		}
 	}
 
-	// DISPLAY PRODUCTS
+	//DISPLAY PRODUCTS
 	class UI {
 		displayProducts(products) {
 			let result = ''
