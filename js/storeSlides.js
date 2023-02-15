@@ -10,8 +10,8 @@ export const storeSlides = () => {
 		let index = 0
 		prevButton.style.display = 'none'
 
-		const slideWidth = slides[0].getBoundingClientRect().clientWidth
-		const containerWidth = container.getBoundingClientRect().clientWidth
+		const slideWidth = slides[0].getBoundingClientRect().width
+		const containerWidth = container.getBoundingClientRect().width
 		const shiftSlide = slides.length - Math.round(containerWidth / slideWidth)
 
 		const moveToNextSlide = () => {
@@ -54,10 +54,10 @@ export const storeSlides = () => {
 		const slides = document.querySelectorAll('.iPhone-store__devices-card')
 		const nextButton = document.querySelector('.iPhone-store__next')
 		const prevButton = document.querySelector('.iPhone-store__previous')
-		console.log(slides)
 
 		let index = 0
 		prevButton.style.display = 'none'
+
 		const slideWidth = slides[0].getBoundingClientRect().width + 21
 		const containerWidth = container.getBoundingClientRect().width
 		const shiftSlide = slides.length - Math.round(containerWidth / slideWidth)
