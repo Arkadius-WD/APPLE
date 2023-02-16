@@ -6,6 +6,9 @@ export const storeApp = () => {
 	const cartContent = document.querySelector('.bag-cart__content')
 	const cartTotal = document.querySelector('.bag-cart__total')
 	const clearCartBtn = document.querySelector('.bag-cart__clear-cart')
+	const btns = [...document.querySelectorAll('.bag-btn')]
+
+	console.log(btns)
 
 	// CART
 	let cart = []
