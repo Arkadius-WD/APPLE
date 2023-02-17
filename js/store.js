@@ -6,9 +6,6 @@ export const storeApp = () => {
 	const cartContent = document.querySelector('.bag-cart__content')
 	const cartTotal = document.querySelector('.bag-cart__total')
 	const clearCartBtn = document.querySelector('.bag-cart__clear-cart')
-	const btns = [...document.querySelectorAll('.bag-btn')]
-
-	console.log(btns)
 
 	// CART
 	let cart = []
@@ -34,7 +31,26 @@ export const storeApp = () => {
 	}
 
 	//DISPLAY PRODUCTS
-	class UI {}
+	class UI {
+		getBagButtons() {
+			const buttons = [...document.querySelectorAll('.bag-btn')]
+
+			buttons.forEach((button, index) => {
+				button.setAttribute('data-id', index + 1)
+				let id = button.dataset.id
+				let inCart = cart.find(item => item.id === id)
+				if (inCart) {
+					button.innerText = 'In Cart'
+					button.disabled = true
+				} else {
+					button.addEventListener('click', event => {
+						event.target.innerText = 'In Cart'
+						event.target.disabled = true
+					})
+				}
+			})
+		}
+	}
 
 	// LOCAL STORAGE
 	class Storage {
@@ -48,9 +64,14 @@ export const storeApp = () => {
 		const products = new Products()
 
 		// get all products
-		products.getProducts().then(products => {
-			console.log(products)
-			Storage.saveProducts(products)
-		})
+		products
+			.getProducts()
+			.then(products => {
+				console.log(products)
+				Storage.saveProducts(products)
+			})
+			.then(() => {
+				ui.getBagButtons()
+			})
 	})
 }
