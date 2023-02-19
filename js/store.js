@@ -5,7 +5,7 @@ export const storeApp = () => {
 	const cartDOM = document.querySelector('.bag-cart')
 	const cartContent = document.querySelector('.bag-cart__content')
 	const cartTotal = document.querySelector('.bag-cart__total')
-	const clearCartBtn = document.querySelector('.bag-cart__clear-cart')
+	const clearCartBtn = document.querySelector('.bag-cart__clear-btn')
 	const navBag = document.querySelector('.nav-bar__bag')
 	const bagClose = document.querySelector('.bag-cart__close')
 
@@ -75,6 +75,11 @@ export const storeApp = () => {
 			})
 			cartTotal.innerText = parseFloat(tempTotal.toFixed(2))
 			cartItems.innerText = itemsTotal
+			if (itemsTotal === 0) {
+				cartItems.style.display = 'none'
+			} else {
+				cartItems.style.display = 'block'
+			}
 		}
 		addCartItem(item) {
 			const div = document.createElement('div')
@@ -102,14 +107,45 @@ export const storeApp = () => {
 		showCart() {
 			cartDOM.classList.add('cart-show')
 		}
+		switchCart() {
+			cartDOM.classList.toggle('cart-show')
+		}
+		setupAPP() {
+			cart = Storage.getCart()
+			this.setCartValues(cart)
+			this.populateCart(cart)
+			navBag.addEventListener('click', this.switchCart)
+			bagClose.addEventListener('click', this.switchCart)
+		}
+		populateCart(cart) {
+			cart.forEach(item => this.addCartItem(item))
+		}
+		cartLogic() {
+			// clear cart button
+			clearCartBtn.addEventListener('click', () => {
+				this.clearCart()
+			})
+			// cart fuctionality
+		}
+		clearCart() {
+			let cartItems = cart.map(item => item.id)
+			cartItems.forEach(id => this.removeItem(id))
+			while (cartContent.children.length > 0) {
+				cartContent.removeChild(cartContent.children[0])
+			}
+		}
+		removeItem(id) {
+			cart = cart.filter(item => item.id !== id)
+			this.setCartValues(cart)
+			Storage.saveCart(cart)
+			let button = this.getSingleButton(id)
+			button.disabled = false
+			button.innerText = 'Buy'
+		}
+		getSingleButton(id) {
+			return buttonsDOM.find(button => button.dataset.id === id)
+		}
 	}
-
-	const switchCart = () => {
-		cartDOM.classList.toggle('cart-show')
-	}
-
-	navBag.addEventListener('click', switchCart)
-	bagClose.addEventListener('click', switchCart)
 
 	// LOCAL STORAGE
 	class Storage {
@@ -123,12 +159,16 @@ export const storeApp = () => {
 		static saveCart(cart) {
 			localStorage.setItem('cart', JSON.stringify(cart))
 		}
+		static getCart() {
+			return localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []
+		}
 	}
 
 	document.addEventListener('DOMContentLoaded', () => {
 		const ui = new UI()
 		const products = new Products()
-
+		// setup app
+		ui.setupAPP()
 		// get all products
 		products
 			.getProduct()
@@ -137,6 +177,7 @@ export const storeApp = () => {
 			})
 			.then(() => {
 				ui.getBagButtons()
+				ui.cartLogic()
 			})
 	})
 }

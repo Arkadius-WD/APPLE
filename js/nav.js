@@ -3,9 +3,6 @@ export const navAnimation = () => {
 	const topNav = document.querySelector('.nav-top')
 	const navBar = document.querySelector('.nav-bar')
 	const navBtn = document.querySelector('.nav-bar__burger')
-	// const navBag = document.querySelector('.nav-bar__bag')
-	// const bagCart = document.querySelector('.bag-cart')
-	// const bagClose = document.querySelector('.bag-cart__close')
 	const navBarClose = document.querySelector('.nav-bar__input-close')
 	const navSearch = document.querySelector('.nav-bar__search')
 	const allNavItems = document.querySelectorAll('.nav-top__item')
@@ -31,10 +28,6 @@ export const navAnimation = () => {
 		navBar.classList.toggle('nav-bar--active')
 	}
 
-	// const showCart = () => {
-	// 	bagCart.classList.toggle('cart-show')
-	// }
-
 	const handleNavItemsAnimation = () => {
 		let delayTime = 0
 		allNavItems.forEach(item => {
@@ -47,6 +40,4 @@ export const navAnimation = () => {
 	navBtn.addEventListener('click', showMenu)
 	navSearch.addEventListener('click', showSearchInput)
 	navBarClose.addEventListener('click', showSearchInput)
-	// navBag.addEventListener('click', showCart)
-	// bagClose.addEventListener('click', showCart)
 }
