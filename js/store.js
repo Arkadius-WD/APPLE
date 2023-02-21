@@ -100,7 +100,7 @@ export const storeApp = () => {
 					</div>
 				</div>
 				<div class="bag-cart__trash" data-id=${item.id}>
-					<img src="./img/buttons/iconmonstr-trash-can-thin.svg" alt="">
+					<img src="./img/buttons/iconmonstr-trash-can-thin.svg" alt="remove">
 				</div>`
 			cartContent.appendChild(div)
 		}
@@ -126,6 +126,14 @@ export const storeApp = () => {
 				this.clearCart()
 			})
 			// cart fuctionality
+			cartContent.addEventListener('click', event => {
+				if (event.target.parentNode.classList.contains('bag-cart__trash')) {
+					let removeItem = event.target.parentNode
+					let id = removeItem.dataset.id
+					cartContent.removeChild(removeItem.parentElement)
+					this.removeItem(id)
+				}
+			})
 		}
 		clearCart() {
 			let cartItems = cart.map(item => item.id)
