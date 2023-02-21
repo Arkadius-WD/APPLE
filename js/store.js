@@ -6,6 +6,8 @@ export const storeApp = () => {
 	const cartContent = document.querySelector('.bag-cart__content')
 	const cartTotal = document.querySelector('.bag-cart__total')
 	const clearCartBtn = document.querySelector('.bag-cart__clear-btn')
+	const cartFooter = document.querySelector('.bag-cart__footer')
+	const cartEmpty = document.querySelector('.bag-cart__empty')
 	const navBag = document.querySelector('.nav-bar__bag')
 	const bagClose = document.querySelector('.bag-cart__close')
 
@@ -77,8 +79,12 @@ export const storeApp = () => {
 			cartItems.innerText = itemsTotal
 			if (itemsTotal === 0) {
 				cartItems.style.display = 'none'
+				cartFooter.style.display = 'none'
+				cartEmpty.style.display = 'block'
 			} else {
 				cartItems.style.display = 'block'
+				cartFooter.style.display = 'flex'
+				cartEmpty.style.display = 'none'
 			}
 		}
 		addCartItem(item) {

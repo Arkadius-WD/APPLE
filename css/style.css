@@ -1393,10 +1393,9 @@ button {
   -webkit-filter: invert(45%) sepia(6%) saturate(284%) hue-rotate(202deg) brightness(92%) contrast(87%);
           filter: invert(45%) sepia(6%) saturate(284%) hue-rotate(202deg) brightness(92%) contrast(87%);
 }
-.bag-cart__info {
+.bag-cart__empty {
   text-align: center;
-  padding: 2rem 1rem;
-  display: none;
+  padding: 1rem 0 2rem;
 }
 .bag-cart__content {
   padding: 1rem 1rem;
