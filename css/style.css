@@ -1336,6 +1336,8 @@ button {
   right: 1rem;
   width: 30rem;
   padding: 1rem;
+  max-height: 80vh;
+  overflow-y: auto;
   background-color: #fff;
   border: 0.1rem solid rgba(110, 110, 115, 0.4392156863);
   border-radius: 1.5rem;

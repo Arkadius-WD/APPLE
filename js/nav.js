@@ -2,9 +2,11 @@
 export const navAnimation = () => {
 	const topNav = document.querySelector('.nav-top')
 	const navBar = document.querySelector('.nav-bar')
+	const navBag = document.querySelector('.nav-bar__bag')
 	const navBtn = document.querySelector('.nav-bar__burger')
 	const navBarClose = document.querySelector('.nav-bar__input-close')
 	const navSearch = document.querySelector('.nav-bar__search')
+	const bagCart = document.querySelector('.bag-cart')
 	const allNavItems = document.querySelectorAll('.nav-top__item')
 
 	const showMenu = () => {
