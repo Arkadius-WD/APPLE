@@ -3,7 +3,7 @@
 		{
 			"sys": { "id": "1" },
 			"fields": {
-				"title": "iPhone 14 pro",
+				"title": "iPhone 14 Pro",
 				"price": 999,
 				"image": {
 					"fields": { "file": { "url": "./img/store/iPhone_section/iphone-card-40-iphone14pro-202209.jpeg" } }
@@ -13,7 +13,7 @@
 		{
 			"sys": { "id": "2" },
 			"fields": {
-				"title": "iphone 14",
+				"title": "iPhone 14",
 				"price": 799,
 				"image": { "fields": { "file": { "url": "./img/store/iPhone_section/iphone-card-40-iphone14-202209.jpeg" } } }
 			}
@@ -29,7 +29,7 @@
 		{
 			"sys": { "id": "4" },
 			"fields": {
-				"title": "iPhone se",
+				"title": "iPhone SE",
 				"price": 429,
 				"image": { "fields": { "file": { "url": "./img/store/iPhone_section/iphone-card-40-iphonese-202203.jpeg" } } }
 			}
@@ -45,7 +45,7 @@
 		{
 			"sys": { "id": "6" },
 			"fields": {
-				"title": "silicone case",
+				"title": "Silicone Case",
 				"price": 49.99,
 				"image": { "fields": { "file": { "url": "./img/store/iPhone_section/MPTR3.jpeg" } } }
 			}
@@ -53,7 +53,7 @@
 		{
 			"sys": { "id": "7" },
 			"fields": {
-				"title": "leather wallet",
+				"title": "Leather Wallet",
 				"price": 39.99,
 				"image": { "fields": { "file": { "url": "./img/store/iPhone_section/MPPY3.jpeg" } } }
 			}
@@ -61,7 +61,7 @@
 		{
 			"sys": { "id": "8" },
 			"fields": {
-				"title": "air tag loop",
+				"title": "AirTag Loop",
 				"price": 29.99,
 				"image": { "fields": { "file": { "url": "./img/store/iPhone_section/MLYY3.jpeg" } } }
 			}
@@ -69,7 +69,7 @@
 		{
 			"sys": { "id": "9" },
 			"fields": {
-				"title": "otter box figura",
+				"title": "OtterBox Figura",
 				"price": 19.99,
 				"image": { "fields": { "file": { "url": "./img/store/iPhone_section/HQ0K2.jpeg" } } }
 			}
@@ -77,7 +77,7 @@
 		{
 			"sys": { "id": "10" },
 			"fields": {
-				"title": "airPods",
+				"title": "AirPods",
 				"price": 129,
 				"image": { "fields": { "file": { "url": "./img/store/iPhone_section/MV7N2.jpeg" } } }
 			}
