@@ -1336,8 +1336,7 @@ button {
   right: 1rem;
   width: 30rem;
   padding: 1rem;
-  max-height: 80vh;
-  overflow-y: auto;
+  max-height: 60vh;
   background-color: #fff;
   border: 0.1rem solid rgba(110, 110, 115, 0.4392156863);
   border-radius: 1.5rem;
@@ -1401,6 +1400,8 @@ button {
 }
 .bag-cart__content {
   padding: 1rem 1rem;
+  max-height: 42vh;
+  overflow-y: auto;
 }
 .bag-cart__item {
   display: -webkit-box;
@@ -1470,6 +1471,9 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+.bag-cart__footer h3 {
+  padding-top: 1rem;
 }
 .bag-cart__footer button {
   margin: 1.5rem 0;
