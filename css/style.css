@@ -1336,7 +1336,7 @@ button {
   right: 1rem;
   width: 30rem;
   padding: 1rem;
-  max-height: 60vh;
+  max-height: 47rem;
   background-color: #fff;
   border: 0.1rem solid rgba(110, 110, 115, 0.4392156863);
   border-radius: 1.5rem;
@@ -1400,7 +1400,7 @@ button {
 }
 .bag-cart__content {
   padding: 1rem 1rem;
-  max-height: 42vh;
+  max-height: 29rem;
   overflow-y: auto;
 }
 .bag-cart__item {
