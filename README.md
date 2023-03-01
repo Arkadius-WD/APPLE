@@ -4,9 +4,9 @@
 ![tutorial thumbnail](./img/Screenshot_2.jpg)
 ![tutorial thumbnail](./img/Screenshot_3.jpg)
 
-Modern Apple Store built with React, TypeScript, Stripe payments, and Strapi backend for stored data. Styling with SASS.
+Modern Apple Store built with Vanilla JS. Styling with SASS.
 
-https://apple-store-sd.vercel.app
+https://arkadius-wd.github.io/APPLE/
 
 ## Main technologies
 
@@ -15,12 +15,4 @@ https://apple-store-sd.vercel.app
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
-## Stack
-
-..........
-
-
-## Details
-
-.....................
 
