@@ -1,6 +1,6 @@
 # Apple E-Commerce Store
 
-![tutorial thumbnail](./client/src/assets/_thumbnail.jpg)
+![tutorial thumbnail](./img/Screenshot_1.jpg)
 
 Modern Apple Store built with React, TypeScript, Stripe payments, and Strapi backend for stored data. Styling with SASS.
 
