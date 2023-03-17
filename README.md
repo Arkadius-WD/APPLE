@@ -6,7 +6,7 @@
 
 Modern Apple Store built with Vanilla JS. Styling with SASS.
 
-[https://arkadius-wd.github.io/APPLE/](https://arkadius-wd.github.io/APPLE--Clone-/)
+[https://arkadius-wd.github.io/APPLE/](https://arkadius-wd.github.io/APPLE/)
 
 ## Main technologies
 
