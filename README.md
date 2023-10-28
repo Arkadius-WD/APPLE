@@ -1,8 +1,11 @@
 # Apple E-Commerce Store
 
 ![tutorial thumbnail](./img/Screenshot_1.jpg)
+
 ![tutorial thumbnail](./img/Screenshot_2.jpg)
+
 ![tutorial thumbnail](./img/Screenshot_3.jpg)
+
 
 Modern Apple Store built with Vanilla JS. Styling with SASS.
 
